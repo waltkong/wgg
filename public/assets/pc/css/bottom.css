@@ -1,0 +1,77 @@
+.bottom_box{
+    height: 402px;
+    background-color: rgb(58,58,58);
+    color: white;
+}
+
+.bottom_content{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: flex-start;
+
+    padding: 51px 80px;
+}
+
+.bottom_logo_box{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.bottom_logo_box .bottom_logo_image{
+    width: 280px;
+}
+
+
+.bottom_category_box{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+
+.bottom_category_box .bottom_category_item{
+    padding: 10px 30px;
+}
+
+.bottom_category_title{
+    font-size: 18px;
+}
+
+.bottom_category_body_text{
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.bottom_wechat_box{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.bottom_wechat_box .bottom_wechat_image{
+    width: 200px;
+}
+
+.bottom_wechat_text1{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.bottom_wechat_text2{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.bottom_copyright{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}

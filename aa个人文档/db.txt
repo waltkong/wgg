@@ -1,0 +1,30 @@
+php think install -u root -p root
+
+php think crud -t music_ad -c music/ad -m music/ad_model
+
+php think crud -t music_banner -c music/banner -m music/banner_model
+
+php think crud -t music_cd -c music/cd -m music/cd_model --relation=music_singer   --relationforeignkey=singer_id 
+
+php think crud -t music_singer -c music/singer -m music/singer_model
+
+php think crud -t music_song -c music/song -m music/song_model --relation=music_singer --relation=music_cd  --relationforeignkey=singer_id --relationforeignkey=cd_id 
+
+php think crud -t music_tag -c music/tag -m music/tag_model
+
+
+php think crud -t music_message -c music/message -m music/message_model --relation=user   --relationforeignkey=user_id 
+
+php think crud -t music_like -c music/like -m music/like_model --relation=user   --relationforeignkey=user_id 
+
+php think crud -t music_collection -c music/collection -m music/collection_model --relation=user   --relationforeignkey=user_id 
+
+php think menu -c music/ad
+php think menu -c music/banner
+php think menu -c music/cd
+php think menu -c music/singer
+php think menu -c music/song
+php think menu -c music/tag
+php think menu -c music/message
+php think menu -c music/like
+php think menu -c music/collection
