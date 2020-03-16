@@ -29,6 +29,16 @@ class Index extends BaseController
     {
         $banner_list = $this->logic->banner_list(1,10);
         $this->assign('banner_list',$banner_list);
+
+        $company_list = $this->logic->company_list([],100);
+        $this->assign('company_list',$company_list);
+
+        $friend_list = $this->logic->company_list(['is_friend'=>1],10);
+        $this->assign('friend_list',$friend_list);
+
+        $news_list = $this->logic->news_list(3);
+        $this->assign('news_list',$news_list);
+
         return $this->view->fetch();
     }
 

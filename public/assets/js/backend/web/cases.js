@@ -33,6 +33,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         {checkbox: true},
                         {field: 'id', title: __('Id'),sortable:true},
+                        {field: 'webcompany.name', title: '客户公司'},
                         {
                             field: 'category_id',
                             title: __('Category_id'),

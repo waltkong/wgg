@@ -27,12 +27,11 @@ class Cases_model extends Model
     protected $append = [
 
     ];
-    
 
-    
-
-
-
+    public function webcompany()
+    {
+        return $this->belongsTo('app\admin\model\web\Company_model', 'company_id', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
 
 
 

@@ -21,7 +21,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" name="top">
 
         {include file='common/header' /}
 
@@ -54,6 +54,163 @@
 
         </div>
 
+
+        <div class="company_introduce_box">
+            <div class="company_introduce_title">
+                公司简介 | About Gezi
+            </div>
+
+            <div class="company_introduce_description">
+                广州市五宫格信息科技有限责任公司（以下简称五宫格科技），成立于2016年4月，总部位于广州市天河区，是一家技术驱动型公司，致力于用图像识别等技术及相关产品为客户提供更便捷优质的服务
+                广州市五宫格信息科技有限责任公司（以下简称五宫格科技），成立于2016年4月，总部位于广州市天河区，是一家技术驱动型公司，致力于用图像识别等技术及相关产品为客户提供更便捷优质的服务
+                广州市五宫格信息科技有限责任公司（以下简称五宫格科技），成立于2016年4月，总部位于广州市天河区，是一家技术驱动型公司，致力于用图像识别等技术及相关产品为客户提供更便捷优质的服务
+                广州市五宫格信息科技有限责任公司（以下简称五宫格科技），成立于2016年4月，总部位于广州市天河区，是一家技术驱动型公司，致力于用图像识别等技术及相关产品为客户提供更便捷优质的服务
+
+            </div>
+
+            <div class="company_introduce_more_box">
+                查看更多 >>
+            </div>
+        </div>
+
+
+        <div class="provide_box">
+            <div class="provide_header">
+                <div class="provide_header_item provide_divider">
+
+                </div>
+                <div class="provide_header_item provide_text">
+                    我们能为您提供
+                </div>
+                <div class="provide_header_item provide_divider">
+                </div>
+
+            </div>
+
+            <div class="provide_body">
+
+                <div class="swiper-container swiper2-container" >
+
+                    <div class="swiper-wrapper">
+
+                        {foreach name="banner_list" item="vo" key="k"}
+                        <div class="swiper-slide">
+                            <h1> {$k} </h1>
+                        </div>
+                        {/foreach}
+
+                    </div>
+
+                    <!--分页-->
+                    <div class="pagination swiper2-pagination"></div>
+                    <!--&lt;!&ndash; 如果需要导航按钮 &ndash;&gt;-->
+                    <div class="swiper-button-prev swiper_btn"></div>
+                    <div class="swiper-button-next swiper_btn"></div>
+
+                    <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;-->
+                    <!--<div class="swiper-scrollbar"></div>-->
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="news_box">
+            <div class="news_box_text">
+                <div class="news_box_text_bar">
+
+                </div>
+                <div class="news_box_text_font">
+                    新闻资讯
+                </div>
+            </div>
+
+            <div class="news_list_box">
+                {foreach name="news_list" item="vo" key="k"}
+                   <div class="news_item">
+                       <div class="news_image">
+                           <img src="__CDN__/assets/pc/image/首页切图/素材切图/16.png">
+                           <div class="news_time_box">
+                               <div class="news_time_date">
+                                   {$vo.create_date}
+                               </div>
+                               <div class="news_time_year">
+                                   {$vo.create_year_month}
+                               </div>
+                           </div>
+                       </div>
+                       <div class="news_item_content">
+                           <div class="news_item_title">
+                               {$vo.name}
+                           </div>
+                           <div class="news_item_description">
+                               {$vo.description}
+                           </div>
+                           <div class="news_item_see_detail">
+                                查看详情 >>
+                           </div>
+                       </div>
+                   </div>
+                {/foreach}
+
+            </div>
+
+            <div class="more_button_text">
+                更多新闻 >>
+            </div>
+
+        </div>
+
+
+
+        <div class="company_box">
+
+            <div class="company_header">
+                <div class="company_header_item provide_divider">
+
+                </div>
+                <div class="company_header_item">
+                    戈子科技，各行业领域的共同选择
+                </div>
+                <div class="company_header_item provide_divider">
+                </div>
+            </div>
+
+            <div class="company_body">
+                {foreach name="company_list" item="vo" key="k"}
+                <div class="company_body_item">
+                    <div class="company_body_img">
+                        <img src="{$vo.image}" />
+                    </div>
+                    <div class="company_body_text">
+                        {$vo.name}
+                    </div>
+                </div>
+                {/foreach}
+            </div>
+
+        </div>
+
+        <div class="friend_link_box">
+            <div class="friend_link_list">
+                <div class="friend_link_list_each friend_link_list_each_first">
+                    友情链接：
+                </div>
+                {foreach name="company_list" item="vo" key="k"}
+                <div class="friend_link_list_each" onclick=goToNewPage("{$vo.jump_url}")>
+                    {$vo.name}
+                </div>
+                {/foreach}
+            </div>
+            <div class="go_top" onclick="toToTop()">
+                <img src="__CDN__/assets/pc/image/首页切图/素材切图/19.png">
+            </div>
+        </div>
+
+
+
         {include file='common/bottom' /}
 
 
@@ -66,13 +223,14 @@
 <script>
 
     window.onload = function() {
-        var mySwiper = new Swiper ('.swiper-container', {
+
+        var mySwiper = new Swiper ('.swiper1-container', {
 //            direction: 'vertical', // 垂直切换选项
             loop: true, // 循环模式选项
             autoplay:5000,
             // 如果需要分页器
             pagination: {
-                el: '.swiper-pagination',
+                el: '.swiper1-pagination',
             },
 
             // 如果需要前进后退按钮
@@ -84,8 +242,35 @@
             // 如果需要滚动条
             scrollbar: {
                 el: '.swiper-scrollbar',
+                clickable:true,
             },
-        })
+        });
+
+
+        var mySwiper2 = new Swiper ('.swiper2-container', {
+//            direction: 'vertical', // 垂直切换选项
+            loop: true, // 循环模式选项
+            autoplay:5000,
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper2-pagination',
+            },
+            slidesPerView: 2.5,
+            centeredSlides: true,
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                clickable:false,
+            },
+        });
+
+
     };
 
     function bannerJump(url) {
@@ -95,6 +280,13 @@
 //            window.location.href = url;
     }
 
+    function toToTop(){
+        window.location.href = "#top";
+    }
+
+    function goToNewPage(url) {
+        window.open(url)
+    }
 
 
 </script>

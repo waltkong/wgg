@@ -3,6 +3,7 @@
 return [
     'Id'          => 'ID',
     'Category_id' => '分类',  //id
+    'Company_id' => '客户公司',
     'Name'        => '标题',
     'Description' => '描述',
     'Keyword' => '关键词',

@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'name' => 'FastAdmin',
+  'name' => '五宫格  官网后台',
   'beian' => '',
   'cdnurl' => '',
   'version' => '1.0.1',
