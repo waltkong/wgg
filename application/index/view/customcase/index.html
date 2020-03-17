@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 首页 </title>
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/common.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/customcase_index.css?v={$asset_version}">
+
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+
+
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/component/paginate.css?v={$asset_version}">
+
+</head>
+
+
+<body>
+<div class="container" name="top">
+    {include file='common/header' /}
+
+    <div class="nav_container">
+        <img src="{$banner.image_url}" alt="{$banner.name}" />
+    </div>
+
+    <div class="category_box">
+
+        {foreach name="category_list" item="vo" key="k"}
+        <div class="category_item  {if condition='$vo.id eq $this_category_id'} category_item_highlight {/if} "
+             onclick="change_category_id('{$vo.id}')">
+            {$vo.name}
+        </div>
+        {/foreach}
+
+    </div>
+
+
+    <div class="cases_box">
+        {include file='component/cases_list' /}
+    </div>
+
+
+    <div class="page_box" >
+        <div class="paginate_container">
+
+            <div class="paginate_item last_page " onclick="first_page()">
+                首页
+            </div>
+
+            <div class="paginate_item last_page " onclick="last_page()">
+                上一页
+            </div>
+
+            {foreach name="pageIndexList" item="vo"}
+            <div  class="paginate_item each_page {if $vo == $params.pageIndex} page_active {/if}  "
+                  onclick="changePage({$vo});" > {$vo}
+            </div>
+            {/foreach}
+
+            <div class="paginate_item each_page page_three_point">
+                ...
+            </div>
+
+            <div class="paginate_item next_page" onclick="next_page()">
+                下一页
+            </div>
+
+            <div class="input_page_number_div">
+                <div class="input_page_number_div_prev">
+                    跳转到
+                </div>
+                <input class="page_number" id="input_page_page_number" type="text" onchange="changePageInput(this);">
+                <div class="input_page_number_div_after">
+                    页
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    {include file='common/bottom' /}
+
+</div>
+
+
+</body>
+
+
+<script>
+
+    var params = {
+        'pageIndex':"{$params.pageIndex}",
+        'eachPage':"{$params.eachPage}",
+        'category_id':"{$params.category_id}"
+    };
+
+    function windows_jump() {
+        var url = "/index/customcase/index?";
+        for(var i in params){
+            if(params[i] != ''){
+                url += '&'+ i + '=' + params[i];
+            }
+        }
+        window.location.href= url;
+    }
+
+    function change_category_id(category_id) {
+        params.pageIndex = 1;
+        params.category_id = category_id;
+        windows_jump();
+    }
+
+
+
+    function changePage(index) {
+        params.pageIndex = index;
+        windows_jump();
+    }
+
+    function first_page() {
+        params.pageIndex = 1;
+        windows_jump();
+    }
+
+    function next_page() {
+        params.pageIndex = Number(params.pageIndex) + 1;
+        if(params.pageIndex < 1){
+            params.pageIndex = 1;
+        }
+        windows_jump();
+    }
+
+    function last_page() {
+        params.pageIndex = Number(params.pageIndex) - 1;
+        if(params.pageIndex < 1){
+            params.pageIndex = 1;
+        }
+        windows_jump();
+    }
+
+    function changePageInput(obj) {
+        var value = $('#input_page_page_number').val();
+        params.pageIndex = Number(value);
+        windows_jump();
+    }
+
+
+
+</script>
+</html>

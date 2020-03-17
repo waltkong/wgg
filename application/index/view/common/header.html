@@ -59,17 +59,25 @@
         <div class="menu_item_box dropdown">
 
             <div class="menu_item_box_title">
-                客户案例
+                <a href="{:url('index/customcase/index')}" >
+                    客户案例
+                </a>
             </div>
             <div class="menu_item_box_list dropdown-content" >
                 <div class="menu_item_box_list_each" >
-                    高校/中小学
+                    <a href="{:url('index/customcase/index',['category_id' => 1])}" >
+                        高校/中小学
+                    </a>
                 </div>
                 <div class="menu_item_box_list_each" >
-                    政府机关
+                    <a href="{:url('index/customcase/index',['category_id' => 2])}" >
+                        政府机关
+                    </a>
                 </div>
                 <div class="menu_item_box_list_each" >
-                    企事业单位
+                    <a href="{:url('index/customcase/index',['category_id' => 3])}" >
+                        企事业单位
+                    </a>
                 </div>
             </div>
             <div class="menu_border_bottom {if $highlight_menu == 4} height_menu {/if}">

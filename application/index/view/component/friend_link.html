@@ -1,0 +1,27 @@
+
+<link rel="stylesheet" href="__CDN__/assets/pc/css/component/friend_link.css?v={$asset_version}">
+
+<div class="friend_link_box">
+    <div class="friend_link_list">
+        <div class="friend_link_list_each friend_link_list_each_first">
+            友情链接：
+        </div>
+        {foreach name="company_list" item="vo" key="k"}
+        <div class="friend_link_list_each" onclick=goToFriendPage("{$vo.jump_url}")>
+            {$vo.name}
+        </div>
+        {/foreach}
+    </div>
+    <div class="go_top" onclick="toToTop()">
+        <img src="__CDN__/assets/pc/image/首页切图/素材切图/19.png">
+    </div>
+</div>
+<script>
+    function toToTop(){
+        window.location.href = "#top";
+    }
+
+    function goToFriendPage(url) {
+        window.open(url)
+    }
+</script>

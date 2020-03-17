@@ -1,0 +1,32 @@
+
+<link rel="stylesheet" href="__CDN__/assets/pc/css/component/cases_list.css?v={$asset_version}">
+
+<div class="cases_list_box">
+    {foreach name="case_list" item="vo" key="k"}
+    <div class="cases_item">
+        <div class="cases_image">
+            <img src="__CDN__/assets/pc/image/首页切图/素材切图/16.png">
+            <div class="cases_time_box">
+                <div class="cases_time_date">
+                    {$vo.create_date}
+                </div>
+                <div class="cases_time_year">
+                    {$vo.create_year_month}
+                </div>
+            </div>
+        </div>
+        <div class="cases_item_content">
+            <div class="cases_item_title">
+                {$vo.name}
+            </div>
+            <div class="cases_item_description">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.description}
+            </div>
+            <div class="cases_item_see_detail">
+                查看详情 >>
+            </div>
+        </div>
+    </div>
+    {/foreach}
+
+</div>

@@ -4,6 +4,8 @@ namespace app\index\logic;
 use app\admin\model\web\Product_model;
 use app\admin\model\web\Solution_model;
 use app\common\util\UrlUtil;
+use app\admin\model\web\Banner_model;
+
 
 class BaseLogic{
 
@@ -63,6 +65,18 @@ class BaseLogic{
             }
         }
         return  array_slice($ret, -3);
+    }
+
+
+    public function banner_one($group=1){
+        $obj = new Banner_model();
+        $row = $obj->where('group',$group)->find();
+        if(!empty($row)){
+            $row['image_url'] = UrlUtil::getFullUrl($row['image_url']);
+        }else{
+            $row = ['image_url' => '', 'name' => '',];
+        }
+        return $row;
     }
 
 

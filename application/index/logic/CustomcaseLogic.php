@@ -1,17 +1,20 @@
 <?php
 namespace app\index\logic;
 
-
+use app\admin\model\web\Banner_model;
+use app\admin\model\web\Cases_model;
+use app\admin\model\web\Company_model;
 use app\admin\model\web\News_model;
 use app\common\util\UrlUtil;
 use app\index\repository\AppRepository;
 
-class NewsLogic extends BaseLogic{
+class CustomcaseLogic extends BaseLogic{
 
+    public function category_list(){
+       return AppRepository::$case_category;
+    }
 
-
-
-    public function news_list($input,$pageIndex,$eachPage){
+    public function case_list($input,$pageIndex,$eachPage){
 
         $default = [
             'data' => [],
@@ -21,7 +24,7 @@ class NewsLogic extends BaseLogic{
 
         $pageOffset = ($pageIndex-1)*$eachPage;
         $objFunc = function () use($input){
-            $obj = new News_model();
+            $obj = new Cases_model();
             if(!empty($input['category_id'])){
                 $obj = $obj->where('category_id',$input['category_id']);
             }
@@ -37,22 +40,13 @@ class NewsLogic extends BaseLogic{
             $list[$k]['image_url'] = UrlUtil::getFullUrl($v['image_url']);
             $list[$k]['create_date'] = date('d',$v['createtime']);
             $list[$k]['create_year_month'] = date('Y-m',$v['createtime']);
+            $list[$k]['company_name'] = Company_model::where('id',$v['company_id'])->value('name','-');
         }
 
         $default['data'] = $list;
         $default['count'] = count($list);
         return $default;
+
     }
-
-    public function category_list(){
-        $arr =  AppRepository::$news_category;
-        array_unshift($arr,[ //头部追加
-            'id' => '',
-            'name' => '全部新闻'
-        ]);
-        return $arr;
-    }
-
-
 
 }

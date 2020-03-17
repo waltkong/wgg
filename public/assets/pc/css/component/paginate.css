@@ -18,6 +18,7 @@
 
 .paginate_item{
     cursor: pointer;
+    border: solid 1px;
 }
 .paginate_container .last_page{
     width: 64px;

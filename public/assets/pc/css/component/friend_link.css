@@ -1,0 +1,36 @@
+.friend_link_box{
+    padding: 20px 70px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.friend_link_list{
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: center;
+
+    font-size: 20px;
+
+}
+
+.friend_link_list_each{
+    margin-left: 15px;
+    color: rgb(133,133,133);
+    cursor: pointer;
+}
+
+.friend_link_list_each_first{
+    color:rgb(38,164,249);
+}
+
+.go_top{
+    width: 70px;
+    cursor: pointer;
+}
