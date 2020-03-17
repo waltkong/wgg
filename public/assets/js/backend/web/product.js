@@ -5,12 +5,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             // 初始化表格参数配置
             Table.api.init({
                 extend: {
-                    index_url: 'web/news/index' + location.search,
-                    add_url: 'web/news/add',
-                    edit_url: 'web/news/edit',
-                    del_url: 'web/news/del',
-                    multi_url: 'web/news/multi',
-                    table: 'web_news',
+                    index_url: 'web/product/index' + location.search,
+                    add_url: 'web/product/add',
+                    edit_url: 'web/product/edit',
+                    del_url: 'web/product/del',
+                    multi_url: 'web/product/multi',
+                    table: 'web_product',
                 }
             });
 
@@ -33,19 +33,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         {checkbox: true},
                         {field: 'id', title: __('Id'),sortable:true},
-                        {
-                            field: 'category_id',
-                            title: __('Category_id'),
-                            formatter: Table.api.formatter.flag,
-                            searchList:{
-                                1:'公司新闻',
-                                2:'行业新闻',
-                                3:'产品动态',
-                            }
-                        },
                         {field: 'name', title: __('Name')},
-                        {field: 'image_url', title: __('Image_url'),events: Table.api.events.image, formatter: Table.api.formatter.image},
-                        {field: 'click_count', title: __('Click_count')},
+                        {field: 'logo_image', title: __('Logo_image'), events: Table.api.events.image, formatter: Table.api.formatter.image},
+                        {field: 'single_image', title: __('Single_image'), events: Table.api.events.image, formatter: Table.api.formatter.image},
                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
@@ -67,7 +57,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
             // 初始化表格
             table.bootstrapTable({
-                url: 'web/news/recyclebin' + location.search,
+                url: 'web/product/recyclebin' + location.search,
                 pk: 'id',
                 sortName: 'id',
                 columns: [
@@ -94,7 +84,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                     text: __('Restore'),
                                     classname: 'btn btn-xs btn-info btn-ajax btn-restoreit',
                                     icon: 'fa fa-rotate-left',
-                                    url: 'web/news/restore',
+                                    url: 'web/product/restore',
                                     refresh: true
                                 },
                                 {
@@ -102,7 +92,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                     text: __('Destroy'),
                                     classname: 'btn btn-xs btn-danger btn-ajax btn-destroyit',
                                     icon: 'fa fa-times',
-                                    url: 'web/news/destroy',
+                                    url: 'web/product/destroy',
                                     refresh: true
                                 }
                             ],

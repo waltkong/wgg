@@ -48,16 +48,29 @@
 }
 
 .header_menu_box .menu_item_box{
+    width: 100px;
+    margin-top: 12px;
+
     padding: 15px 22px ;
     font-size: 14px;
     color: white;
+    text-align: center;
 
     cursor:pointer;
 }
 
 .height_menu{
-    border-bottom: solid white 2px;
+    background-color: white;
 }
+
+.menu_border_bottom{
+    margin-top: 10px;
+    margin-left: 13px;
+    width: 30px;
+    height: 1px;
+}
+
+
 
 .dropdown {
     position: relative;

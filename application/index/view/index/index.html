@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="__CDN__/assets/pc/css/common.css?v={$asset_version}">
     <link rel="stylesheet" href="__CDN__/assets/pc/css/index.css?v={$asset_version}">
+
+
     <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
 
 
@@ -61,7 +63,7 @@
             </div>
 
             <div class="company_introduce_description">
-                广州市五宫格信息科技有限责任公司（以下简称五宫格科技），成立于2016年4月，总部位于广州市天河区，是一家技术驱动型公司，致力于用图像识别等技术及相关产品为客户提供更便捷优质的服务
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 广州市五宫格信息科技有限责任公司（以下简称五宫格科技），成立于2016年4月，总部位于广州市天河区，是一家技术驱动型公司，致力于用图像识别等技术及相关产品为客户提供更便捷优质的服务
                 广州市五宫格信息科技有限责任公司（以下简称五宫格科技），成立于2016年4月，总部位于广州市天河区，是一家技术驱动型公司，致力于用图像识别等技术及相关产品为客户提供更便捷优质的服务
                 广州市五宫格信息科技有限责任公司（以下简称五宫格科技），成立于2016年4月，总部位于广州市天河区，是一家技术驱动型公司，致力于用图像识别等技术及相关产品为客户提供更便捷优质的服务
                 广州市五宫格信息科技有限责任公司（以下简称五宫格科技），成立于2016年4月，总部位于广州市天河区，是一家技术驱动型公司，致力于用图像识别等技术及相关产品为客户提供更便捷优质的服务
@@ -93,9 +95,16 @@
 
                     <div class="swiper-wrapper">
 
-                        {foreach name="banner_list" item="vo" key="k"}
+                        {foreach name="product_list" item="vo" key="k"}
                         <div class="swiper-slide">
-                            <h1> {$k} </h1>
+
+                            <div class="provide_item">
+                                <img src="{$vo.logo_image}" alt="{$vo.name}"/>
+                                <div class="provide_product_name">
+                                    {$vo.name}
+                                </div>
+                            </div>
+
                         </div>
                         {/foreach}
 
@@ -117,6 +126,87 @@
         </div>
 
 
+        {foreach name="product_list" item="vo" key="k"}
+
+        <div class="single_product_box single_product_box_{$k}   {if condition='$k neq 0'} single_product_box_hide {/if} ">
+            <div class="single_product_img" >
+                <img src="{$vo.single_image}" id="single_product_img" alt="{$vo.name}" />
+            </div>
+            <div class="single_product_content">
+                <div class="single_product_name" id="single_product_name">
+                    {$vo.name}
+                </div>
+                <div class="single_product_util_list" id="single_product_util_list">
+                    {foreach name="vo['util_array']" item="vo2" key="k2"}
+                    <div class="each_util">
+                        {$vo2}
+                    </div>
+                    {/foreach}
+                </div>
+                <div class="single_product_see_more">
+                    查看更多 >>
+                </div>
+            </div>
+        </div>
+
+        {/foreach}
+
+
+        <!--<div class="single_solution_box">-->
+            <!--<div class="single_solution_image">-->
+                <!--<img src="" alt=""/>-->
+            <!--</div>-->
+            <!--<div class="single_solution_text">-->
+                <!--<div class="single_solution_see_more">-->
+                    <!--查看更多>>-->
+                <!--</div>-->
+                <!--<div class="single_solution_free_get">-->
+                    <!--免费领取方案-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+
+        <div class="case_box">
+
+            <div class="news_box_text">
+                <div class="news_box_text_bar">
+
+                </div>
+                <div class="news_box_text_font">
+                    客户案例
+                </div>
+            </div>
+
+            <div class="case_box_body">
+                {foreach name="case_list" item="vo" key="k"}
+                <div class="case_item">
+                    <div class="case_image">
+                        <img src="{$vo.image_url}" alt="{$vo.name}"/>
+                    </div>
+                    <div class="case_company">
+                        {$vo.company_name}
+                    </div>
+                    <div class="case_description">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.description}
+                    </div>
+                </div>
+                {/foreach}
+
+                <div class="case_item">
+                    <div class="case_image">
+                        <img src="__CDN__/assets/pc/image/首页切图/素材切图/15.png">
+                    </div>
+                    <div class="case_image_more">
+                        更多案例 >>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
         <div class="news_box">
             <div class="news_box_text">
                 <div class="news_box_text_bar">
@@ -127,35 +217,8 @@
                 </div>
             </div>
 
-            <div class="news_list_box">
-                {foreach name="news_list" item="vo" key="k"}
-                   <div class="news_item">
-                       <div class="news_image">
-                           <img src="__CDN__/assets/pc/image/首页切图/素材切图/16.png">
-                           <div class="news_time_box">
-                               <div class="news_time_date">
-                                   {$vo.create_date}
-                               </div>
-                               <div class="news_time_year">
-                                   {$vo.create_year_month}
-                               </div>
-                           </div>
-                       </div>
-                       <div class="news_item_content">
-                           <div class="news_item_title">
-                               {$vo.name}
-                           </div>
-                           <div class="news_item_description">
-                               {$vo.description}
-                           </div>
-                           <div class="news_item_see_detail">
-                                查看详情 >>
-                           </div>
-                       </div>
-                   </div>
-                {/foreach}
+            {include file='component/news_list' /}
 
-            </div>
 
             <div class="more_button_text">
                 更多新闻 >>
@@ -255,7 +318,7 @@
             pagination: {
                 el: '.swiper2-pagination',
             },
-            slidesPerView: 2.5,
+            slidesPerView: 4.1,
             centeredSlides: true,
             // 如果需要前进后退按钮
             navigation: {
@@ -268,10 +331,27 @@
                 el: '.swiper-scrollbar',
                 clickable:false,
             },
+            on:{
+                click:function () {
+                    var index = this.realIndex;
+                    $('.single_product_box').addClass('single_product_box_hide');
+                    $('.single_product_box_'+index).removeClass('single_product_box_hide');
+
+                }
+            },
         });
 
 
     };
+
+
+    function generateUtil(utils) {
+        var html = '';
+        for(var i=0;i<utils.length;i++){
+            html += "<div class='each_util'>" + utils[i] + "</div>";
+        }
+        $('#single_product_util_list').html(html);
+    }
 
     function bannerJump(url) {
         console.log(url);

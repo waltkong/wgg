@@ -1,0 +1,94 @@
+.page_box{
+    margin-top: 30px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+
+.paginate_container{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.paginate_item{
+    cursor: pointer;
+}
+.paginate_container .last_page{
+    width: 64px;
+    height: 32px;
+    padding: 5px;
+    text-align: center;
+
+    background-color: rgb(238,238,238);
+
+    margin: 5px;
+}
+
+.paginate_container .next_page{
+    width: 64px;
+    height: 32px;
+    padding: 5px;
+    text-align: center;
+
+    background-color: rgb(238,238,238);
+
+    margin: 5px;
+}
+
+.paginate_container .input_page_number_div{
+    width: 200px;
+    height: 28px;
+
+    margin: 5px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: center;
+
+}
+
+.input_page_number_div .input_page_number_div_prev{
+    width: 50px;
+    height: 32px;
+}
+
+.input_page_number_div .page_number{
+    margin: 5px;
+    width: 50px;
+    height: 28px;
+}
+
+.input_page_number_div .input_page_number_div_after{
+    width: 40px;
+    height: 32px;
+}
+
+.paginate_container .each_page{
+    width: 40px;
+    height: 32px;
+
+    background-color: rgb(238,238,238);
+    padding: 5px;
+    margin: 5px;
+}
+.each_page.page_three_point{
+    padding: 5px;
+    text-align: center;
+}
+.each_page.page_active{
+    background-color: rgb(8,149,255);
+}
+
+
+
+
+
+

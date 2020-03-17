@@ -1,0 +1,39 @@
+.nav_container{
+    max-height: 500px;
+}
+
+.nav_container img{
+    max-height: 500px;
+}
+
+
+.category_box{
+    padding: 30px 180px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.category_item{
+    cursor: pointer;
+    width: 146px;
+    height: 43px;
+    margin:10px;
+    padding-top: 10px;
+    font-size: 20px;
+    box-shadow: 3px 3px 3px rgba(0,58,58,58);
+    color: rgb(84,84,84);
+    z-index: 1;
+    text-align: center;
+}
+
+.category_item.category_item_highlight{
+    background-color: rgb(52,175,244);
+    color: white;
+}
+
+.news_box{
+    padding: 20px 180px;
+}

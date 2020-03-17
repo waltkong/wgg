@@ -1,0 +1,32 @@
+
+<link rel="stylesheet" href="__CDN__/assets/pc/css/component/news_list.css?v={$asset_version}">
+
+<div class="news_list_box">
+    {foreach name="news_list" item="vo" key="k"}
+    <div class="news_item">
+        <div class="news_image">
+            <img src="__CDN__/assets/pc/image/首页切图/素材切图/16.png">
+            <div class="news_time_box">
+                <div class="news_time_date">
+                    {$vo.create_date}
+                </div>
+                <div class="news_time_year">
+                    {$vo.create_year_month}
+                </div>
+            </div>
+        </div>
+        <div class="news_item_content">
+            <div class="news_item_title">
+                {$vo.name}
+            </div>
+            <div class="news_item_description">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.description}
+            </div>
+            <div class="news_item_see_detail">
+                查看详情 >>
+            </div>
+        </div>
+    </div>
+    {/foreach}
+
+</div>

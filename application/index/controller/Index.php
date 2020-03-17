@@ -23,6 +23,8 @@ class Index extends BaseController
         $this->req = request()->param(false);
         $this->logic = new IndexLogic();
 
+        $this->assign('highlight_menu',1);
+
     }
 
     public function index()
@@ -38,6 +40,9 @@ class Index extends BaseController
 
         $news_list = $this->logic->news_list(3);
         $this->assign('news_list',$news_list);
+
+        $case_list = $this->logic->case_list(3);
+        $this->assign('case_list',$case_list);
 
         return $this->view->fetch();
     }
