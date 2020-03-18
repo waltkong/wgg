@@ -5,6 +5,7 @@ namespace app\index\controller;
 
 use app\index\logic\NewsLogic;
 use think\Request;
+use app\index\logic\ContactusLogic;
 
 class News extends BaseController
 {
@@ -52,6 +53,12 @@ class News extends BaseController
         ];
         $this->assign("params",$params);
 
+        $contactlogic = new ContactusLogic();
+        $seo_info = $contactlogic->seo_info();
+        $this->assign('seo_title',$seo_info['seo_news_title']);
+        $this->assign('seo_description',$seo_info['seo_news_description']);
+        $this->assign('seo_keyword',$seo_info['seo_news_keyword']);
+
         return $this->view->fetch();
     }
 
@@ -72,7 +79,9 @@ class News extends BaseController
         $recommend_news_list = $this->logic->news_list([],1,5,['order'=>'click_count']);
         $this->assign('recommend_news_list',$recommend_news_list['data']);
 
-
+        $this->assign('seo_title',$row['name'] ?? '');
+        $this->assign('seo_description',$row['description'] ?? '');
+        $this->assign('seo_keyword',$row['keyword'] ?? '');
 
         return $this->view->fetch();
     }

@@ -77,31 +77,40 @@ class ContactusLogic extends BaseLogic{
     ];
 
 
+    static $company_info;
+    static $seo_info;
 
     public function company_info(){
         $defalut = self::$company_defaluts;
-        $list = (new Config_model)->where('group','company_info')->select();
-        $list = collection($list)->toArray();
-        foreach ($list as $k => $item){
-            $defalut[$item['config_key']] = $item['config_value'];
+        if(empty(self::$company_info)){
+            $list = (new Config_model)->where('group','company_info')->select();
+            $list = collection($list)->toArray();
+            foreach ($list as $k => $item){
+                $defalut[$item['config_key']] = $item['config_value'];
 
-            if($item['config_key'] == 'image_url'){
-                $defalut['image_array'] = explode(',',$item['config_value']);
+                if($item['config_key'] == 'image_url'){
+                    $defalut['image_array'] = explode(',',$item['config_value']);
+                }
+
             }
-
+            self::$company_info = $defalut;
         }
-        return $defalut;
+        return self::$company_info;
     }
 
 
     public function seo_info(){
         $seo = self::$register_seo_key;
-        $list = (new Config_model)->where('group','seo_info')->select();
-        $list = collection($list)->toArray();
-        foreach ($list as $k => $item){
-            $seo[$item['config_key']] = $item['config_value'];
+
+        if(empty(self::$seo_info)){
+            $list = (new Config_model)->where('group','seo_info')->select();
+            $list = collection($list)->toArray();
+            foreach ($list as $k => $item){
+                $seo[$item['config_key']] = $item['config_value'];
+            }
+            self::$seo_info = $seo;
         }
-        return $seo;
+        return self::$seo_info ;
     }
 
 

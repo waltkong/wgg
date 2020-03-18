@@ -3,6 +3,7 @@
 namespace app\index\controller;
 
 
+use app\index\logic\ContactusLogic;
 use app\index\logic\IndexLogic;
 use think\Request;
 
@@ -43,6 +44,13 @@ class Index extends BaseController
 
         $case_list = $this->logic->case_list(3);
         $this->assign('case_list',$case_list);
+
+
+        $contactlogic = new ContactusLogic();
+        $seo_info = $contactlogic->seo_info();
+        $this->assign('seo_title',$seo_info['seo_index_title']);
+        $this->assign('seo_description',$seo_info['seo_index_description']);
+        $this->assign('seo_keyword',$seo_info['seo_index_keyword']);
 
         return $this->view->fetch();
     }

@@ -28,6 +28,12 @@ class Contactus extends BaseController
         $this->assign('banner',$banner);
         $this->assign('highlight_menu',6);
 
+        $contactlogic = new ContactusLogic();
+        $seo_info = $contactlogic->seo_info();
+        $this->assign('seo_title',$seo_info['seo_aboutus_title']);
+        $this->assign('seo_description',$seo_info['seo_aboutus_description']);
+        $this->assign('seo_keyword',$seo_info['seo_aboutus_keyword']);
+
     }
 
     public function index()

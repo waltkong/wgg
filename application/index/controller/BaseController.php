@@ -3,6 +3,7 @@ namespace app\index\controller;
 
 use app\common\controller\Frontend;
 use app\index\logic\BaseLogic;
+use app\index\logic\ContactusLogic;
 use think\Request;
 
 class  BaseController extends Frontend{
@@ -27,6 +28,8 @@ class  BaseController extends Frontend{
 
         $this->logic->insertVisitLog();
 
+        $this->AssignCompanyConfig();
+
     }
 
     protected function menuData(){
@@ -37,6 +40,12 @@ class  BaseController extends Frontend{
 
         $this->assign('now_solution',$solution_list[0]);
         $this->assign('now_product',$product_list[0]);
+    }
+
+    protected function AssignCompanyConfig(){
+        $contactlogic = new ContactusLogic();
+        $company_info = $contactlogic->company_info();
+        $this->assign('page_company_info',$company_info);
     }
 
 

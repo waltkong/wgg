@@ -4,6 +4,7 @@ namespace app\index\controller;
 
 use app\index\logic\CustomcaseLogic;
 use think\Request;
+use app\index\logic\ContactusLogic;
 
 class Customcase extends BaseController
 {
@@ -50,6 +51,14 @@ class Customcase extends BaseController
         ];
         $this->assign("params",$params);
 
+
+        $contactlogic = new ContactusLogic();
+        $seo_info = $contactlogic->seo_info();
+        $this->assign('seo_title',$seo_info['seo_customcase_title']);
+        $this->assign('seo_description',$seo_info['seo_customcase_description']);
+        $this->assign('seo_keyword',$seo_info['seo_customcase_keyword']);
+
+
         return $this->view->fetch();
     }
 
@@ -68,6 +77,11 @@ class Customcase extends BaseController
 
         $recommend_cases_list = $this->logic->case_list([],1,5,['order'=>'click_count']);
         $this->assign('recommend_cases_list',$recommend_cases_list['data']);
+
+
+        $this->assign('seo_title',$row['name'] ?? '');
+        $this->assign('seo_description',$row['description'] ?? '');
+        $this->assign('seo_keyword',$row['keyword'] ?? '');
 
         return $this->view->fetch();
     }
