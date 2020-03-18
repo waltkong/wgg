@@ -20,7 +20,9 @@ php think crud -t music_like -c music/like -m music/like_model --relation=user  
 php think crud -t music_collection -c music/collection -m music/collection_model --relation=user   --relationforeignkey=user_id 
 
 php think crud -t web_product -c web/product -m web/product_model
-php think menu -c music/collection
+
+php think crud -t web_config -c web/config -m web/config_model
+php think menu -c web/config
 
 
 php think menu -c music/ad

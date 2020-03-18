@@ -1,0 +1,108 @@
+.nav_container{
+    max-height: 500px;
+}
+
+.nav_container img{
+    max-height: 500px;
+}
+
+.main_box{
+    margin-top: 50px;
+    padding: 0 100px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+.main_left{
+    width: 156px;
+    height: 575px;
+    background-color: rgb(249,249,249);
+}
+
+.main_left_item{
+    cursor: pointer;
+    padding: 10px;
+    height: 46px;
+    font-size: 20px;
+    background-color: rgb(237,237,237);
+    color: rgb(73,73,73);
+    text-align: center;
+}
+
+.main_left_item a{
+    text-decoration: none;
+}
+
+.main_left_item.category_item_highlight{
+    background-color: rgb(52,175,244);
+    color: white;
+}
+
+.main_right{
+    margin-left: 60px;
+    width: 850px;
+}
+
+.info_title_text{
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(79,79,79);
+}
+
+.company_description{
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgb(64,64,64);
+}
+
+.culture_box{
+    margin-top: 20px;
+}
+
+.culture_box .culture_item{
+    margin-top: 10px;
+    padding: 3px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+
+.culture_item_text{
+    width: 126px;
+    height: 33px;
+    padding: 5px;
+    background-color: rgb(52,175,244);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.culture_item_name{
+    margin-left: 15px;
+    color: rgb(64,64,64);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Certificates_box{
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.Certificates_box_item{
+    max-width: 33%;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 首页 </title>
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/common.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/contactus_index.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
+</head>
+
+
+<body>
+<div class="container" name="top">
+    {include file='common/header' /}
+
+    <div class="nav_container">
+        <img src="{$banner.image_url}" alt="{$banner.name}" />
+    </div>
+
+    <div class="main_box">
+
+        <div class="main_left">
+            <div class="main_left_item {if condition='1 eq $this_category_id'} category_item_highlight {/if}">
+                <a href="/index/contactus/index">公司简介</a>
+            </div>
+            <div class="main_left_item {if condition='2 eq $this_category_id'} category_item_highlight {/if}">
+                 <a href="/index/contactus/contact_us">联系我们</a>
+            </div>
+        </div>
+
+        <div class="main_right">
+            <div class="info_title_text">
+                公司简介 | About Gezi
+            </div>
+
+            <div class="company_description">
+                {$row.company_description}
+            </div>
+
+            <div class="info_title_text">
+                公司文化 | culture
+            </div>
+
+
+            <div class="culture_box">
+                <div class="culture_item">
+                    <div class="culture_item_text">
+                        公司精神
+                    </div>
+                    <div class="culture_item_name">
+                        {$row.company_spirit}
+                    </div>
+                </div>
+                <div class="culture_item">
+                    <div class="culture_item_text">
+                        核心价值观
+                    </div>
+                    <div class="culture_item_name">
+                        {$row.company_value_view}
+                    </div>
+                </div>
+                <div class="culture_item">
+                    <div class="culture_item_text">
+                        经营理念
+                    </div>
+                    <div class="culture_item_name">
+                        {$row.company_manage_theory}
+                    </div>
+                </div>
+                <div class="culture_item">
+                    <div class="culture_item_text">
+                        公司愿景
+                    </div>
+                    <div class="culture_item_name">
+                        {$row.company_dream}
+                    </div>
+                </div>
+            </div>
+
+            <div class="info_title_text">
+                荣誉证书 | Certificates
+            </div>
+
+            <div class="Certificates_box">
+                {foreach name="row.image_array" item="vo" key="k"}
+                <div class="Certificates_box_item">
+                    <img src="{$vo}" />
+                </div>
+                {/foreach}
+            </div>
+
+        </div>
+
+    </div>
+
+
+    {include file='common/bottom' /}
+
+</div>
+
+
+</body>
+
+
+<script>
+
+    var params = {
+        'category_id':"{$this_category_id}"
+    };
+
+    function windows_jump() {
+        var url = "/index/contactus/index?";
+        for(var i in params){
+            if(params[i] != ''){
+                url += '&'+ i + '=' + params[i];
+            }
+        }
+        window.location.href= url;
+    }
+
+    function change_category_id(category_id) {
+        params.pageIndex = 1;
+        params.category_id = category_id;
+        windows_jump();
+    }
+
+
+
+
+</script>
+</html>

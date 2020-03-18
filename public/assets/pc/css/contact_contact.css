@@ -1,0 +1,177 @@
+.nav_container{
+    max-height: 500px;
+}
+
+.nav_container img{
+    max-height: 500px;
+}
+
+.main_box{
+    margin-top: 50px;
+    padding: 0 100px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+.main_left{
+    width: 156px;
+    height: 575px;
+    background-color: rgb(249,249,249);
+}
+
+.main_left_item{
+    cursor: pointer;
+    padding: 10px;
+    height: 46px;
+    font-size: 20px;
+    background-color: rgb(237,237,237);
+    color: rgb(73,73,73);
+    text-align: center;
+}
+
+.main_left_item a{
+    text-decoration: none;
+}
+
+.main_left_item.category_item_highlight{
+    background-color: rgb(52,175,244);
+    color: white;
+}
+
+.main_right{
+    margin-left: 60px;
+    width: 850px;
+}
+
+
+.right_info_item{
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.right_info_item .info_icon{
+    width: 22px;
+    height: 22px;
+}
+
+.right_info_item .info_text{
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.right_info_item .info_name{
+    margin-left: 10px;
+    font-size: 20px;
+    color: rgb(89,89,89);
+
+}
+
+.map{
+    margin-top: 20px;
+    width: 550px;
+    height: 250px;
+    background-color: #0a6aa1;
+}
+
+.info_title_text{
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(79,79,79);
+}
+
+.form{
+    margin-top: 20px;
+}
+
+.main_box input{
+
+    width: 450px;
+    height: 35px;
+
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.form textarea {
+    width: 450px;
+    height: 100px;
+    padding: 5px 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    font-size: 20px;
+    text-align: left;
+}
+
+.form select {
+    padding: 1px 150px ;
+    width: 450px;
+    height: 35px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+    text-align-last: center;
+}
+
+.form select option{
+
+    text-align: center;
+    font-size: 18px;
+}
+
+.form button {
+    background-color: rgb(52,175,244);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 4px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.form_item{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.form_text{
+    margin: 10px 5px;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+
+}
+
+.form_input{
+    width: 200px;
+}
+
+.form_item.need_area{
+    width: 450px;
+    height: 300px;
+    margin-top: -70px;
+}
+
+.form_btn{
+    margin-top: -50px;
+    margin-left: 230px;
+}

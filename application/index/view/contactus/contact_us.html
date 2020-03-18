@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 首页 </title>
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/common.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/contact_contact.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
+
+    <script src="__CDN__/assets/pc/layer/layer.js?v={$asset_version}"></script>
+
+</head>
+
+
+<body>
+<div class="container" name="top">
+    {include file='common/header' /}
+
+    <div class="nav_container">
+        <img src="{$banner.image_url}" alt="{$banner.name}" />
+    </div>
+
+    <div class="main_box">
+
+        <div class="main_left">
+            <div class="main_left_item {if condition='1 eq $this_category_id'} category_item_highlight {/if}">
+                <a href="/index/contactus/index">公司简介</a>
+            </div>
+            <div class="main_left_item {if condition='2 eq $this_category_id'} category_item_highlight {/if}">
+                <a href="/index/contactus/contact_us">联系我们</a>
+            </div>
+        </div>
+
+        <div class="main_right">
+
+            <div class="right_info_item">
+                <div class="info_icon">
+                    <img src="__CDN__/assets/pc/image/联系我们/phone.png">
+                </div>
+                <div class="info_text">
+                    联系电话：
+                </div>
+                <div class="info_name">
+                    {$row.contact_phone}
+                </div>
+            </div>
+
+            <div class="right_info_item">
+                <div class="info_icon">
+                    <img src="__CDN__/assets/pc/image/联系我们/phone2.png">
+                </div>
+                <div class="info_text">
+                    商务联系：
+                </div>
+                <div class="info_name">
+                    {$row.contact_mobile}（{$row.contact_people}）
+                </div>
+            </div>
+
+            <div class="right_info_item">
+                <div class="info_icon">
+                    <img src="__CDN__/assets/pc/image/联系我们/email.png">
+                </div>
+                <div class="info_text">
+                    官方邮箱：
+                </div>
+                <div class="info_name">
+                    {$row.company_email}
+                </div>
+            </div>
+
+            <div class="right_info_item">
+                <div class="info_icon">
+                    <img src="__CDN__/assets/pc/image/联系我们/address.png">
+                </div>
+                <div class="info_text">
+                    商务联系：
+                </div>
+                <div class="info_name">
+                    {$row.company_address}
+                </div>
+            </div>
+
+            <div class="map">
+            </div>
+
+            <div class="info_title_text">
+                在线留言 | Leave message
+            </div>
+
+            <div class="form">
+                <div class="form_item">
+                    <div class="form_text">
+                        姓名：
+                    </div>
+                    <div class="form_input">
+                        <input id="username" name='username' value=""    autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="form_text">
+                        手机号码：
+                    </div>
+                    <div class="form_input">
+                        <input id="phone"  name='phone' value=""    autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="form_text">
+                        回电时间：
+                    </div>
+                    <div class="form_input">
+                        <select id="reply_time" name="reply_time">
+                            <option value="无">--选择时间--</option>
+                            <option value="9:00-12:00">9:00-12:00</option>
+                            <option value="12:00-18:00">12:00-18:00</option>
+                            <option value="18:00-21:00">18:00-21:00</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form_item need_area">
+                    <div class="form_text">
+                        您的需求：
+                    </div>
+                    <div class="form_input">
+                        <textarea name="need" id="need">
+
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="form_btn">
+                    <button onclick="submitForm()">提交</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    {include file='common/bottom' /}
+
+</div>
+
+
+</body>
+
+
+<script>
+
+  function submitForm() {
+      var ajaxdata = {
+          username: $('#username').val(),
+          phone: $('#phone').val(),
+          reply_time: $('#reply_time').val(),
+          need: $('#need').val(),
+      };
+      $.ajax({
+          type: "POST",
+          url: "/index/contactus/do_message",
+          data: ajaxdata,
+          dataType: "json",
+          success: function(response){
+              if(response.code ==1){
+
+                  $('#username').val('');
+                  $('#phone').val('');
+                  $('#reply_time').val('');
+                  $('#need').val('');
+
+                  layer.msg("提交成功");
+              }else{
+                  layer.msg(response.msg);
+              }
+          }
+      });
+  }
+
+
+
+
+</script>
+</html>
