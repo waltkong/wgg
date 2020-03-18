@@ -7,6 +7,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 extend: {
                     index_url: 'web/config/index' + location.search,
                     add_url: 'web/config/add',
+                    seoadd_url: 'web/config/seoadd',
                     edit_url: 'web/config/edit',
                     del_url: 'web/config/del',
                     multi_url: 'web/config/multi',
@@ -36,7 +37,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'group', title: __('Group')},
                         {field: 'config_key', title: __('Config_key')},
                         {field: 'config_name', title: __('Config_name')},
-                        {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'updatetime', title: __('Updatetime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'operate',
                             title: __('Operate'),
@@ -51,6 +51,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         }
                     ]
                 ]
+            });
+
+
+            //添加seo编辑点击事件
+            $(document).on("click",".btn-seoadd",function(){
+                Fast.api.open($.fn.bootstrapTable.defaults.extend.seoadd_url,'seo编辑',{})
             });
 
             // 为表格绑定事件
@@ -114,6 +120,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
             // 为表格绑定事件
             Table.api.bindevent(table);
+
         },
         add: function () {
             Controller.api.bindevent();

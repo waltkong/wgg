@@ -24,9 +24,40 @@ class ContactusLogic extends BaseLogic{
         'company_address' => '公司地址',
         'company_address_long' => '公司地址经度',
         'company_address_lat' => '公司地址纬度',
+        'company_logo_image' => '公司logo',
+        'company_copyright' => '公司版权信息',
+        'company_wechat_image' => '公司二维码',
     ];
 
-    static $defaluts = [
+
+    static $register_seo_key = [
+        'seo_index_title' => '首页title',
+        'seo_index_description' => '首页description',
+        'seo_index_keyword' => '首页keyword',
+
+        'seo_solution_title' => '解决方案title',
+        'seo_solution_description' => '解决方案description',
+        'seo_solution_keyword' => '解决方案keyword',
+
+        'seo_product_title' => '产品中心title',
+        'seo_product_description' => '产品中心description',
+        'seo_product_keyword' => '产品中心keyword',
+
+        'seo_customcase_title' => '客户案例title',
+        'seo_customcase_description' => '客户案例description',
+        'seo_customcase_keyword' => '客户案例keyword',
+
+        'seo_news_title' => '新闻资讯title',
+        'seo_news_description' => '新闻资讯description',
+        'seo_news_keyword' => '新闻资讯keyword',
+
+        'seo_aboutus_title' => '关于我们title',
+        'seo_aboutus_description' => '关于我们description',
+        'seo_aboutus_keyword' => '关于我们keyword',
+    ];
+
+
+    static $company_defaluts = [
         'company_description' => '',
         'company_spirit' => '',
         'company_value_view' => '',
@@ -40,10 +71,15 @@ class ContactusLogic extends BaseLogic{
         'company_address' => '',
         'company_address_long' => '',
         'company_address_lat' => '',
+        'company_logo_image' => '',
+        'company_copyright' => '',
+        'company_wechat_image' => '',
     ];
 
+
+
     public function company_info(){
-        $defalut = self::$defaluts;
+        $defalut = self::$company_defaluts;
         $list = (new Config_model)->where('group','company_info')->select();
         $list = collection($list)->toArray();
         foreach ($list as $k => $item){
@@ -55,6 +91,17 @@ class ContactusLogic extends BaseLogic{
 
         }
         return $defalut;
+    }
+
+
+    public function seo_info(){
+        $seo = self::$register_seo_key;
+        $list = (new Config_model)->where('group','seo_info')->select();
+        $list = collection($list)->toArray();
+        foreach ($list as $k => $item){
+            $seo[$item['config_key']] = $item['config_value'];
+        }
+        return $seo;
     }
 
 

@@ -44,7 +44,7 @@ class Config extends Backend
 
 
     public function add(){
-        $row = $this->getRow();
+        $row = $this->getCompanyRow();
         $this->view->assign("row", $row);
 
         if ($this->request->isPost()) {
@@ -92,10 +92,57 @@ class Config extends Backend
     }
 
 
+    public function seoadd(){
+        $row = (new ContactusLogic())->seo_info();
+        $this->view->assign("row", $row);
+
+        if ($this->request->isPost()) {
+            $params = $this->request->post("row/a");
+            if ($params) {
+                $result = false;
+                Db::startTrans();
+                try {
+
+                    $updates = [];
+                    foreach ($params as $key => $param){
+                        $updates[] = [
+                            'group' => 'seo_info',
+                            'config_key' => $key,
+                            'config_name' => ContactusLogic::$register_seo_key[$key] ?? '-',
+                            'config_value' => $param,
+                            'createtime' => time(),
+                            'updatetime' => time(),
+                        ];
+                    }
+                    (new Config_model())->where('group','seo_info')->delete();
+                    $result = (new Config_model())->insertAll($updates);
+
+                    Db::commit();
+                } catch (ValidateException $e) {
+                    Db::rollback();
+                    $this->error($e->getMessage());
+                } catch (PDOException $e) {
+                    Db::rollback();
+                    $this->error($e->getMessage());
+                } catch (Exception $e) {
+                    Db::rollback();
+                    $this->error($e->getMessage());
+                }
+                if ($result !== false) {
+                    $this->success();
+                } else {
+                    $this->error(__('No rows were inserted'));
+                }
+            }
+            $this->error(__('Parameter %s can not be empty', ''));
+        }
+
+        return $this->fetch();
+    }
 
 
-    protected function getRow(){
-        $defalut = ContactusLogic::$defaluts;
+    protected function getCompanyRow(){
+        $defalut = ContactusLogic::$company_defaluts;
 
         $list = (new Config_model())->where('group','company_info')->select();
         $list = collection($list)->toArray();
