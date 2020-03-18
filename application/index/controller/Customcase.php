@@ -57,6 +57,9 @@ class Customcase extends BaseController
     public function detail(){
         $input = $this->req;
         $input['id'] = $input['id'] ?? '';
+
+        $this->logic->shouldUpdateClick();
+
         $row = $this->logic->case_one($input);
         $this->assign('row',$row);
 

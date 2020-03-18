@@ -59,6 +59,10 @@ class News extends BaseController
     public function detail(){
         $input = $this->req;
         $input['id'] = $input['id'] ?? '';
+
+        $this->logic->shouldUpdateClick();
+
+
         $row = $this->logic->news_one($input);
         $this->assign('row',$row);
 

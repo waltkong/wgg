@@ -24,6 +24,12 @@ php think crud -t web_product -c web/product -m web/product_model
 php think crud -t web_config -c web/config -m web/config_model
 php think menu -c web/config
 
+php think crud -t web_message -c web/message -m web/message_model
+php think menu -c web/message
+
+php think crud -t web_visitlog -c web/visitlog -m web/visitlog_model
+php think menu -c web/visitlog
+
 
 php think menu -c music/ad
 php think menu -c music/banner

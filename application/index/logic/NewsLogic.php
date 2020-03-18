@@ -9,8 +9,6 @@ use app\index\repository\AppRepository;
 class NewsLogic extends BaseLogic{
 
 
-
-
     public function news_list($input,$pageIndex,$eachPage,$option=[]){
 
         $default = [
@@ -71,7 +69,14 @@ class NewsLogic extends BaseLogic{
             return $obj;
         };
         $row = $objFunc()->find();
+
         if(!empty($row)){
+
+            if(self::$updateClick){
+                $row->click_count += 1;
+                $row->save();
+            }
+
             if(!empty($row['image_url'])){
                 $row['image_url'] = UrlUtil::getFullUrl($row['image_url']);
             }

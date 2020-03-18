@@ -68,6 +68,12 @@ class CustomcaseLogic extends BaseLogic{
         };
         $row = $objFunc()->find();
         if(!empty($row)){
+
+            if(parent::$updateClick){
+                $row->click_count += 1;
+                $row->save();
+            }
+
             if(!empty($row['image_url'])){
                 $row['image_url'] = UrlUtil::getFullUrl($row['image_url']);
             }

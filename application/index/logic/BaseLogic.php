@@ -3,11 +3,34 @@ namespace app\index\logic;
 
 use app\admin\model\web\Product_model;
 use app\admin\model\web\Solution_model;
+use app\admin\model\web\Visitlog_model;
 use app\common\util\UrlUtil;
 use app\admin\model\web\Banner_model;
 
 
 class BaseLogic{
+
+    static $updateClick = false;
+
+    public function shouldUpdateClick(){
+        self::$updateClick = true;
+    }
+
+    public function insertVisitLog(){
+        //清除100天以前的
+        $cleartime = time() - 3600*24*100 ;
+        (new Visitlog_model)->where('createtime','<',$cleartime);
+
+        $data = [
+            'ip' => request()->ip(),
+            'referer' => $_SERVER['HTTP_REFERER'],
+            'url' => request()->baseUrl(),
+            'full_url' => request()->url(),
+            'group' => request()->controller(),
+            'createtime' => time(),
+        ];
+        (new Visitlog_model)->insert($data);
+    }
 
 
     public function solution_list(){

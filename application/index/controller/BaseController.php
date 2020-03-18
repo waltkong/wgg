@@ -25,6 +25,8 @@ class  BaseController extends Frontend{
 
         $this->menuData();
 
+        $this->logic->insertVisitLog();
+
     }
 
     protected function menuData(){
