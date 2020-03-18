@@ -55,7 +55,18 @@ class Customcase extends BaseController
 
 
     public function detail(){
+        $input = $this->req;
+        $input['id'] = $input['id'] ?? '';
+        $row = $this->logic->case_one($input);
+        $this->assign('row',$row);
 
+        $jump_url = $this->logic->getJumps($input['id']);
+        $this->assign('jump_url',$jump_url);
+
+        $recommend_cases_list = $this->logic->case_list([],1,5,['order'=>'click_count']);
+        $this->assign('recommend_cases_list',$recommend_cases_list['data']);
+
+        return $this->view->fetch();
     }
 
 

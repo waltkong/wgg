@@ -22,7 +22,7 @@
             <div class="cases_item_description">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.description}
             </div>
-            <div class="cases_item_see_detail">
+            <div class="cases_item_see_detail" onclick=goToCasesDetailPage("{$vo.id}")>
                 查看详情 >>
             </div>
         </div>
@@ -30,3 +30,9 @@
     {/foreach}
 
 </div>
+
+<script>
+    function goToCasesDetailPage(id) {
+        window.location.href='/index/customcase/detail/id/'+id;
+    }
+</script>

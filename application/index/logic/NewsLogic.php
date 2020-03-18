@@ -11,7 +11,7 @@ class NewsLogic extends BaseLogic{
 
 
 
-    public function news_list($input,$pageIndex,$eachPage){
+    public function news_list($input,$pageIndex,$eachPage,$option=[]){
 
         $default = [
             'data' => [],
@@ -22,15 +22,23 @@ class NewsLogic extends BaseLogic{
         $pageOffset = ($pageIndex-1)*$eachPage;
         $objFunc = function () use($input){
             $obj = new News_model();
-            if(!empty($input['category_id'])){
+            if(isset($input['category_id']) && !empty($input['category_id'])){
                 $obj = $obj->where('category_id',$input['category_id']);
             }
             return $obj;
         };
         $default['total'] = $objFunc()->count();
-        $list = $objFunc()
-            ->order('createtime', 'desc')
-            ->limit($pageOffset,$eachPage)->select();
+
+        if(isset($option['order'])){
+            $list = $objFunc()
+                ->order($option['order'], 'desc')
+                ->limit($pageOffset,$eachPage)->select();
+        }else{
+            $list = $objFunc()
+                ->order('createtime', 'desc')
+                ->limit($pageOffset,$eachPage)->select();
+        }
+
         $list = collection($list)->toArray();
 
         foreach ($list as $k => $v){
@@ -51,6 +59,30 @@ class NewsLogic extends BaseLogic{
             'name' => '全部新闻'
         ]);
         return $arr;
+    }
+
+
+    public function news_one($input){
+        $objFunc = function () use($input){
+            $obj = new News_model();
+            if(!empty($input['id'])){
+                $obj = $obj->where('id',$input['id']);
+            }
+            return $obj;
+        };
+        $row = $objFunc()->find();
+        if(!empty($row)){
+            if(!empty($row['image_url'])){
+                $row['image_url'] = UrlUtil::getFullUrl($row['image_url']);
+            }
+            $row['create_date'] = date('Y-m-d',$row['createtime']);
+        }
+        return $row;
+    }
+
+
+    public function getJumps($id){
+        return parent::getJumpUrls($id,News_model::class);
     }
 
 

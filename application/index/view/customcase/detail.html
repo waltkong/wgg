@@ -2,9 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 首页 </title>
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/common.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/customcase_detail.css?v={$asset_version}">
+
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+
+
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
 </head>
+
+
 <body>
+<div class="container" name="top">
+    {include file='common/header' /}
+
+    <div class="nav_container">
+        <img src="{$banner.image_url}" alt="{$banner.name}" />
+    </div>
+
+    <div class="main_box">
+
+        <div>
+            <div class="cases_box">
+                <div>
+                    <div class="cases_header_box">
+                        <h1 class="cases_header_text">
+                            {$row.name}
+                        </h1>
+                    </div>
+
+                    <div class="time_box">
+                        <div class="time_text">
+                            发布日期：{$row.create_date}
+                        </div>
+                        <div class="click_text">
+                            {$row.click_count}次浏览
+                        </div>
+                    </div>
+
+                    <div class="cases_content_box">
+                        {$row.content}
+                    </div>
+                </div>
+
+                <div class="line_box">
+                </div>
+            </div>
+
+            <div class="simple_paginate_box">
+
+                <div class="simple_paginate_item">
+                    <div class="simple_paginate_item_text">
+                        上一篇：
+                    </div>
+                    <div class="simple_paginate_item_name">
+                        <a href="/index/customcase/detail/id/{$jump_url.prev.id}">{$jump_url.prev.name}</a>
+                    </div>
+                </div>
+
+                <div class="simple_paginate_item">
+                    <div class="simple_paginate_item_text">
+                        下一篇：
+                    </div>
+                    <div class="simple_paginate_item_name">
+                        <a href="/index/customcase/detail/id/{$jump_url.next.id}">{$jump_url.next.name}</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="recommend_box">
+
+            <div class="recommend_head_text">
+                推荐阅读
+            </div>
+
+
+
+            <div class="recommend_cases_list">
+                {foreach name="recommend_cases_list" item="vo" key="k"}
+                <div class="recommend_cases_item">
+                    <a href="/index/customcase/detail/id/{$vo.id}">{$vo.name}</a>
+                </div>
+                {/foreach}
+
+            </div>
+
+
+            <div class="recommend_head_text">
+                相关推荐
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    {include file='common/bottom' /}
+
+</div>
+
 
 </body>
+
+
+<script>
+
+
+
+
+</script>
 </html>

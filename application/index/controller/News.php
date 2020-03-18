@@ -57,7 +57,20 @@ class News extends BaseController
 
 
     public function detail(){
+        $input = $this->req;
+        $input['id'] = $input['id'] ?? '';
+        $row = $this->logic->news_one($input);
+        $this->assign('row',$row);
 
+        $jump_url = $this->logic->getJumps($input['id']);
+        $this->assign('jump_url',$jump_url);
+
+        $recommend_news_list = $this->logic->news_list([],1,5,['order'=>'click_count']);
+        $this->assign('recommend_news_list',$recommend_news_list['data']);
+
+
+
+        return $this->view->fetch();
     }
 
 

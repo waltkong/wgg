@@ -80,4 +80,22 @@ class BaseLogic{
     }
 
 
+    //获取 上一页 或者 下一页
+    public function getJumpUrls($id,$modelClass){
+        $prev = $modelClass::where('id','<',$id)->order('createtime', 'desc')
+            ->limit(0,1)->select();
+        if(empty($prev)){
+            $prev =   $modelClass::where('id','=',$id)->select();
+        }
+        $next=  $modelClass::where('id','>',$id)->order('createtime', 'asc')
+            ->limit(0,1)->select();
+        if(empty($next)){
+            $next =   $modelClass::where('id','=',$id)->select();
+        }
+        return [
+            'prev' => $prev[0],
+            'next' => $next[0],
+        ];
+    }
+
 }

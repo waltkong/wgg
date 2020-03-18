@@ -22,7 +22,7 @@
             <div class="news_item_description">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.description}
             </div>
-            <div class="news_item_see_detail">
+            <div class="news_item_see_detail" onclick=goToNewsDetailPage("{$vo.id}")>
                 查看详情 >>
             </div>
         </div>
@@ -30,3 +30,9 @@
     {/foreach}
 
 </div>
+
+<script>
+    function goToNewsDetailPage(id) {
+        window.location.href='/index/news/detail/id/'+id;
+    }
+</script>

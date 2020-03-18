@@ -4,7 +4,6 @@ namespace app\index\logic;
 use app\admin\model\web\Banner_model;
 use app\admin\model\web\Cases_model;
 use app\admin\model\web\Company_model;
-use app\admin\model\web\News_model;
 use app\common\util\UrlUtil;
 use app\index\repository\AppRepository;
 
@@ -14,7 +13,7 @@ class CustomcaseLogic extends BaseLogic{
        return AppRepository::$case_category;
     }
 
-    public function case_list($input,$pageIndex,$eachPage){
+    public function case_list($input,$pageIndex,$eachPage,$option=[]){
 
         $default = [
             'data' => [],
@@ -31,9 +30,18 @@ class CustomcaseLogic extends BaseLogic{
             return $obj;
         };
         $default['total'] = $objFunc()->count();
-        $list = $objFunc()
-            ->order('createtime', 'desc')
-            ->limit($pageOffset,$eachPage)->select();
+
+
+        if(isset($option['order'])){
+            $list = $objFunc()
+                ->order($option['order'], 'desc')
+                ->limit($pageOffset,$eachPage)->select();
+        }else{
+            $list = $objFunc()
+                ->order('createtime', 'desc')
+                ->limit($pageOffset,$eachPage)->select();
+        }
+
         $list = collection($list)->toArray();
 
         foreach ($list as $k => $v){
@@ -47,6 +55,30 @@ class CustomcaseLogic extends BaseLogic{
         $default['count'] = count($list);
         return $default;
 
+    }
+
+
+    public function case_one($input){
+        $objFunc = function () use($input){
+            $obj = new Cases_model();
+            if(!empty($input['id'])){
+                $obj = $obj->where('id',$input['id']);
+            }
+            return $obj;
+        };
+        $row = $objFunc()->find();
+        if(!empty($row)){
+            if(!empty($row['image_url'])){
+                $row['image_url'] = UrlUtil::getFullUrl($row['image_url']);
+            }
+            $row['create_date'] = date('Y-m-d',$row['createtime']);
+        }
+        return $row;
+    }
+
+
+    public function getJumps($id){
+        return parent::getJumpUrls($id,Cases_model::class);
     }
 
 }
