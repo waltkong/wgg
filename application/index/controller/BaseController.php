@@ -35,12 +35,10 @@ class  BaseController extends Frontend{
 
     protected function menuData(){
         $solution_list = $this->logic->solution_list();
-        $this->assign('solution_list',$solution_list);
-        $product_list = $this->logic->product_list();
-        $this->assign('product_list',$product_list);
+        $this->assign('menu_solution_list',$solution_list);
 
-        $this->assign('now_solution',$solution_list[0]);
-        $this->assign('now_product',$product_list[0]);
+        $product_category_list = $this->logic->product_category_list();
+        $this->assign('menu_product_category_list',$product_category_list);
 
         $this->assign('menu_customcase_category_list',AppRepository::$case_category);
         $this->assign('menu_news_category_list',AppRepository::$news_category);

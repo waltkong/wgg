@@ -9,6 +9,7 @@ return [
     'Keyword'      => '关键词',
     'Description'  => '描述',
     'Content'      => '内容',
+    'Template'  => '模板名',
     'Createtime'   => '创建时间',
     'Updatetime'   => '更新时间',
     'Deletetime'   => '删除时间'

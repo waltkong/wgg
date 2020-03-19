@@ -20,7 +20,7 @@
                 </div>
 
 
-                {foreach name="solution_list" item="vo" key="k"}
+                {foreach name="menu_solution_list" item="vo" key="k"}
                 {if condition="$k<4"}
                 <div class="bottom_category_body_text" >
                     <a href="{:url('index/solution/detail',['id'=>$vo['id']])}" >
@@ -38,10 +38,10 @@
                 </div>
 
 
-                {foreach name="product_list" item="vo" key="k"}
+                {foreach name="menu_product_category_list" item="vo" key="k"}
                 {if condition="$k<4"}
                 <div class="bottom_category_body_text" >
-                    <a href="{:url('index/product/detail',['id'=>$vo['id']])}" >
+                    <a href="{:url('index/product/product_category_index',['id'=>$vo['id']])}" >
                         {$vo.name}
                     </a>
                 </div>

@@ -198,6 +198,10 @@
     cursor: pointer;
 }
 
+.single_product_see_more a{
+    text-decoration: none;
+}
+
 .case_box{
     padding: 20px 160px;
 

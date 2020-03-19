@@ -31,12 +31,5 @@ php think crud -t web_visitlog -c web/visitlog -m web/visitlog_model
 php think menu -c web/visitlog
 
 
-php think menu -c music/ad
-php think menu -c music/banner
-php think menu -c music/cd
-php think menu -c music/singer
-php think menu -c music/song
-php think menu -c music/tag
-php think menu -c music/message
-php think menu -c music/like
-php think menu -c music/collection
+php think crud -t web_productcategory -c web/productcategory -m web/productcategory_model
+php think menu -c web/productcategory

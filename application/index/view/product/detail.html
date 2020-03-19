@@ -28,27 +28,18 @@
 <div class="container" name="top">
     {include file='common/header' /}
 
-    <div class="nav_container">
-        <img src="{$banner.image_url}" alt="{$banner.name}" />
+    <div class="breadcrumb_box">
+        当前位置：<a href="/index/index/index">首页</a>><a href="{:url('index/product/product_category_index')}">产品中心</a>
+        ><a href="{:url('index/product/product_category_index',['id'=>$row['category_id']])}">{$row.category_name}</a>
+        ><a href="#"><span class="breadcrumb_title_text">{$row.name}</span></a>
     </div>
 
 
-    <div class="category_box">
 
-        {foreach name="product_list" item="vo" key="k"}
-        <div class="category_item  {if condition='$vo.id eq $row.id '} category_item_highlight {/if} "
-             onclick="change_category_id('{$vo.id}')">
-            {$vo.name}
-        </div>
-        {/foreach}
-
-    </div>
 
     <div class="main_box">
-
+        {$row.content}
     </div>
-
-
 
 
 

@@ -34,12 +34,11 @@
             <ul class="row list-inline plupload-preview" id="p-single_image"></ul>
         </div>
     </div>
-
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Banner_image')}:</label>
         <div class="col-xs-12 col-sm-8">
             <div class="input-group">
-                <input id="c-banner_image" class="form-control" size="50" name="row[banner_image]" type="text" value="">
+                <input id="c-banner_image" class="form-control" size="50" name="row[banner_image]" type="text">
                 <div class="input-group-addon no-border no-padding">
                     <span><button type="button" id="plupload-banner_image" class="btn btn-danger plupload" data-input-id="c-banner_image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-banner_image"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
                     <span><button type="button" id="fachoose-banner_image" class="btn btn-primary fachoose" data-input-id="c-banner_image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
@@ -47,6 +46,14 @@
                 <span class="msg-box n-right" for="c-banner_image"></span>
             </div>
             <ul class="row list-inline plupload-preview" id="p-banner_image"></ul>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Util')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-util" class="form-control" rows="5" name="row[util]" cols="50"></textarea>
+            用|分开
         </div>
     </div>
 
@@ -59,27 +66,9 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Description')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <textarea id="c-description" class="form-control " rows="5" name="row[description]" cols="50"></textarea>
+            <input id="c-description" class="form-control" name="row[description]" type="text">
         </div>
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Content')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <textarea id="c-content" class="form-control editor" rows="5" name="row[content]" cols="50"></textarea>
-        </div>
-    </div>
-
-
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Template')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            {:build_radios('row[template]',
-            [''=>'无模板', '智慧食堂'=>'智慧食堂','自选餐'=>'自选餐','预定套取餐'=>'预定套取餐','自助餐'=>'自助餐'],
-            '')}
-        </div>
-    </div>
-
-
     <div class="form-group layer-footer">
         <label class="control-label col-xs-12 col-sm-2"></label>
         <div class="col-xs-12 col-sm-8">

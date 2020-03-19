@@ -4,6 +4,7 @@ namespace app\index\logic;
 use app\admin\model\web\Product_model;
 use app\admin\model\web\Solution_model;
 use app\admin\model\web\Visitlog_model;
+use app\admin\model\web\Productcategory_model;
 use app\common\util\UrlUtil;
 use app\admin\model\web\Banner_model;
 
@@ -33,10 +34,10 @@ class BaseLogic{
     }
 
 
-    public function solution_list(){
+    public function solution_list($count=20){
         $obj = new Solution_model();
         $list = $obj->order('id', 'asc')
-            ->limit(0,20)
+            ->limit(0,$count)
             ->field('id,name,logo_image,single_image')
             ->select();
         $list = collection($list)->toArray();
@@ -47,10 +48,12 @@ class BaseLogic{
         return $list;
     }
 
-    public function product_list(){
-        $obj = new Product_model();
+
+
+    public function product_category_list($count=20){
+        $obj = new Productcategory_model();
         $list = $obj->order('id', 'asc')
-            ->limit(0,20)
+            ->limit(0,$count)
             ->field('id,name,logo_image,single_image,util')
             ->select();
         $list = collection($list)->toArray();

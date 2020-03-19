@@ -5,12 +5,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             // 初始化表格参数配置
             Table.api.init({
                 extend: {
-                    index_url: 'web/product/index' + location.search,
-                    add_url: 'web/product/add',
-                    edit_url: 'web/product/edit',
-                    del_url: 'web/product/del',
-                    multi_url: 'web/product/multi',
-                    table: 'web_product',
+                    index_url: 'web/productcategory/index' + location.search,
+                    add_url: 'web/productcategory/add',
+                    edit_url: 'web/productcategory/edit',
+                    del_url: 'web/productcategory/del',
+                    multi_url: 'web/productcategory/multi',
+                    table: 'web_productcategory',
                 }
             });
 
@@ -33,7 +33,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         {checkbox: true},
                         {field: 'id', title: __('Id'),sortable:true},
-                        {field: 'productcategory.name', title: '分类'},
                         {field: 'name', title: __('Name')},
                         {field: 'logo_image', title: __('Logo_image'), events: Table.api.events.image, formatter: Table.api.formatter.image},
                         {field: 'single_image', title: __('Single_image'), events: Table.api.events.image, formatter: Table.api.formatter.image},
@@ -59,7 +58,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
             // 初始化表格
             table.bootstrapTable({
-                url: 'web/product/recyclebin' + location.search,
+                url: 'web/productcategory/recyclebin' + location.search,
                 pk: 'id',
                 sortName: 'id',
                 columns: [
@@ -86,7 +85,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                     text: __('Restore'),
                                     classname: 'btn btn-xs btn-info btn-ajax btn-restoreit',
                                     icon: 'fa fa-rotate-left',
-                                    url: 'web/product/restore',
+                                    url: 'web/productcategory/restore',
                                     refresh: true
                                 },
                                 {
@@ -94,7 +93,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                     text: __('Destroy'),
                                     classname: 'btn btn-xs btn-danger btn-ajax btn-destroyit',
                                     icon: 'fa fa-times',
-                                    url: 'web/product/destroy',
+                                    url: 'web/productcategory/destroy',
                                     refresh: true
                                 }
                             ],

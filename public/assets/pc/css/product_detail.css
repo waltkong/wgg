@@ -7,29 +7,24 @@
 }
 
 
-.category_box{
-    padding: 30px 180px;
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    align-items: center;
+.breadcrumb_box{
+    margin-top: 30px;
+    padding: 0 100px;
+    font-size: 22px;
+    color: rgb(55,55,55);
+
 }
 
-.category_item{
-    cursor: pointer;
-    width: 146px;
-    height: 43px;
-    margin:10px;
-    padding-top: 10px;
-    font-size: 20px;
-    box-shadow: 3px 3px 3px rgba(0,58,58,58);
-    color: rgb(84,84,84);
-    z-index: 1;
-    text-align: center;
+.breadcrumb_box a{
+    text-decoration: none;
+    color: rgb(55,55,55);
 }
 
-.category_item.category_item_highlight{
-    background-color: rgb(52,175,244);
-    color: white;
+.breadcrumb_box .breadcrumb_title_text{
+    font-weight: bold;
+}
+
+.main_box{
+    margin-top: 30px;
+    padding: 0 180px;
 }
