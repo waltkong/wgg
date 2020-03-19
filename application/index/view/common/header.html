@@ -72,21 +72,17 @@
                 </a>
             </div>
             <div class="menu_item_box_list dropdown-content" >
+
+
+                {foreach name="menu_customcase_category_list" item="vo" key="k"}
                 <div class="menu_item_box_list_each" >
-                    <a href="{:url('index/customcase/index',['category_id' => 1])}" >
-                        高校/中小学
+                    <a href="{:url('index/customcase/index',['category_id'=>$vo['id']])}" >
+                        {$vo.name}
                     </a>
                 </div>
-                <div class="menu_item_box_list_each" >
-                    <a href="{:url('index/customcase/index',['category_id' => 2])}" >
-                        政府机关
-                    </a>
-                </div>
-                <div class="menu_item_box_list_each" >
-                    <a href="{:url('index/customcase/index',['category_id' => 3])}" >
-                        企事业单位
-                    </a>
-                </div>
+                {/foreach}
+
+
             </div>
             <div class="menu_border_bottom {if $highlight_menu == 4} height_menu {/if}">
             </div>
@@ -99,21 +95,15 @@
                 </a>
             </div>
             <div class="menu_item_box_list dropdown-content" >
+
+                {foreach name="menu_news_category_list" item="vo" key="k"}
                 <div class="menu_item_box_list_each" >
-                    <a href="{:url('index/news/index',['category_id' => 1])}" >
-                        公司新闻
+                    <a href="{:url('index/news/index',['category_id'=>$vo['id']])}" >
+                        {$vo.name}
                     </a>
                 </div>
-                <div class="menu_item_box_list_each" >
-                    <a href="{:url('index/news/index',['category_id' => 2])}" >
-                        行业资讯
-                    </a>
-                </div>
-                <div class="menu_item_box_list_each" >
-                    <a href="{:url('index/news/index',['category_id' => 3])}" >
-                        产品动态
-                    </a>
-                </div>
+                {/foreach}
+
             </div>
             <div class="menu_border_bottom {if $highlight_menu == 5} height_menu {/if}">
             </div>

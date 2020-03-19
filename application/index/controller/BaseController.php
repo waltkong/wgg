@@ -4,6 +4,7 @@ namespace app\index\controller;
 use app\common\controller\Frontend;
 use app\index\logic\BaseLogic;
 use app\index\logic\ContactusLogic;
+use app\index\repository\AppRepository;
 use think\Request;
 
 class  BaseController extends Frontend{
@@ -40,6 +41,10 @@ class  BaseController extends Frontend{
 
         $this->assign('now_solution',$solution_list[0]);
         $this->assign('now_product',$product_list[0]);
+
+        $this->assign('menu_customcase_category_list',AppRepository::$case_category);
+        $this->assign('menu_news_category_list',AppRepository::$news_category);
+
     }
 
     protected function AssignCompanyConfig(){
