@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> {$seo_title} </title>
+    <meta name="description" content="{$seo_description}">
+    <meta name="keywords" content="{$seo_keyword}">
+
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/common.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/pc/css/product_detail.css?v={$asset_version}">
+
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+
+
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
+</head>
+
+
+<body>
+<div class="container" name="top">
+    {include file='common/header' /}
+
+    <div class="nav_container">
+        <img src="{$banner.image_url}" alt="{$banner.name}" />
+    </div>
+
+
+    <div class="category_box">
+
+        {foreach name="product_list" item="vo" key="k"}
+        <div class="category_item  {if condition='$vo.id eq $row.id '} category_item_highlight {/if} "
+             onclick="change_category_id('{$vo.id}')">
+            {$vo.name}
+        </div>
+        {/foreach}
+
+    </div>
+
+    <div class="main_box">
+
+    </div>
+
+
+
+
+
+
+    {include file='common/bottom' /}
+
+</div>
+
+
+</body>
+
+
+<script>
+
+    var params = {
+        'id':"{$row.id}"
+    };
+
+    function windows_jump() {
+        var url = "/index/product/detail?";
+        for(var i in params){
+            if(params[i] != ''){
+                url += '&'+ i + '=' + params[i];
+            }
+        }
+        window.location.href= url;
+    }
+
+    function change_category_id(category_id) {
+        params.id = category_id;
+        windows_jump();
+    }
+
+
+</script>
+</html>

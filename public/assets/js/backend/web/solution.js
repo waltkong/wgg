@@ -36,6 +36,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'name', title: __('Name')},
                         {field: 'logo_image', title: __('Logo_image'), events: Table.api.events.image, formatter: Table.api.formatter.image},
                         {field: 'single_image', title: __('Single_image'), events: Table.api.events.image, formatter: Table.api.formatter.image},
+                        {field: 'banner_image', title: __('Banner_image'), events: Table.api.events.image, formatter: Table.api.formatter.image},
                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]

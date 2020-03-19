@@ -61,7 +61,7 @@ class CustomcaseLogic extends BaseLogic{
     public function case_one($input){
         $objFunc = function () use($input){
             $obj = new Cases_model();
-            if(!empty($input['id'])){
+            if(isset($input['id']) && !empty($input['id'])){
                 $obj = $obj->where('id',$input['id']);
             }
             return $obj;

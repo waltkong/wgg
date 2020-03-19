@@ -23,7 +23,7 @@ class BaseLogic{
 
         $data = [
             'ip' => request()->ip(),
-            'referer' => $_SERVER['HTTP_REFERER'],
+            'referer' => $_SERVER['HTTP_REFERER'] ?? '',
             'url' => request()->baseUrl(),
             'full_url' => request()->url(),
             'group' => request()->controller(),

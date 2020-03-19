@@ -63,7 +63,7 @@ class NewsLogic extends BaseLogic{
     public function news_one($input){
         $objFunc = function () use($input){
             $obj = new News_model();
-            if(!empty($input['id'])){
+            if(isset($input['id']) && !empty($input['id'])){
                 $obj = $obj->where('id',$input['id']);
             }
             return $obj;

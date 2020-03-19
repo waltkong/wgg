@@ -21,6 +21,8 @@
 
     <script src="__CDN__/assets/pc/layer/layer.js?v={$asset_version}"></script>
 
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=hAeMFHmpyHa2ZjaCH9VVridl"></script>
+
 </head>
 
 
@@ -93,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="map">
+            <div class="map" id="map_container">
             </div>
 
             <div class="info_title_text">
@@ -162,6 +164,36 @@
 
 
 <script>
+
+
+    $(document).ready(function () {
+        // 百度地图API功能
+        var map = new BMap.Map("map_container");
+        map.enableScrollWheelZoom();
+        var point;
+
+        var marker; // 创建点
+        var addr;
+
+        //添加覆盖物
+        function add_overlay(){
+            map.addOverlay(marker);            //增加点
+        }
+        //清除覆盖物
+        function remove_overlay(){
+            map.clearOverlays();
+        }
+
+        var lng ="{$row.company_address_long}";
+        var lat = "{$row.company_address_lat}";
+
+        point = new BMap.Point(lng, lat);
+        marker = new BMap.Marker(new BMap.Point(lng, lat));
+        map.centerAndZoom(point, 15);
+        add_overlay();
+    });
+
+
 
   function submitForm() {
       var ajaxdata = {

@@ -5,6 +5,7 @@ return [
     'Name'         => '产品名',
     'Logo_image'   => '产品logo',
     'Single_image' => '产品单图',
+    'Banner_image' => 'banner图',
     'Util'         => '产品功能',
     'Keyword'      => '关键词',
     'Content'      => '产品内容',
