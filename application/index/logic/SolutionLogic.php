@@ -33,7 +33,7 @@ class SolutionLogic extends BaseLogic{
         return $row;
     }
 
-    public function solution_list()
+    public function get_solution_list()
     {
         return parent::solution_list();
     }

@@ -1,0 +1,156 @@
+.part_title_box{
+
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.part_title_bar{
+    width: 4px;
+    height: 30px;
+    background-color: rgb(52,175,244);
+}
+
+.part_title_text{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.current_situation_box{
+    margin-top: 20px;
+    padding: 20px 150px;
+}
+.current_situation_img{
+    margin-top: 20px;
+}
+.current_situation_img img{
+    width: 1350px;
+}
+
+.plan_box{
+    margin-top: 20px;
+    padding: 20px 150px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.plan_content{
+    width: 300px;
+}
+
+.plan_content_description{
+    margin-top: 40px;
+    color: rgb(103,103,103);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.plan_content_button{
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 138px;
+    height: 38px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: rgb(52,175,244);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.plan_image{
+    margin-left: 130px;
+    width: 850px;
+}
+
+
+.use_canteen_process{
+    background-color: rgb(247,247,247);
+    margin-top: 20px;
+    padding: 20px 150px;
+}
+
+.use_canteen_image img{
+    margin-top: 20px;
+    width: 1350px;
+}
+
+.pay_way_box{
+    margin-top: 20px;
+    padding: 20px 150px;
+}
+
+.pay_way_image img{
+    margin-top: 20px;
+    width: 1350px;
+}
+
+.manage_system_box{
+    margin-top: 20px;
+    padding: 20px 150px;
+}
+
+.manage_system_content{
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+.manage_system_content_left{
+    margin-left: 100px;
+}
+
+.manage_system_content_left img{
+    width: 900px;
+}
+
+.manage_system_content_right{
+    width: 350px;
+    margin-left: 50px;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+
+.manage_system_content_each{
+    color: rgb(95,95,95);
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.manage_control_box{
+    margin-top: 20px;
+    padding: 20px 150px;
+}
+
+.manage_control_content{
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+
+.manage_control_each img{
+    width: 150px;
+}

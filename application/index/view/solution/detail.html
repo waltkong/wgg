@@ -45,7 +45,42 @@
 
 
     <div class="main_box">
-        {include file='solution_templates/智慧食堂' /}
+
+
+        <?php
+            if ($row['template']=='智慧食堂'){
+        ?>
+            {include file='solution_templates/wise_canteen' /}
+        <?php
+        }
+        ?>
+
+        <?php
+            if ($row['template']=='自选餐'){
+        ?>
+        {include file='solution_templates/myself_pick' /}
+        <?php
+        }
+        ?>
+
+
+        <?php
+            if ($row['template']=='预定套取餐'){
+        ?>
+        {include file='solution_templates/order_food' /}
+        <?php
+        }
+        ?>
+
+
+        <?php
+            if (empty($row['template'])){
+        ?>
+        <?php
+        }
+        ?>
+
+
     </div>
 
 

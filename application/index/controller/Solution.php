@@ -35,7 +35,7 @@ class Solution extends BaseController
 
         $this->assign('banner',['image_url' => $row['banner_image'] ?? '', 'name' => $row['name'] ?? '',]);
 
-        $this->assign('solution_list',$this->logic->solution_list());
+        $this->assign('solution_list',$this->logic->get_solution_list());
 
         $this->assign('seo_title',$row['name'] ?? '');
         $this->assign('seo_description',$row['description']?? '');

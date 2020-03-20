@@ -1,0 +1,85 @@
+.part_title_box{
+
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.part_title_bar{
+    width: 4px;
+    height: 30px;
+    background-color: rgb(52,175,244);
+}
+
+.part_title_text{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.wechat_order{
+    margin-top: 20px;
+    padding: 20px 150px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+.wechat_order_left{
+    width:700px;
+
+}
+
+.wechat_order_content{
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 450px;
+    font-size: 18px;
+    line-height: 35px;
+    font-weight: bold;
+    color: rgb(101,101,101);
+}
+
+.wechat_order_list{
+    margin-top: 150px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.wechat_order_list_each{
+    width: 350px;
+    padding: 5px 5px;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(101,101,101);
+}
+
+.wechat_order_right{
+    margin-left: 50px;
+    width:600px;
+}
+
+.wechat_order_right img{
+    width:600px;
+    margin-top: 20px;
+}
+
+.temperature_keep_closet_box{
+    margin-top: 20px;
+    padding: 20px 150px;
+}
+
+.temperature_keep_closet_box_image img{
+    margin-top: 20px;
+}

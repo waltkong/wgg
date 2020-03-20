@@ -202,6 +202,72 @@
     text-decoration: none;
 }
 
+
+.single_solution_box{
+
+    height: 530px;
+    width: 100%;
+
+    background:url(/assets/pc/image/index/解决方案.png);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+
+    position: relative;
+
+
+}
+
+.single_solution_content_box{
+    width: 350px;
+    float: right;
+
+    padding: 10px 30px;
+    color: white;
+}
+
+.single_solution_title_text{
+    margin-top: 190px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.single_solution_content_text{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.single_solution_footer{
+    margin-top: 40px;
+    padding: 0 10px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: no;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+
+.single_solution_see_more{
+    cursor: pointer;
+}
+
+.single_solution_free_get{
+    margin-left: 15px;
+    background-color: white;
+    width: 130px;
+    height: 29px;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+
+    color: rgb(92,180,238);
+    cursor: pointer;
+}
+
+
+
 .case_box{
     padding: 20px 160px;
 
