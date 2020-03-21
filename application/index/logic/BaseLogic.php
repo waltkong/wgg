@@ -18,19 +18,22 @@ class BaseLogic{
     }
 
     public function insertVisitLog(){
-        //清除100天以前的
-        $cleartime = time() - 3600*24*100 ;
-        (new Visitlog_model)->where('createtime','<',$cleartime);
 
-        $data = [
-            'ip' => request()->ip(),
-            'referer' => $_SERVER['HTTP_REFERER'] ?? '',
-            'url' => request()->baseUrl(),
-            'full_url' => request()->url(),
-            'group' => request()->controller(),
-            'createtime' => time(),
-        ];
-        (new Visitlog_model)->insert($data);
+        if(request()->isGet()){
+            //清除100天以前的
+            $cleartime = time() - 3600*24*100 ;
+            (new Visitlog_model)->where('createtime','<',$cleartime);
+
+            $data = [
+                'ip' => request()->ip(),
+                'referer' => $_SERVER['HTTP_REFERER'] ?? '',
+                'url' => request()->baseUrl(),
+                'full_url' => request()->url(),
+                'group' => request()->controller(),
+                'createtime' => time(),
+            ];
+            (new Visitlog_model)->insert($data);
+        }
     }
 
 

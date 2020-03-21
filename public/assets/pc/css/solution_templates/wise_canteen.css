@@ -272,7 +272,7 @@
 .advantage_list_each_left{
     width: 400px;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .advantage_list_each_middle{
@@ -288,7 +288,7 @@
 .advantage_list_each_right{
     width: 400px;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .apply_custom_images{
@@ -318,4 +318,20 @@
     margin-left: 80px;
     margin-top: 30px;
     width: 240px;
+}
+
+
+.go_top{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: flex-start;
+
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.go_top img{
+    width: 80px;
 }

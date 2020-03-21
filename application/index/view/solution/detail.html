@@ -72,6 +72,13 @@
         }
         ?>
 
+        <?php
+            if ($row['template']=='自助餐'){
+        ?>
+        {include file='solution_templates/self_help' /}
+        <?php
+        }
+        ?>
 
         <?php
             if (empty($row['template'])){

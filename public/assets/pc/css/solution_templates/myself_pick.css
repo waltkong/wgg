@@ -154,3 +154,18 @@
 .manage_control_each img{
     width: 150px;
 }
+
+.go_top{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: flex-start;
+
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.go_top img{
+    width: 80px;
+}

@@ -1,0 +1,99 @@
+.part_title_box{
+
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.part_title_bar{
+    width: 4px;
+    height: 30px;
+    background-color: rgb(52,175,244);
+}
+
+.part_title_text{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.plan_box{
+    margin-top: 20px;
+    padding: 20px 150px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.plan_box_left{
+    width: 450px;
+}
+
+.plan_box_description{
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(71,71,71);
+    line-height: 35px;
+}
+
+.plan_box_right{
+    margin-left: 50px;
+    width: 850px;
+}
+
+.use_canteen_process{
+    background-color: rgb(247,247,247);
+    margin-top: 20px;
+    padding: 20px 150px;
+}
+
+.use_canteen_process_image{
+    margin-top: 20px;
+}
+
+.special_function_box{
+    margin-top: 20px;
+    padding: 20px 150px;
+}
+
+.special_function_box_images{
+    margin-top: 20px;
+    padding: 20px 80px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+
+}
+
+.special_function_box_images img{
+    margin-left: 40px;
+    width: 350px;
+    margin-top: 30px;
+}
+
+.go_top{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: flex-start;
+
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.go_top img{
+    width: 80px;
+}

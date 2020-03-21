@@ -83,3 +83,145 @@
 .temperature_keep_closet_box_image img{
     margin-top: 20px;
 }
+
+.apply_place_box{
+    background-color: rgb(247,247,247);
+    margin-top: 20px;
+    padding: 20px 150px;
+}
+
+.apply_place_content{
+    margin-top: 20px;
+    margin-left: 120px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.apply_place_content_each{
+    width: 300px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+
+
+.case_advantage_box{
+    margin-top: 20px;
+    padding: 20px 150px;
+    background-color: rgb(247,247,247);
+
+}
+
+.case_advantage_box_content{
+    margin-top: 20px;
+    margin-left: 120px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.case_advantage_each{
+    width: 380px;
+    margin-left: 30px;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.case_advantage_each_image{
+    height: 400px;
+}
+
+.case_advantage_each_image img{
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+.case_advantage_each_title{
+
+
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(101,101,101);
+}
+
+.case_advantage_each_description{
+
+    margin-bottom: 20px;
+    color: rgb(91,91,91);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+
+.wise_device_box{
+    background-color: rgb(247,247,247);
+    margin-top: 20px;
+    padding: 20px 150px;
+}
+
+.wise_device_content{
+    margin-top: 20px;
+    margin-left: 120px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.wise_device_each{
+    width: 380px;
+    margin-left: 30px;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.wise_device_each_image{
+    height: 250px;
+}
+
+.wise_device_each_image img{
+    width: 300px;
+    max-height: 250px;
+}
+
+.wise_device_each_title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(101,101,101);
+}
+
+.go_top{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: flex-start;
+
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.go_top img{
+    width: 80px;
+}
