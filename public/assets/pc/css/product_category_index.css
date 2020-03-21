@@ -46,6 +46,7 @@
 
 .product_list_box{
     margin-left: 90px;
+
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
@@ -54,9 +55,10 @@
 }
 
 .product_list_box .product_list_item{
-    width: 330px;
-    margin-right: 40px;
-    margin-top: 50px;
+    width: 29%;
+    margin-right: 4%;
+    margin-top: 30px;
+
 
     display: flex;
     flex-direction:column;
@@ -69,7 +71,7 @@
 .product_list_item .product_image_box{
     border:2px dashed rgb(159,159,159);
     border-radius: 5px;
-    height: 350px;
+
     padding: 15px 10px;
 
     display: flex;

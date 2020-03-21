@@ -29,7 +29,7 @@
     margin-top: 20px;
 }
 .current_situation_img img{
-    width: 1200px;
+
 }
 
 .plan_box{
@@ -44,6 +44,7 @@
 }
 
 .plan_content{
+    padding:  0 20px;
     width: 250px;
 }
 
@@ -82,7 +83,7 @@
 
 .use_canteen_image img{
     margin-top: 20px;
-    width: 1200px;
+
 }
 
 .pay_way_box{
@@ -92,7 +93,6 @@
 
 .pay_way_image img{
     margin-top: 20px;
-    width: 1200px;
 }
 
 .manage_system_box{

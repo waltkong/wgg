@@ -28,12 +28,12 @@
     display: flex;
     flex-direction:row;
     flex-wrap: nowrap;
-    justify-content:flex-start;
+    justify-content:space-around;
     align-items: flex-start;
 }
 
 .wechat_order_left{
-    width:700px;
+    width:45%;
 
 }
 
@@ -54,7 +54,7 @@
     flex-direction:row;
     flex-wrap: wrap;
     justify-content:flex-start;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .wechat_order_list_each{
@@ -66,13 +66,11 @@
 }
 
 .wechat_order_right{
-    margin-left: 10px;
-    width:500px;
+    width:55%;
 }
 
 .wechat_order_right img{
-    width:500px;
-    margin-top: 20px;
+    width:90%;
 }
 
 .temperature_keep_closet_box{
@@ -93,18 +91,22 @@
 .apply_place_content{
     margin-top: 20px;
     margin-left: 130px;
+}
+
+.apply_place_content_every_row{
+    margin-top: 50px;
 
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content:flex-start;
-    align-items: flex-start;
+    justify-content:space-around;
+    align-items: center;
 }
 
 .apply_place_content_each{
-    width: 280px;
-    margin-right: 70px;
-    margin-top: 50px;
+    width: 28%;
+
+
 }
 
 
@@ -128,7 +130,7 @@
 }
 
 .case_advantage_each{
-    width: 300px;
+    width: 28%;
     margin-left: 30px;
 
     display: flex;
@@ -173,17 +175,17 @@
 
 .wise_device_content{
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 120px;
 
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content:flex-start;
-    align-items: flex-start;
+    justify-content:space-around;
+    align-items: center;
 }
 
 .wise_device_each{
-    width: 300px;
+    width: 28%;
     margin-left: 30px;
 
     display: flex;
@@ -194,12 +196,11 @@
 }
 
 .wise_device_each_image{
-    height: 250px;
+
 }
 
 .wise_device_each_image img{
-    width: 270px;
-    max-height: 250px;
+    width: 90%;
 }
 
 .wise_device_each_title{

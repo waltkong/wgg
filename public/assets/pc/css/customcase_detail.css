@@ -17,8 +17,12 @@
     align-items: flex-start;
 }
 
-.main_box .cases_box{
-    width: 970px;
+.main_left{
+    width: 75%;
+    padding: 10px 10px;
+}
+
+.main_left .cases_box{
 
     display: flex;
     flex-direction:row;
@@ -26,6 +30,10 @@
     justify-content:space-around;
     align-items: flex-start;
 
+}
+
+.cases_box_body{
+    width: 95%;
 }
 
 .cases_box .cases_header_box{
@@ -75,7 +83,7 @@
 }
 
 .main_box .recommend_box{
-    width:300px;
+    width: 25%;
 }
 
 .recommend_head_text{
