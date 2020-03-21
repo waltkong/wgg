@@ -48,11 +48,11 @@
 }
 
 .header_menu_box .menu_item_box{
-    width: 100px;
+    width: 110px;
     margin-top: 12px;
 
     padding: 15px 22px ;
-    font-size: 14px;
+    font-size: 15px;
     color: white;
     text-align: center;
 
@@ -65,7 +65,7 @@
 
 .menu_border_bottom{
     margin-top: 10px;
-    margin-left: 13px;
+    margin-left: 16px;
     width: 30px;
     height: 1px;
 }
