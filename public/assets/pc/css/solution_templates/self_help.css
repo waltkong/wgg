@@ -34,20 +34,19 @@
 }
 
 .plan_box_left{
-    width: 450px;
+    width: 400px;
 }
 
 .plan_box_description{
     margin-top: 30px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
     color: rgb(71,71,71);
     line-height: 35px;
 }
 
 .plan_box_right{
     margin-left: 50px;
-    width: 850px;
+    width: 750px;
 }
 
 .use_canteen_process{
@@ -58,6 +57,10 @@
 
 .use_canteen_process_image{
     margin-top: 20px;
+}
+
+.use_canteen_process_image img{
+    width: 1200px;
 }
 
 .special_function_box{
@@ -78,8 +81,8 @@
 }
 
 .special_function_box_images img{
-    margin-left: 40px;
-    width: 350px;
+    margin-right: 40px;
+    width: 300px;
     margin-top: 30px;
 }
 
@@ -90,10 +93,10 @@
     justify-content:flex-end;
     align-items: flex-start;
 
-    margin-top: 20px;
+    margin-top: 18px;
     cursor: pointer;
 }
 
 .go_top img{
-    width: 80px;
+    width: 60px;
 }
