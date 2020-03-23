@@ -19,10 +19,16 @@
     align-items: center;
 }
 
-.header_logo_box .header_logo_box{
+.header_logo_box .logo_image{
     width: 144px;
     padding: 10px 10px 10px 10px;
 }
+
+.logo_image img{
+    width: 100%;
+}
+
+
 
 .header_logo_box .website_title{
     width: 150px;

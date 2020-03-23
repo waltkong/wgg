@@ -23,7 +23,7 @@ class  BaseController extends Frontend{
     }
 
     private function myInit(){
-        $this->assign("asset_version",time());
+        $this->assign("asset_version",'v1.0.0');   //time()
 
         $this->menuData();
 
