@@ -362,3 +362,14 @@ if (!function_exists('hsv2rgb')) {
         ];
     }
 }
+
+
+
+function isUrlMp4($url){
+    $file = explode('.', $url);
+    $end = end($file);
+    if($end == 'mp4'){
+        return true;
+    }
+    return false;
+}

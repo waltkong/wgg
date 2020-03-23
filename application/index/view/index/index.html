@@ -38,10 +38,14 @@
 
                     {foreach name="banner_list" item="vo" key="k"}
                     <div class="swiper-slide">
+
                         <img src="{$vo.image_url}"
-                                   alt="{$vo.name}"
-                                                   width="100%"
-                                                   onclick="bannerJump('{$vo.jump_url}')"></div>
+                             alt="{$vo.name}"
+                             width="100%"
+                             onclick="bannerJump('{$vo.jump_url}')">
+
+
+                    </div>
                     {/foreach}
 
                 </div>
@@ -351,7 +355,12 @@
     function bannerJump(url) {
         console.log(url);
 
-        window.open(url)
+        if(url != '' && url != null){
+            window.open(url)
+        }
+
+
+
 //            window.location.href = url;
     }
 

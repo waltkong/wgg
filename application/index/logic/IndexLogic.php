@@ -23,9 +23,16 @@ class IndexLogic extends BaseLogic{
             ->limit(0,$count)
             ->select();
         $list = collection($list)->toArray();
+        $maxFileHeight = 0;
         foreach ($list as $k => $v){
             $list[$k]['image_url'] = UrlUtil::getFullUrl($v['image_url']);
+
+            $filename = APP_ROOT_PATH.$v['image_url'];
+            $img_info = getimagesize($filename);
+
+
             $list[$k]['jump_url'] = UrlUtil::getFullUrl($v['jump_url']);
+
         }
         return $list;
     }
