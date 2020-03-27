@@ -198,7 +198,7 @@
                         <img src="{$vo.image_url}" alt="{$vo.name}"/>
                     </div>
                     <div class="case_company">
-                        {$vo.company_name}
+                        {$vo.name}
                     </div>
                     <div class="case_description">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.description}
@@ -255,16 +255,19 @@
             </div>
 
             <div class="company_body">
-                {foreach name="company_list" item="vo" key="k"}
-                <div class="company_body_item">
-                    <div class="company_body_img">
-                        <img src="{$vo.image}" />
-                    </div>
-                    <div class="company_body_text">
-                        {$vo.name}
-                    </div>
-                </div>
-                {/foreach}
+
+                <img src="{$page_company_info.custom_company_logo_images}" />
+
+                <!--foreach name="company_list" item="vo" key="k"-->
+                <!--<div class="company_body_item">-->
+                    <!--<div class="company_body_img">-->
+                        <!--<img src="vo.image" />-->
+                    <!--</div>-->
+                    <!--<div class="company_body_text">-->
+                        <!--vo.name-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--/foreach-->
             </div>
 
         </div>
@@ -314,9 +317,9 @@
             loop: true, // 循环模式选项
             autoplay:5000,
             // 如果需要分页器
-            pagination: {
-                el: '.swiper2-pagination',
-            },
+//            pagination: {
+//                el: '.swiper2-pagination',
+//            },
             slidesPerView: 4.1,
             centeredSlides: true,
             // 如果需要前进后退按钮

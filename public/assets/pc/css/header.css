@@ -20,8 +20,8 @@
 }
 
 .header_logo_box .logo_image{
-    width: 144px;
-    padding: 10px 10px 10px 10px;
+    width: 155px;
+    padding: 7px 7px 7px 7px;
 }
 
 .logo_image img{
@@ -37,7 +37,7 @@
     padding: 2px 10px 2px 10px;
     font-size: 16px;
     color: white;
-    font-weight: bold;
+    /*font-weight: bold;*/
 
     border-left: solid white 2px;
 }

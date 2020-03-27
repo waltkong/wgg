@@ -111,7 +111,6 @@
 .operate_target_item_text{
     margin-top: 20px;
     font-size: 14px;
-    font-weight: bold;
     color: rgb(72,72,72);
 }
 
@@ -142,7 +141,6 @@
     line-height: 30px;
     font-size: 16px;
     color: rgb(99,99,99);
-    font-weight: bold;
 }
 
 .case_description_image{
@@ -205,7 +203,6 @@
 
 .function_box_content_each_list{
     color: rgb(77,77,77);
-    font-weight: bold;
     font-size: 16px;
 }
 

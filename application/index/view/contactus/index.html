@@ -31,11 +31,13 @@
     <div class="main_box">
 
         <div class="main_left">
-            <div class="main_left_item {if condition='1 eq $this_category_id'} category_item_highlight {/if}">
-                <a href="/index/contactus/index">公司简介</a>
+            <div class="main_left_item {if condition='1 eq $this_category_id'} category_item_highlight {/if}"
+                onclick="windows_jump('/index/contactus/index')">
+                公司简介
             </div>
-            <div class="main_left_item {if condition='2 eq $this_category_id'} category_item_highlight {/if}">
-                 <a href="/index/contactus/contact_us">联系我们</a>
+            <div class="main_left_item {if condition='2 eq $this_category_id'} category_item_highlight {/if}"
+                 onclick="windows_jump('/index/contactus/contact_us')">
+                 联系我们
             </div>
         </div>
 
@@ -93,11 +95,9 @@
             </div>
 
             <div class="Certificates_box">
-                {foreach name="row.image_array" item="vo" key="k"}
-                <div class="Certificates_box_item">
-                    <img src="{$vo}" />
-                </div>
-                {/foreach}
+
+                <img src="{$row.image_url}" alt="戈子科技荣誉证书" />
+
             </div>
 
         </div>
@@ -115,25 +115,13 @@
 
 <script>
 
-    var params = {
-        'category_id':"{$this_category_id}"
-    };
 
-    function windows_jump() {
-        var url = "/index/contactus/index?";
-        for(var i in params){
-            if(params[i] != ''){
-                url += '&'+ i + '=' + params[i];
-            }
-        }
+
+    function windows_jump(url) {
         window.location.href= url;
     }
 
-    function change_category_id(category_id) {
-        params.pageIndex = 1;
-        params.category_id = category_id;
-        windows_jump();
-    }
+
 
 
 

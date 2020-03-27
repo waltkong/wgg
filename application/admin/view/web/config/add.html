@@ -127,8 +127,8 @@
             <div class="input-group">
                 <input id="c-avatar" data-rule="" class="form-control" size="50" name="row[image_url]" type="text" value="{$row.image_url|htmlentities}">
                 <div class="input-group-addon no-border no-padding">
-                    <span><button type="button" id="plupload-avatar" class="btn btn-danger plupload" data-input-id="c-avatar" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="true" data-preview-id="p-avatar"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
-                    <span><button type="button" id="fachoose-avatar" class="btn btn-primary fachoose" data-input-id="c-avatar" data-mimetype="image/*" data-multiple="true"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                    <span><button type="button" id="plupload-avatar" class="btn btn-danger plupload" data-input-id="c-avatar" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-avatar"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-avatar" class="btn btn-primary fachoose" data-input-id="c-avatar" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
                 </div>
                 <span class="msg-box n-right" for="c-avatar"></span>
             </div>
@@ -136,7 +136,20 @@
         </div>
     </div>
 
-
+    <div class="form-group">
+        <label for="c-custom_company_logo_images" class="control-label col-xs-12 col-sm-2">客户logo图集:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-custom_company_logo_images" data-rule="" class="form-control" size="50" name="row[custom_company_logo_images]" type="text" value="{$row.custom_company_logo_images|htmlentities}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-custom_company_logo_images" class="btn btn-danger plupload" data-input-id="c-custom_company_logo_images" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-custom_company_logo_images"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-custom_company_logo_images" class="btn btn-primary fachoose" data-input-id="c-custom_company_logo_images" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-custom_company_logo_images"></span>
+            </div>
+            <ul class="row list-inline plupload-preview" id="p-custom_company_logo_images"></ul>
+        </div>
+    </div>
 
 
 

@@ -29,17 +29,17 @@
     height: 46px;
     font-size: 20px;
     background-color: rgb(237,237,237);
-    color: rgb(73,73,73);
+    color: rgb(49,49,49);
     text-align: center;
 }
 
-.main_left_item a{
-    text-decoration: none;
+.main_left a{
+    text-decoration-line: none;
 }
 
 .main_left_item.category_item_highlight{
     background-color: rgb(52,175,244);
-    color: white;
+    color: white !important;
 }
 
 .main_right{
@@ -90,7 +90,6 @@
     margin-left: 15px;
     color: rgb(64,64,64);
     font-size: 16px;
-    font-weight: bold;
 }
 
 .Certificates_box{
@@ -103,6 +102,7 @@
     align-items: center;
 }
 
-.Certificates_box_item{
-    max-width: 33%;
+.Certificates_box img{
+    width: 100%;
 }
+

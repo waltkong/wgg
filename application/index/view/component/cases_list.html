@@ -5,7 +5,10 @@
     {foreach name="case_list" item="vo" key="k"}
     <div class="cases_item">
         <div class="cases_image">
-            <img src="__CDN__/assets/pc/image/首页切图/素材切图/16.png">
+            <!--<img src="__CDN__/assets/pc/image/首页切图/素材切图/16.png">-->
+
+            <img src="{$vo.image_url}">
+
             <div class="cases_time_box">
                 <div class="cases_time_date">
                     {$vo.create_date}

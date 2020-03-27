@@ -86,6 +86,7 @@
 }
 .each_page.page_active{
     background-color: rgb(8,149,255);
+    color: white;
 }
 
 

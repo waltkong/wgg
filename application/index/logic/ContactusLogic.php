@@ -27,6 +27,8 @@ class ContactusLogic extends BaseLogic{
         'company_logo_image' => '公司logo',
         'company_copyright' => '公司版权信息',
         'company_wechat_image' => '公司二维码',
+
+        'custom_company_logo_images' => '客户公司logo图集',
     ];
 
 
@@ -74,6 +76,8 @@ class ContactusLogic extends BaseLogic{
         'company_logo_image' => '',
         'company_copyright' => '',
         'company_wechat_image' => '',
+
+        'custom_company_logo_images' => '',
     ];
 
 
@@ -88,9 +92,9 @@ class ContactusLogic extends BaseLogic{
             foreach ($list as $k => $item){
                 $defalut[$item['config_key']] = $item['config_value'];
 
-                if($item['config_key'] == 'image_url'){
-                    $defalut['image_array'] = explode(',',$item['config_value']);
-                }
+//                if($item['config_key'] == 'image_url'){   //荣誉证书
+//                    $defalut['image_array'] = explode(',',$item['config_value']);
+//                }
 
             }
             self::$company_info = $defalut;

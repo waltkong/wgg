@@ -3,6 +3,7 @@
 namespace app\index\controller;
 
 
+use app\index\logic\CustomcaseLogic;
 use app\index\logic\NewsLogic;
 use think\Request;
 use app\index\logic\ContactusLogic;
@@ -78,6 +79,10 @@ class News extends BaseController
 
         $recommend_news_list = $this->logic->news_list([],1,5,['order'=>'click_count']);
         $this->assign('recommend_news_list',$recommend_news_list['data']);
+
+        $relation_recommend_list = (new CustomcaseLogic())->case_list([],1,3,['order'=>'id']);
+        $this->assign('relation_recommend_list',$relation_recommend_list['data']);
+
 
         $this->assign('seo_title',$row['name'] ?? '');
         $this->assign('seo_description',$row['description'] ?? '');

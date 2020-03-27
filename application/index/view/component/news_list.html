@@ -5,7 +5,10 @@
     {foreach name="news_list" item="vo" key="k"}
     <div class="news_item">
         <div class="news_image">
-            <img src="__CDN__/assets/pc/image/首页切图/素材切图/16.png">
+            <!--<img src="__CDN__/assets/pc/image/首页切图/素材切图/16.png">-->
+
+            <img src="{$vo.image_url}">
+
             <div class="news_time_box">
                 <div class="news_time_date">
                     {$vo.create_date}

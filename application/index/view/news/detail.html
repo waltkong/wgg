@@ -112,6 +112,16 @@
             <div class="recommend_head_text">
                 相关推荐
             </div>
+
+
+            <div class="recommend_news_list">
+                {foreach name="relation_recommend_list" item="vo" key="k"}
+                <div class="recommend_news_item">
+                    <a href="/index/customcase/detail/id/{$vo.id}">{$vo.name}</a>
+                </div>
+                {/foreach}
+
+            </div>
         </div>
 
 

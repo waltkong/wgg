@@ -28,6 +28,10 @@
 <div class="container" name="top">
     {include file='common/header' /}
 
+    <div class="nav_container">
+        <img src="{$banner.image_url}" alt="{$banner.name}" />
+    </div>
+
     <div class="breadcrumb_box">
         当前位置：<a href="/index/index/index">首页</a>><a href="{:url('index/product/product_category_index')}">产品中心</a>
         ><a href="{:url('index/product/product_category_index',['id'=>$row['category_id']])}">{$row.category_name}</a>

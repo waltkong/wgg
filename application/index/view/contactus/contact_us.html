@@ -37,11 +37,13 @@
     <div class="main_box">
 
         <div class="main_left">
-            <div class="main_left_item {if condition='1 eq $this_category_id'} category_item_highlight {/if}">
-                <a href="/index/contactus/index">公司简介</a>
+            <div class="main_left_item {if condition='1 eq $this_category_id'} category_item_highlight {/if}"
+                 onclick="windows_jump('/index/contactus/index')">
+                公司简介
             </div>
-            <div class="main_left_item {if condition='2 eq $this_category_id'} category_item_highlight {/if}">
-                <a href="/index/contactus/contact_us">联系我们</a>
+            <div class="main_left_item {if condition='2 eq $this_category_id'} category_item_highlight {/if}"
+                 onclick="windows_jump('/index/contactus/contact_us')">
+                联系我们
             </div>
         </div>
 
