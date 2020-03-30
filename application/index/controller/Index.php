@@ -31,7 +31,7 @@ class Index extends BaseController
     public function index()
     {
         $banner_list = $this->logic->banner_list(1,10);
-        $this->assign('banner_list',$banner_list);
+        $this->assign('banner',$banner_list[0]);
 
         $company_list = $this->logic->company_list([],100);
         $this->assign('company_list',$company_list);

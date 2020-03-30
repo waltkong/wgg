@@ -42,7 +42,49 @@
 
 
     <div class="main_box">
-        {$row.content}
+
+        <div class="product_introduce_box">
+
+            <div class="product_image">
+                <img src="{$row.single_image}" alt="{$row.name}" />
+            </div>
+
+            <div class="product_description_box">
+
+                <div class="product_title">
+                    {$row.name}
+                </div>
+
+                <div class="product_description">
+                    {$row.description}
+                </div>
+
+                <div class="product_attributes">
+                    {foreach name="row.util_array" item="vo" key="k"}
+                    <div class="product_attributes_each">
+                        {$vo}
+                    </div>
+                    {/foreach}
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="part_title_box">
+            <div class="part_title_bar">
+            </div>
+            <div class="part_title_text">
+                详细信息
+            </div>
+        </div>
+
+
+        <div class="product_content">
+            {$row.content}
+        </div>
+
     </div>
 
 
@@ -52,7 +94,7 @@
 
 </div>
 
-
+{include file='common/baidubridge' /}
 </body>
 
 

@@ -32,34 +32,9 @@
 
         <div class="nav_container">
 
-            <div class="swiper-container swiper1-container" >
-
-                <div class="swiper-wrapper">
-
-                    {foreach name="banner_list" item="vo" key="k"}
-                    <div class="swiper-slide">
-
-                        <img src="{$vo.image_url}"
-                             alt="{$vo.name}"
-                             width="100%"
-                             onclick="bannerJump('{$vo.jump_url}')">
-
-
-                    </div>
-                    {/foreach}
-
-                </div>
-
-                <!--分页-->
-                <div class="pagination swiper1-pagination"></div>
-                <!--&lt;!&ndash; 如果需要导航按钮 &ndash;&gt;-->
-                <div class="swiper-button-prev swiper_btn"></div>
-                <div class="swiper-button-next swiper_btn"></div>
-
-                <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;-->
-                <!--<div class="swiper-scrollbar"></div>-->
-
-            </div>
+            <video class="banner_video" src="{$banner.jump_url}" controls="controls" autoplay   width="100%" >
+                您的浏览器不支持 video 标签。
+            </video>
 
         </div>
 
@@ -101,7 +76,7 @@
                         {foreach name="menu_product_category_list" item="vo" key="k"}
                         <div class="swiper-slide">
 
-                            <div class="provide_item">
+                            <div class="provide_item" onmouseover="listenOnMOuseOver('{$k}')">
                                 <img src="{$vo.logo_image}" alt="{$vo.name}"/>
                                 <div class="provide_product_name">
                                     {$vo.name}
@@ -281,7 +256,7 @@
 
     </div>
 
-
+    {include file='common/baidubridge' /}
 </body>
 
 
@@ -343,9 +318,13 @@
             },
         });
 
-
     };
 
+
+    function listenOnMOuseOver(index) {
+        $('.single_product_box').addClass('single_product_box_hide');
+        $('.single_product_box_'+index).removeClass('single_product_box_hide');
+    }
 
     function generateUtil(utils) {
         var html = '';

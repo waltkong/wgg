@@ -59,6 +59,16 @@ class ProductLogic extends BaseLogic{
                 $row['banner_image'] = UrlUtil::getFullUrl($row['banner_image']);
             }
             $row['create_date'] = date('Y-m-d',$row['createtime']);
+
+            $utils = explode('|',$row['util']);
+            $temp = [];
+            foreach ($utils as $k2 => $util){
+                $util = trim($util);
+                $util = str_replace("：",":",$util);
+                $temp[] = $util;
+            }
+            $row['util_array'] =$temp;
+
         }
         return $row;
     }

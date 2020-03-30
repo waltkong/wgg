@@ -8,6 +8,12 @@
 }
 
 
+.banner_video{
+    height : calc(90vh);
+    object-fit:fill;
+}
+
+
 .company_introduce_box{
 
     height: 400px;
@@ -61,7 +67,7 @@
     padding-top: 10px;
     opacity: 0.8;
     border-radius: 5px;
-    box-shadow: 10px 10px 10px rgba(0,60,60,60);
+    box-shadow: 10px 10px 10px rgba(60,60,60,1);
     cursor: pointer;
 }
 
@@ -145,7 +151,7 @@
 /*}*/
 
 .single_product_img img{
-    width: 300px;
+    width: 380px;
     /*max-height: 300px;*/
 }
 
@@ -208,7 +214,7 @@
     height: 530px;
     width: 100%;
 
-    background:url(/assets/pc/image/index/解决方案.png);
+    background:url(/assets/pc/image/index/solution.png);
     background-size:100% 100%;
     background-repeat:no-repeat;
 
