@@ -115,7 +115,7 @@
 }
 
 .form select {
-    padding: 1px 150px ;
+    padding: 1px 220px ;
     width: 550px;
     height: 35px;
     border: 2px solid #ccc;
@@ -123,12 +123,14 @@
     font-size: 18px;
     text-align: center;
     text-align-last: center;
+    vertical-align: middle;
 }
 
 .form select option{
 
     text-align: center;
     font-size: 18px;
+    vertical-align: middle;
 }
 
 .form button {

@@ -1,7 +1,8 @@
 .current_situation_operate_box{
     margin-top: 20px;
     background-color: rgb(247,247,247);
-    padding: 20px 150px;
+    /*padding: 20px 150px;*/
+    padding: 1.3rem 10%;
 }
 
 .part_title_box{
@@ -115,7 +116,8 @@
 }
 
 .case_description_box{
-    padding: 20px 150px;
+    /*padding: 20px 150px;*/
+    padding: 1.3rem 10%;
 
     display: flex;
     flex-direction:row;
@@ -127,7 +129,8 @@
 
 .case_description_text_box{
     margin-top: 50px;
-    width: 425px;
+    /*width: 425px;*/
+    width: 40%;
 }
 
 .case_description_text_title{
@@ -144,12 +147,13 @@
 }
 
 .case_description_image{
+    width: 55%;
     margin-left: 80px;
-    height: 550px;
+    /*height: 550px;*/
 }
 
 .case_description_image img{
-    width: 800px;
+    /*width: 800px;*/
 
 }
 
@@ -286,8 +290,8 @@
 
 .apply_custom{
     margin-top: 30px;
-    padding: 20px 150px;
-
+    /*padding: 20px 150px;*/
+    padding: 1.3rem 10%;
 
 }
 
@@ -307,7 +311,7 @@
 .apply_custom_every_row img{
     margin-right: 30px;
 
-    width: 240px;
+    width: 21%;
 }
 
 
