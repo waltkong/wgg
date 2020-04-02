@@ -1,6 +1,8 @@
 .bottom_box{
-    margin-top: 20px;
-    height: 402px;
+    /*margin-top: 20px;*/
+    /*height: 402px;*/
+    margin-top: 1.2rem;
+    height: 25rem;
     background-color: rgb(58,58,58);
     color: white;
 }
@@ -8,14 +10,18 @@
 .bottom_content{
     display: flex;
     flex-direction:row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content:space-around;
     align-items: flex-start;
 
-    padding: 51px 80px;
+    /*padding: 51px 80px;*/
+    padding: 3.1rem 5rem;
 }
 
 .bottom_logo_box{
+
+    width: 25%;
+
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
@@ -24,13 +30,18 @@
 }
 
 .bottom_logo_box .bottom_logo_image{
-    width: 280px;
+    /*width: 280px;*/
+    /*width: 17rem;*/
+    width: 98%;
+    max-width: 13rem;
 }
 
 .bottom_logo_box .bottom_logo_text{
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    margin-top: 0.5rem;
     text-align: center;
-    font-size: 20px;
+    /*font-size: 20px;*/
+    font-size: 1.1rem;
     color: white;
 }
 
@@ -43,16 +54,25 @@
 }
 
 .bottom_category_box .bottom_category_item{
-    padding: 10px 30px;
+    /*padding: 10px 30px;*/
+    padding: 0.6rem 0.5rem;
+    width: 8rem;
+}
+
+.bottom_category_box .bottom_category_item.bottom_category_item_long{
+    width: 18rem;
 }
 
 .bottom_category_title{
-    font-size: 18px;
+    /*font-size: 18px;*/
+    font-size: 1.1rem;
 }
 
 .bottom_category_body_text{
-    margin-top: 10px;
-    font-size: 14px;
+    /*margin-top: 10px;*/
+    /*font-size: 14px;*/
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
 }
 
 .bottom_category_item a{
@@ -61,6 +81,9 @@
 }
 
 .bottom_wechat_box{
+    width: 15%;
+
+
     display: flex;
     flex-direction:column;
     flex-wrap: nowrap;
@@ -69,21 +92,27 @@
 }
 
 .bottom_wechat_box .bottom_wechat_image{
-    width: 200px;
+    /*width: 200px;*/
+    /*width: 12.5rem;*/
 }
 
 .bottom_wechat_text1{
-    margin-top: 10px;
-    font-size: 16px;
+    /*margin-top: 10px;*/
+    /*font-size: 16px;*/
+    margin-top: 0.6rem;
+    font-size: 1rem;
 }
 
 .bottom_wechat_text2{
-    margin-top: 10px;
-    font-size: 18px;
+    /*margin-top: 10px;*/
+    /*font-size: 18px;*/
+    margin-top: 0.6rem;
+    font-size: 1.1rem;
 }
 
 .bottom_copyright{
     text-align: center;
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-size: 1rem;
     /*font-weight: bold;*/
 }
