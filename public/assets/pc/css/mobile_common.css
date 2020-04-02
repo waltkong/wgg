@@ -22,7 +22,6 @@ html::-webkit-scrollbar{width:0px}
 
 body {
     font-family: "Microsoft YaHei";
-    width: 100%;
+    width: 140%;
     position: absolute;
 }
-

@@ -2,6 +2,7 @@
 namespace app\index\controller;
 
 use app\common\controller\Frontend;
+use app\common\util\DeviceUtil;
 use app\index\logic\BaseLogic;
 use app\index\logic\ContactusLogic;
 use app\index\repository\AppRepository;
@@ -30,6 +31,10 @@ class  BaseController extends Frontend{
         $this->logic->insertVisitLog();
 
         $this->AssignCompanyConfig();
+
+
+        $this->assign('visitDevice',DeviceUtil::isMobile()?'mobile':'pc');
+
 
     }
 
