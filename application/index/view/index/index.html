@@ -144,28 +144,55 @@
         {/foreach}
 
 
-        <div class="single_solution_box">
-            <div class="single_solution_content_box">
-                <div class="single_solution_title_text">
+        <!--<div class="single_solution_box">-->
+            <!--<div class="single_solution_content_box">-->
+                <!--<div class="single_solution_title_text">-->
+                    <!--智慧食堂解决方案-->
+                <!--</div>-->
+
+                <!--<div class="single_solution_content_text">-->
+                    <!--完整的智慧食堂改造方案涉及食堂智能化管理与智能化服务两个方面。旨在全面提升顾客订餐，购餐和就餐各个环节的体验质量，提升食堂内部管理及总部管控的效率......-->
+                <!--</div>-->
+
+                <!--<div class="single_solution_footer">-->
+                    <!--<div class="single_solution_see_more">-->
+                        <!--查看更多>>-->
+                    <!--</div>-->
+                    <!--<div class="single_solution_free_get">-->
+                        <!--免费领取方案-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+
+        <!--</div>-->
+
+
+        <div class="single_solution_box_v2">
+
+            <div class="solution_v2_image">
+                <img src="__CDN__/assets/pc/image/index/solution_v2.png">
+            </div>
+
+            <div class="solution_v2_content_box">
+                <div class="solution_v2_title_text">
                     智慧食堂解决方案
                 </div>
-
-                <div class="single_solution_content_text">
+                <div class="solution_v2_content_text">
                     完整的智慧食堂改造方案涉及食堂智能化管理与智能化服务两个方面。旨在全面提升顾客订餐，购餐和就餐各个环节的体验质量，提升食堂内部管理及总部管控的效率......
                 </div>
-
-                <div class="single_solution_footer">
-                    <div class="single_solution_see_more">
+                <div class="solution_v2_footer">
+                    <div class="solution_v2_see_more" onclick="gotosolutionPage()">
                         查看更多>>
                     </div>
-                    <div class="single_solution_free_get">
+                    <div class="solution_v2_free_get">
                         免费领取方案
                     </div>
                 </div>
-
             </div>
 
         </div>
+
 
 
 
@@ -360,7 +387,9 @@
 //            window.location.href = url;
     }
 
-
+    function gotosolutionPage() {
+        window.location.href='/index/solution/detail';
+    }
 
 
 

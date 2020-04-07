@@ -22,7 +22,7 @@ class BaseLogic{
         if(request()->isGet()){
             //清除100天以前的
             $cleartime = time() - 3600*24*100 ;
-            (new Visitlog_model)->where('createtime','<',$cleartime);
+            (new Visitlog_model)->where('createtime','<',$cleartime)->delete();
 
             $data = [
                 'ip' => request()->ip(),

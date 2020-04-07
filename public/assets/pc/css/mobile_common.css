@@ -24,4 +24,5 @@ body {
     font-family: "Microsoft YaHei";
     width: 140%;
     position: absolute;
+    /*width: 100vw;*/
 }
