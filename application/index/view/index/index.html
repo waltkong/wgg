@@ -46,9 +46,36 @@
 
         <div class="nav_container">
 
-            <video class="banner_video" src="{$banner.jump_url}" controls="controls" autoplay   width="100%" >
-                您的浏览器不支持 video 标签。
-            </video>
+            <!--<video class="banner_video" src="$banner.jump_url" controls="controls" autoplay   width="100%" >-->
+                <!--您的浏览器不支持 video 标签。-->
+            <!--</video>-->
+
+
+            <div class="swiper-container swiper1-container" >
+
+                <div class="swiper-wrapper">
+
+                    {foreach name="banner" item="vo" key="k"}
+                    <div class="swiper-slide">
+
+                        <img src="{$vo.image_url}" alt="{$vo.name}"  onclick="bannerJump('{$vo.jump_url}')"/>
+
+                    </div>
+                    {/foreach}
+
+                </div>
+
+                <!--分页-->
+                <div class="pagination swiper1-pagination"></div>
+                <!--&lt;!&ndash; 如果需要导航按钮 &ndash;&gt;-->
+                <div class="swiper-button-prev swiper_btn"></div>
+                <div class="swiper-button-next swiper_btn"></div>
+
+                <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;-->
+                <!--<div class="swiper-scrollbar"></div>-->
+
+            </div>
+
 
         </div>
 
@@ -171,7 +198,7 @@
         <div class="single_solution_box_v2">
 
             <div class="solution_v2_image">
-                <img src="__CDN__/assets/pc/image/index/solution_v2.png">
+                <img src="__CDN__/assets/pc/image/index/solution_v2_hq.png">
             </div>
 
             <div class="solution_v2_content_box">
@@ -179,14 +206,31 @@
                     智慧食堂解决方案
                 </div>
                 <div class="solution_v2_content_text">
-                    完整的智慧食堂改造方案涉及食堂智能化管理与智能化服务两个方面。旨在全面提升顾客订餐，购餐和就餐各个环节的体验质量，提升食堂内部管理及总部管控的效率......
+                    <div class="solution_v2_content_text_li">
+                        1.高校食堂解决方案
+                    </div>
+                    <div class="solution_v2_content_text_li">
+                        2.医院食堂解决方案
+                    </div>
+                    <div class="solution_v2_content_text_li">
+                        3.政府机关食堂解决方案
+                    </div>
+                    <div class="solution_v2_content_text_li">
+                        4.企业食堂解决方案
+                    </div>
+                    <div class="solution_v2_content_text_li">
+                        5.园区食堂解决方案
+                    </div>
+                    <div class="solution_v2_content_text_li">
+                        6.中小学食堂解决方案
+                    </div>
                 </div>
                 <div class="solution_v2_footer">
                     <div class="solution_v2_see_more" onclick="gotosolutionPage()">
-                        查看更多>>
+                        了解详情
                     </div>
-                    <div class="solution_v2_free_get">
-                        免费领取方案
+                    <div class="solution_v2_free_get" onclick="gotoContact()">
+                        点击咨询
                     </div>
                 </div>
             </div>
@@ -336,7 +380,9 @@
 //            pagination: {
 //                el: '.swiper2-pagination',
 //            },
-            slidesPerView: 4.1,
+            slidesPerView: 4.2,
+//            slidesPerView : 'auto',
+//            loopedSlides :4,
             centeredSlides: true,
             // 如果需要前进后退按钮
             navigation: {
@@ -389,6 +435,10 @@
 
     function gotosolutionPage() {
         window.location.href='/index/solution/detail';
+    }
+
+    function gotoContact() {
+        window.location.href='/index/contactus/contact_us';
     }
 
 

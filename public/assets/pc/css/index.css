@@ -111,9 +111,14 @@
     margin-top: 20px;
 }
 
+/*.provide_body .swiper-wrapper{*/
+    /*align-items: flex-start;*/
+/*}*/
+
 .provide_item{
-    width: 110px;
+    width: 50%;
     height: 220px;
+    /*background-color: #0d95e8;*/
 
     display: flex;
     flex-direction:column;
@@ -123,7 +128,9 @@
 }
 
 .provide_item img{
-    width: 70px;
+    /*width: 70%;*/
+    width: 75px;
+
 }
 .provide_product_name{
     color: rgb(94,94,94);
@@ -151,12 +158,12 @@
 /*}*/
 
 .single_product_img img{
-    width: 380px;
+    width: 400px;
     /*max-height: 300px;*/
 }
 
 .single_product_content{
-    margin-left: 70px;
+    margin-left: 15%;
 
     display: flex;
     flex-direction:column;
@@ -210,7 +217,7 @@
 
 
 .single_solution_box_v2{
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     padding: 1.2rem 10%;
     background-color: rgb(247,247,247);
 
@@ -227,23 +234,30 @@
 
 .solution_v2_content_box{
     width: 30%;
-    margin-left: 5%;
+    margin-left: 7%;
 }
 
 .solution_v2_title_text{
-    color: rgb(67,174,254);
+    color: rgb(60,60,60);
     font-size: 1.3rem;
     font-weight: bold;
 }
 
 .solution_v2_content_text{
-    color: rgb(67,174,254);
-    margin-top: 0.9rem;
+
+
+
+    color: #7F7F7F;
+    margin-top: 1rem;
     font-size: 0.9rem;
 }
+.solution_v2_content_text_li{
+    margin-top: 10px;
+}
+
 .solution_v2_footer{
     margin-top: 2.5rem;
-    padding: 0 0.6rem;
+    padding: 0 0;
 
     display: flex;
     flex-direction:row;
@@ -253,27 +267,28 @@
 }
 
 .solution_v2_see_more{
-    background-color: white;
+    color: white;
     padding: 10px;
-    color: rgb(67,174,254);
+    background-color: #29A4FF;
     font-size: 0.9rem;
     width: 8rem;
     cursor: pointer;
     text-align: center;
     border: 1px solid rgb(194,225,249);
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .solution_v2_free_get{
     margin-left: 15px;
-    background-color: rgb(41,164,255);
+    background-color: #29A4FF;
     width: 130px;
     padding: 10px;
     text-align: center;
     font-size: 14px;
     border: 1px solid rgb(194,225,249);
-    border-radius: 3px;
+    border-radius: 5px;
     color: white;
+    cursor: pointer;
     /*cursor: pointer;*/
 }
 
