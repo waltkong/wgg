@@ -111,12 +111,15 @@
     margin-top: 20px;
 }
 
-/*.provide_body .swiper-wrapper{*/
-    /*align-items: flex-start;*/
-/*}*/
+
+
+.provide_body .swiper-wrapper{
+    /*margin-left: 140px;*/
+    margin-left: 8.75rem;
+}
 
 .provide_item{
-    width: 50%;
+    width: 100%;
     height: 220px;
     /*background-color: #0d95e8;*/
 
@@ -129,8 +132,8 @@
 
 .provide_item img{
     /*width: 70%;*/
-    width: 75px;
-
+    /*width: 75px;*/
+    width: 128px;
 }
 .provide_product_name{
     color: rgb(94,94,94);

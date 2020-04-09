@@ -23,7 +23,7 @@
                 {foreach name="menu_solution_list" item="vo" key="k"}
                 {if condition="$k<4"}
                 <div class="bottom_category_body_text" >
-                    <a href="{:url('index/solution/detail',['id'=>$vo['id']])}" >
+                    <a href="{:url('solution/detail',['id'=>$vo['id']])}" >
                         {$vo.name}
                     </a>
                 </div>
@@ -41,7 +41,7 @@
                 {foreach name="menu_product_category_list" item="vo" key="k"}
                 {if condition="$k<4"}
                 <div class="bottom_category_body_text" >
-                    <a href="{:url('index/product/product_category_index',['id'=>$vo['id']])}" >
+                    <a href="{:url('product/product_category_index',['id'=>$vo['id']])}" >
                         {$vo.name}
                     </a>
                 </div>
@@ -57,7 +57,7 @@
 
                 {foreach name="menu_customcase_category_list" item="vo" key="k"}
                 <div class="bottom_category_body_text" >
-                    <a href="{:url('index/customcase/index',['category_id'=>$vo['id']])}" >
+                    <a href="{:url('customcase/index',['category_id'=>$vo['id']])}" >
                         {$vo.name}
                     </a>
                 </div>
@@ -71,7 +71,7 @@
 
                 {foreach name="menu_news_category_list" item="vo" key="k"}
                 <div class="bottom_category_body_text" >
-                    <a href="{:url('index/news/index',['category_id'=>$vo['id']])}" >
+                    <a href="{:url('news/index',['category_id'=>$vo['id']])}" >
                         {$vo.name}
                     </a>
                 </div>
