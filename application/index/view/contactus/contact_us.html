@@ -53,11 +53,11 @@
 
         <div class="main_left">
             <div class="main_left_item {if condition='1 eq $this_category_id'} category_item_highlight {/if}"
-                 onclick="windows_jump('/index/contactus/index')">
+                 onclick="windows_jump('/contact_company')">
                 公司简介
             </div>
             <div class="main_left_item {if condition='2 eq $this_category_id'} category_item_highlight {/if}"
-                 onclick="windows_jump('/index/contactus/contact_us')">
+                 onclick="windows_jump('/contact_us')">
                 联系我们
             </div>
         </div>
@@ -221,7 +221,7 @@
       };
       $.ajax({
           type: "POST",
-          url: "/index/contactus/do_message",
+          url: "/contact_us_domessage",
           data: ajaxdata,
           dataType: "json",
           success: function(response){

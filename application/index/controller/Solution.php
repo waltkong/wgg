@@ -26,7 +26,7 @@ class Solution extends BaseController
 
     }
 
-    //产品详情
+    //解决方案详情
     public function detail(){
         $input = $this->req;
         $input['id'] = $input['id'] ?? '';

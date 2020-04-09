@@ -83,7 +83,7 @@
                         上一篇：
                     </div>
                     <div class="simple_paginate_item_name">
-                        <a href="/index/news/detail/id/{$jump_url.prev.id}">{$jump_url.prev.name}</a>
+                        <a href="/news_detail/{$jump_url.prev.id}">{$jump_url.prev.name}</a>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@
                         下一篇：
                     </div>
                     <div class="simple_paginate_item_name">
-                        <a href="/index/news/detail/id/{$jump_url.next.id}">{$jump_url.next.name}</a>
+                        <a href="/news_detail/{$jump_url.next.id}">{$jump_url.next.name}</a>
                     </div>
                 </div>
 
@@ -113,7 +113,7 @@
             <div class="recommend_news_list">
                 {foreach name="recommend_news_list" item="vo" key="k"}
                 <div class="recommend_news_item">
-                    <a href="/index/news/detail/id/{$vo.id}">{$vo.name}</a>
+                    <a href="/news_detail/{$vo.id}">{$vo.name}</a>
                 </div>
                 {/foreach}
 
@@ -128,7 +128,7 @@
             <div class="recommend_news_list">
                 {foreach name="relation_recommend_list" item="vo" key="k"}
                 <div class="recommend_news_item">
-                    <a href="/index/customcase/detail/id/{$vo.id}">{$vo.name}</a>
+                    <a href="/customcase_detail/{$vo.id}">{$vo.name}</a>
                 </div>
                 {/foreach}
 

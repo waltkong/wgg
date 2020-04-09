@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="product_see_detail_text">
-                    <a href="{:url('index/product/detail',['id'=>$vo['id']])}">查看详情</a>
+                    <a href="/product/{$vo.id}">查看详情</a>
                 </div>
 
             </div>
@@ -99,7 +99,8 @@
     };
 
     function windows_jump() {
-        var url = "/index/product/product_category_index?";
+//        var url = "/index/product/product_category_index?";
+        var url = "/product_cate/"+params.id+"?";
         for(var i in params){
             if(params[i] != ''){
                 url += '&'+ i + '=' + params[i];

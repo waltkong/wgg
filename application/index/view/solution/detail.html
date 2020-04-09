@@ -121,7 +121,9 @@
     };
 
     function windows_jump() {
-        var url = "/index/solution/detail?";
+//        var url = "/index/solution/detail?";
+        var url = "/solution/"+params.id+"?";
+
         for(var i in params){
             if(params[i] != ''){
                 url += '&'+ i + '=' + params[i];

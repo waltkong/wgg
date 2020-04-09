@@ -119,7 +119,8 @@
     };
 
     function windows_jump() {
-        var url = "/index/news/index?";
+//        var url = "/index/news/index?";
+        var url = "/news/"+params.category_id+"?";
         for(var i in params){
             if(params[i] != ''){
                 url += '&'+ i + '=' + params[i];

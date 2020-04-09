@@ -118,7 +118,8 @@
     };
 
     function windows_jump() {
-        var url = "/index/customcase/index?";
+//        var url = "/index/customcase/index?";
+        var url = "/customcase/"+params.category_id+"?";
         for(var i in params){
             if(params[i] != ''){
                 url += '&'+ i + '=' + params[i];

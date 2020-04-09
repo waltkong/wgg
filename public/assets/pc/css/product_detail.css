@@ -40,7 +40,7 @@
 
 .product_image{
 
-    width: 40%;
+    width: 35%;
     padding: 15px 15px;
     border: 1px solid rgb(137,137,137);
 }
@@ -73,6 +73,20 @@
 
 .product_attributes_each{
     margin-top: 10px;
+}
+
+.consule_price{
+    margin-top: 25px;
+    margin-left: 15px;
+    background-color: #29A4FF;
+    width: 130px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid rgb(194,225,249);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
 }
 
 

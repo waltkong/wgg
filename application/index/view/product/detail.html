@@ -44,8 +44,8 @@
     </div>
 
     <div class="breadcrumb_box">
-        当前位置：<a href="/index/index/index">首页</a>><a href="{:url('index/product/product_category_index')}">产品中心</a>
-        ><a href="{:url('index/product/product_category_index',['id'=>$row['category_id']])}">{$row.category_name}</a>
+        当前位置：<a href="/">首页</a>><a href="/product_cate">产品中心</a>
+        ><a href="/product_cate/{$row.category_id}">{$row.category_name}</a>
         ><a href="#"><span class="breadcrumb_title_text">{$row.name}</span></a>
     </div>
 
@@ -76,6 +76,10 @@
                         {$vo}
                     </div>
                     {/foreach}
+                </div>
+
+                <div class="consule_price" onclick="gotoContact()">
+                    咨询价格
                 </div>
 
             </div>
@@ -128,6 +132,10 @@
     function change_category_id(category_id) {
         params.id = category_id;
         windows_jump();
+    }
+
+    function gotoContact() {
+        window.location.href='/contact_us';
     }
 
 

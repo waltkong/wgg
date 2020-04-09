@@ -90,7 +90,7 @@
             </div>
 
             <div class="company_introduce_more_box">
-                <a href="/index/contactus/index"> 查看更多 >></a>
+                <a href="/contact_company"> 查看更多 >></a>
             </div>
         </div>
 
@@ -158,12 +158,12 @@
                 <div class="single_product_util_list" id="single_product_util_list">
                     {foreach name="vo['util_array']" item="vo2" key="k2"}
                     <div class="each_util">
-                        {$vo2}
+                        √ {$vo2}
                     </div>
                     {/foreach}
                 </div>
                 <div class="single_product_see_more">
-                    <a href="/index/product/product_category_index"> 查看更多 >></a>
+                    <a href="/product_cate/{$vo.id}"> 查看更多 >></a>
                 </div>
             </div>
         </div>
@@ -271,7 +271,7 @@
                         <img src="__CDN__/assets/pc/image/首页切图/素材切图/15.png">
                     </div>
                     <div class="case_image_more">
-                        <a href="/index/customcase/index"> 更多案例 >> </a>
+                        <a href="/customcase"> 更多案例 >> </a>
                     </div>
                 </div>
 
@@ -293,7 +293,7 @@
 
 
             <div class="more_button_text">
-                <a href="/index/customcase/index"> 更多新闻 >> </a>
+                <a href="/news"> 更多新闻 >> </a>
 
             </div>
 
@@ -434,11 +434,11 @@
     }
 
     function gotosolutionPage() {
-        window.location.href='/index/solution/detail';
+        window.location.href='/solution';
     }
 
     function gotoContact() {
-        window.location.href='/index/contactus/contact_us';
+        window.location.href='/contact_us';
     }
 
 

@@ -55,6 +55,10 @@ class Index extends BaseController
         return $this->view->fetch();
     }
 
+    public function test(){
+        echo 3333333333;die;
+    }
+
 
 
 

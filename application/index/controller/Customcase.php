@@ -91,7 +91,9 @@ class Customcase extends BaseController
         return $this->view->fetch();
     }
 
-
+    public function test(){
+        echo 555555;die;
+    }
 
 
 }
