@@ -12,90 +12,158 @@
                 智慧食堂解决方案
             </div>
         </div>
-
-        <div class="header_menu_box">
-            <div class="btn_box">
-                <button class="menu_btn" onclick="toggle_menu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+        <div class="menu_btn_box">
+            <button class="menu_btn" onclick="toggle_menu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+
 
     </div>
 
     <div id="drawer_menu" class="drawer_menu">
-        <div class="drawer_menu_ul">
-            <div class="drawer_menu_li {if $highlight_menu == 1} active {/if}">
-                <a href="/" >首页</a>
-            </div>
 
-            <div class="drawer_menu_li {if $highlight_menu == 2} active {/if}" onclick="toggle_sub_menu(this)">
-                <div >
-                    解决方案 <img class="sub_menu_arrow" src="__CDN__/assets/mobile/image/icon/右箭头.png">
-                </div>
-                <div class="drawer_menu_sub_li_box" style="display: none">
-                    {foreach name="menu_solution_list" item="vo" key="k"}
-                        <div class="drawer_menu_sub_li">
-                            <a href="/solution/{$vo.id}" >{$vo.name}</a>
-                        </div>
-                    {/foreach}
-                </div>
-            </div>
 
-            <div class="drawer_menu_li {if $highlight_menu == 3} active {/if}" onclick="toggle_sub_menu(this)">
-                产品中心 <img class="sub_menu_arrow" src="__CDN__/assets/mobile/image/icon/右箭头.png">
-                <div class="drawer_menu_sub_li_box" style="display: none">
-                    {foreach name="menu_product_category_list" item="vo" key="k"}
-                    <div class="drawer_menu_sub_li">
-                        <a href="/product_cate/{$vo.id}" >{$vo.name}</a>
-                    </div>
-                    {/foreach}
+       <div class="drawer_menu_item">
+           <div class="menu_first_level">
+               <div class="menu_first_level_name">
+                   首页
+               </div>
+           </div>
+
+           <div class="menu_sub_level">
+           </div>
+       </div>
+
+        <div class="drawer_menu_item">
+            <div class="menu_first_level" onclick="toggle_sub_menu(this)">
+                <div class="menu_first_level_name"  >
+                    解决方案
+                </div>
+                <div class="menu_first_level_arrow">
+                    <img class="menu_first_level_arrow_img" src="__CDN__/assets/mobile/image/icon/right_arrow.png">
                 </div>
             </div>
 
-            <div class="drawer_menu_li {if $highlight_menu == 4} active {/if}" onclick="toggle_sub_menu(this)">
-                客户案例 <img class="sub_menu_arrow" src="__CDN__/assets/mobile/image/icon/右箭头.png">
-                <div class="drawer_menu_sub_li_box" style="display: none">
-                    {foreach name="menu_customcase_category_list" item="vo" key="k"}
-                    <div class="drawer_menu_sub_li">
-                        <a href="/customcase/{$vo.id}" >{$vo.name}</a>
-                    </div>
-                    {/foreach}
+            <div class="menu_sub_level">
+
+                {foreach name="menu_solution_list" item="vo" key="k"}
+                <div class="menu_sub_level_item">
+                    <a href="/solution/{$vo.id}" >
+                        {$vo.name}
+                    </a>
+                </div>
+                {/foreach}
+            </div>
+        </div>
+
+        <div class="drawer_menu_item">
+            <div class="menu_first_level" onclick="toggle_sub_menu(this)">
+                <div class="menu_first_level_name">
+                    产品中心
+                </div>
+                <div class="menu_first_level_arrow">
+                    <img class="menu_first_level_arrow_img" src="__CDN__/assets/mobile/image/icon/right_arrow.png">
                 </div>
             </div>
 
-            <div class="drawer_menu_li {if $highlight_menu == 5} active {/if}" onclick="toggle_sub_menu(this)">
-                新闻资讯 <img class="sub_menu_arrow" src="__CDN__/assets/mobile/image/icon/右箭头.png">
-                <div class="drawer_menu_sub_li_box" style="display: none">
-                    {foreach name="menu_news_category_list" item="vo" key="k"}
-                    <div class="drawer_menu_sub_li">
-                        <a href="/news/{$vo.id}" >{$vo.name}</a>
-                    </div>
-                    {/foreach}
+            <div class="menu_sub_level">
+
+                {foreach name="menu_product_category_list" item="vo" key="k"}
+                <div class="menu_sub_level_item">
+                    <a href="/product_cate/{$vo.id}" >
+                        {$vo.name}
+                    </a>
+                </div>
+                {/foreach}
+            </div>
+        </div>
+
+        <div class="drawer_menu_item">
+            <div class="menu_first_level" onclick="toggle_sub_menu(this)">
+                <div class="menu_first_level_name">
+                    客户案例
+                </div>
+                <div class="menu_first_level_arrow">
+                    <img class="menu_first_level_arrow_img" src="__CDN__/assets/mobile/image/icon/right_arrow.png">
                 </div>
             </div>
 
-            <div class="drawer_menu_li {if $highlight_menu == 6} active {/if}" onclick="toggle_sub_menu(this)">
-                关于我们 <img class="sub_menu_arrow" src="__CDN__/assets/mobile/image/icon/右箭头.png">
-                <div class="drawer_menu_sub_li_box" style="display: none">
+            <div class="menu_sub_level">
 
-                    <div class="drawer_menu_sub_li">
-                        <a href="/contact_company" >公司介绍</a>
-                    </div>
-                    <div class="drawer_menu_sub_li">
-                        <a href="/contact_us" >联系我们</a>
-                    </div>
+                {foreach name="menu_customcase_category_list" item="vo" key="k"}
+                <div class="menu_sub_level_item">
+                    <a href="/customcase/{$vo.id}" >
+                        {$vo.name}
+                    </a>
+                </div>
+                {/foreach}
+            </div>
+        </div>
+
+        <div class="drawer_menu_item">
+            <div class="menu_first_level" onclick="toggle_sub_menu(this)">
+                <div class="menu_first_level_name">
+                    新闻动态
+                </div>
+                <div class="menu_first_level_arrow">
+                    <img class="menu_first_level_arrow_img" src="__CDN__/assets/mobile/image/icon/right_arrow.png">
+                </div>
+            </div>
+
+            <div class="menu_sub_level">
+
+                {foreach name="menu_news_category_list" item="vo" key="k"}
+                <div class="menu_sub_level_item">
+                    <a href="/news/{$vo.id}" >
+                        {$vo.name}
+                    </a>
+                </div>
+                {/foreach}
+
+            </div>
+        </div>
+
+        <div class="drawer_menu_item">
+
+            <div class="menu_first_level" onclick="toggle_sub_menu(this)">
+                <div class="menu_first_level_name">
+                    关于我们
+                </div>
+                <div class="menu_first_level_arrow">
+                    <img class="menu_first_level_arrow_img" src="__CDN__/assets/mobile/image/icon/right_arrow.png">
+                </div>
+            </div>
+
+            <div class="menu_sub_level">
+
+                <div class="menu_sub_level_item">
+                    <a href="/contact_company" >
+                        公司介绍
+                    </a>
+                </div>
+
+                <div class="menu_sub_level_item">
+                    <a href="/contact_us" >
+                        联系我们
+                    </a>
                 </div>
             </div>
 
         </div>
+
+
+
     </div>
 
 </div>
 
-
+<div class="header_img_display_none" style="display: none">
+    <img id='arrow001' src="/assets/mobile/image/icon/right_arrow.png">
+    <img id='arrow002' src="/assets/mobile/image/icon/down_arrow.png">
+</div>
 
 <script>
     var menu_btn = document.getElementById("menu_btn");
@@ -106,29 +174,42 @@
 
     function toggle_menu() {
         if (menu_hide){
-            menu_nav.style.height = "320px";
+            menu_nav.style.display= 'block';
             menu_hide = false;
         } else {
-            menu_nav.style.height = "0";
+            menu_nav.style.display = 'none';
             menu_hide = true;
         }
     }
 
 
-    var right_arrow_asset = "__CDN__/assets/mobile/image/icon/右箭头.png";
-    var down_arrow_asset = "__CDN__/assets/mobile/image/icon/下箭头.png";
+    var right_arrow_asset ="/assets/mobile/image/icon/right_arrow.png";
+    var down_arrow_asset ="/assets/mobile/image/icon/down_arrow.png";
+
 
     function toggle_sub_menu(obj) {
-        var obj1 = $(obj).find('.drawer_menu_sub_li_box')[0];
+
+        var obj1 = $(obj).parent().find('.menu_sub_level')[0];
+
+        var imgobj = $(obj).find('.menu_first_level_arrow_img')[0];
+
         if(obj1.style.display == 'none'){
-            $('.drawer_menu_ul').find('.drawer_menu_sub_li_box').css('display','none');
+
+            $('.menu_sub_level').css('display','none');
+            $(imgobj).attr('src',$('#arrow002').attr('src'));
             obj1.style.display = 'block';
-            $(obj).find('.sub_menu_arrow').attr('src',down_arrow_asset);
+
         }else{
+            $('.menu_sub_level').css('display','none');
+            $(imgobj).attr('src',$('#arrow001').attr('src'));
             obj1.style.display = 'none';
-            $(obj).find('.sub_menu_arrow').attr('src',right_arrow_asset);
+
         }
     }
+
+
+
+
 
 </script>
 
