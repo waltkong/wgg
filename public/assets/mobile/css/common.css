@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+html{
+    /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+    -ms-overflow-style:none;
+    /*火狐下隐藏滚动条*/
+    scrollbar-width: none;
+}
+html::-webkit-scrollbar{width:0px}
+
+body {
+    font-family: "Microsoft YaHei";
+    width: 100%;
+    position: absolute;
+}

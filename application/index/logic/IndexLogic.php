@@ -28,7 +28,7 @@ class IndexLogic extends BaseLogic{
             $list[$k]['image_url'] = UrlUtil::getFullUrl($v['image_url']);
 
             $filename = APP_ROOT_PATH.$v['image_url'];
-            $img_info = getimagesize($filename);
+//            $img_info = getimagesize($filename);
 
 
             $list[$k]['jump_url'] = UrlUtil::getFullUrl($v['jump_url']);
@@ -87,6 +87,17 @@ class IndexLogic extends BaseLogic{
 
         }
         return $list;
+    }
+
+
+    public function one_vedio(){
+        $obj = new Banner_model();
+        $row = $obj
+            ->where('group',1)
+            ->where('jump_url','like','%.mp4%')
+            ->order('createtime', 'desc')
+            ->find();
+        return empty($row)? '' : $row->jump_url;
     }
 
 

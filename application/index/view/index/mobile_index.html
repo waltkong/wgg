@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> {$seo_title} </title>
+    <meta name="description" content="{$seo_description}">
+    <meta name="keywords" content="{$seo_keyword}">
+
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/common.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/index.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
+
+</head>
+<body>
+
+    <div class="container" name="top">
+
+        {include file='common/mobileheader' /}
+
+        <div class="nav_container">
+            <div class="swiper-container swiper1-container" >
+
+                <div class="swiper-wrapper">
+
+                    {foreach name="banner" item="vo" key="k"}
+                    <div class="swiper-slide">
+
+                        <img src="{$vo.image_url}" alt="{$vo.name}"  onclick="bannerJump('{$vo.jump_url}')"/>
+
+                    </div>
+                    {/foreach}
+
+                </div>
+
+                <!--分页-->
+                <div class="pagination swiper1-pagination"></div>
+                <!--&lt;!&ndash; 如果需要导航按钮 &ndash;&gt;-->
+                <div class="swiper-button-prev swiper_btn"></div>
+                <div class="swiper-button-next swiper_btn"></div>
+
+                <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;-->
+                <!--<div class="swiper-scrollbar"></div>-->
+
+            </div>
+        </div>
+
+        <div class="common_title_text_box">
+            <div class="little_vertical_bar">
+            </div>
+            <div class="common_title_title_text">
+                <div class="title_text_big">
+                    解决方案/
+                </div>
+                <div class="title_text_small">
+                    SOLUTION
+                </div>
+            </div>
+            <div class="little_vertical_bar">
+            </div>
+        </div>
+
+        <div class="video_box">
+            <video src="{$one_vedio}" controls="controls">
+                您的浏览器不支持 video 标签。
+            </video>
+        </div>
+
+        <div class="apply_field_box">
+            <div class="apply_field_title_box">
+                <img src="__CDN__/assets/mobile/image/素材切图输出/1-首页\图像/未标题-1_29.gif"/>
+                <div class="apply_field_title_text">
+                    <div class="title_text_big">
+                        应用场景/
+                    </div>
+                    <div class="title_text_small">
+                        SCENE
+                    </div>
+                </div>
+            </div>
+            <div class="apply_field_content">
+                适用于：<span class="apply_field_content_desc">高校食堂，医院食堂，政府机关食堂，企业食堂等大型团餐场合</span>
+            </div>
+
+        </div>
+
+
+        <div class="common_title_text_box">
+            <div class="little_vertical_bar">
+            </div>
+            <div class="common_title_title_text">
+                <div class="title_text_big">
+                    智慧食堂产品/
+                </div>
+                <div class="title_text_small">
+                    PRODUCTS
+                </div>
+            </div>
+            <div class="little_vertical_bar">
+            </div>
+        </div>
+
+        <div class="wise_products_category_box">
+
+            {foreach name="menu_product_category_list" item="vo" key="k"}
+
+            <div class="wise_products_category_item">
+                <div class="wise_products_category_item_img">
+                    <img src="{$vo.single_image}" alt="{$vo.name}" />
+                </div>
+                <div class="wise_products_category_item_name">
+                    {$vo.name}
+                </div>
+            </div>
+
+            {/foreach}
+
+        </div>
+
+        <div class="common_title_text_box">
+            <div class="little_vertical_bar">
+            </div>
+            <div class="common_title_title_text">
+                <div class="title_text_big">
+                    公司简介/
+                </div>
+                <div class="title_text_small">
+                    ABOUT US
+                </div>
+            </div>
+            <div class="little_vertical_bar">
+            </div>
+        </div>
+
+        <div class="company_info_box">
+            <div class="company_img">
+                <img src="__CDN__/assets/mobile/image/index/company.png"  alt="五宫格信息科技"/>
+            </div>
+            <div class="company_desc_box">
+                <div class="company_desc_text">
+                    {$page_company_info.company_description}
+                </div>
+                <div class="company_see_more">
+                    <div> 查看更多 >> </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cases_box_container">
+
+            <div class="common_title_text_box">
+                <div class="little_vertical_bar">
+                </div>
+                <div class="common_title_title_text">
+                    <div class="title_text_big">
+                        客户案例/
+                    </div>
+                    <div class="title_text_small">
+                        CASES
+                    </div>
+                </div>
+                <div class="little_vertical_bar">
+                </div>
+            </div>
+
+            <div class="cases_box">
+                {foreach name="case_list" item="vo" key="k"}
+
+                <div class="cases_item">
+                    <div class="cases_item_img">
+                        <img src="{$vo.image_url}" alt="{$vo.name}" />
+                    </div>
+                    <div class="cases_item_name">
+                        {$vo.name}
+                    </div>
+                </div>
+
+                {/foreach}
+            </div>
+
+            <div class="common_see_more">
+                <div>查看更多>></div>
+            </div>
+        </div>
+
+
+        <div class="news_box_container">
+
+            <div class="common_title_text_box">
+                <div class="little_vertical_bar">
+                </div>
+                <div class="common_title_title_text">
+                    <div class="title_text_big">
+                        新闻资讯/
+                    </div>
+                    <div class="title_text_small">
+                        NEWS
+                    </div>
+                </div>
+                <div class="little_vertical_bar">
+                </div>
+            </div>
+
+            <div class="news_box">
+
+                {foreach name="news_list" item="vo" key="k"}
+                <div class="news_item">
+
+                    <div class="news_item_img">
+                        <img src="{$vo.image_url}" alt="{$vo.name}" />
+                    </div>
+
+                    <div class="news_item_content_box">
+                        <div class="news_item_title">
+                            {$vo.name}
+                        </div>
+                        <div class="news_item_description">
+                            &nbsp;{$vo.description}
+                        </div>
+                    </div>
+
+                </div>
+
+                {if condition="($k < count($news_list)-1 ) "}
+
+                <div class="news_divider">
+                </div>
+                {/if}
+
+
+                {/foreach}
+
+            </div>
+
+            <div class="common_see_more">
+                <div>查看更多>></div>
+            </div>
+
+        </div>
+
+
+        <div class="gezi_desc_text_box">
+            <div class="gezi_bar">
+            </div>
+            <div class="gezi_desct_text">
+                戈子科技, 各行业领域的共同选择
+            </div>
+            <div class="gezi_bar">
+            </div>
+        </div>
+
+        <div class=" companies_box">
+
+        </div>
+
+
+        {include file='common/mobilefooter' /}
+    </div>
+</body>
+
+
+<script>
+
+    window.onload = function() {
+
+        var mySwiper = new Swiper ('.swiper1-container', {
+//            direction: 'vertical', // 垂直切换选项
+            loop: true, // 循环模式选项
+            autoplay:5000,
+            // 如果需要分页器
+//            pagination: {
+//                el: '.swiper1-pagination',
+//            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                clickable:true,
+            },
+        });
+
+
+        var mySwiper2 = new Swiper ('.swiper2-container', {
+//            direction: 'vertical', // 垂直切换选项
+            loop: true, // 循环模式选项
+            autoplay:5000,
+            // 如果需要分页器
+//            pagination: {
+//                el: '.swiper2-pagination',
+//            },
+            slidesPerView: 3.9,
+//            slidesPerView : 'auto',
+//            loopedSlides :4,
+            centeredSlides: true,
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                clickable:false,
+            },
+            on:{
+                click:function () {
+                    var index = this.realIndex;
+                    $('.single_product_box').addClass('single_product_box_hide');
+                    $('.single_product_box_'+index).removeClass('single_product_box_hide');
+
+                }
+            },
+        });
+
+    };
+
+
+    function listenOnMOuseOver(index) {
+        $('.single_product_box').addClass('single_product_box_hide');
+        $('.single_product_box_'+index).removeClass('single_product_box_hide');
+    }
+
+    function generateUtil(utils) {
+        var html = '';
+        for(var i=0;i<utils.length;i++){
+            html += "<div class='each_util'>" + utils[i] + "</div>";
+        }
+        $('#single_product_util_list').html(html);
+    }
+
+    function bannerJump(url) {
+        console.log(url);
+
+        if(url != '' && url != null){
+            window.open(url)
+        }
+
+
+
+//            window.location.href = url;
+    }
+
+    function gotosolutionPage() {
+        window.location.href='/solution';
+    }
+
+    function gotoContact() {
+        window.location.href='/contact_us';
+    }
+
+
+
+
+</script>
+
+</html>
