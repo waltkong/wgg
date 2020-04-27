@@ -86,7 +86,31 @@
     </div>
 
 
+<script>
 
+    var params = {
+        'id':"{$row.id}"
+    };
+
+    function windows_jump() {
+//        var url = "/index/solution/detail?";
+        var url = "/mobile_solution/"+params.id+"?";
+
+        for(var i in params){
+            if(params[i] != ''){
+                url += '&'+ i + '=' + params[i];
+            }
+        }
+        window.location.href= url;
+    }
+
+    function change_category_id(category_id) {
+        params.id = category_id;
+        windows_jump();
+    }
+
+
+</script>
 
 
 

@@ -60,7 +60,7 @@
 }
 
 .plan_header .plan_header_img{
-    width: 40px;
+    width: 50px;
 }
 
 .plan_header .plan_header_img img{
@@ -89,6 +89,7 @@
     font-size: 15px;
 }
 
+
 .plan_body{
     margin-top: 10px;
     width: 80%;
@@ -113,7 +114,7 @@
 
 
 .plan_img_box .plan_img_end{
-    width: 40px;
+    width: 50px;
 }
 
 
