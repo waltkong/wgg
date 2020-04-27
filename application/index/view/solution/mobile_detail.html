@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> {$seo_title} </title>
+    <meta name="description" content="{$seo_description}">
+    <meta name="keywords" content="{$seo_keyword}">
+
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/common.css?v={$asset_version}">
+
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/solution_detail.css?v={$asset_version}">
+
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+
+
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container" name="top">
+        {include file='common/mobileheader' /}
+
+        <div class="category_box">
+        {foreach name="solution_list" item="vo" key="k"}
+            <div class="category_item  {if condition='$vo.id eq $row.id '} category_item_highlight {/if} "
+            onclick="change_category_id('{$vo.id}')"
+            >
+            <span>{$vo.name}</span>
+            </div>
+        {/foreach}
+        </div>
+
+        <div class="main_box">
+
+            <?php
+                if ($row['template']=='智慧食堂'){
+            ?>
+            {include file='mobile_solution_templates/wise_canteen' /}
+            <?php
+            }
+            ?>
+
+            <?php
+                if ($row['template']=='自选餐'){
+            ?>
+            {include file='mobile_solution_templates/myself_pick' /}
+            <?php
+            }
+            ?>
+
+
+            <?php
+                if ($row['template']=='预定套取餐'){
+            ?>
+            {include file='mobile_solution_templates/order_food' /}
+            <?php
+            }
+            ?>
+
+            <?php
+                if ($row['template']=='自助餐'){
+            ?>
+            {include file='mobile_solution_templates/self_help' /}
+            <?php
+            }
+            ?>
+
+            <?php
+                if (empty($row['template'])){
+            ?>
+            <?php
+            }
+            ?>
+
+
+        </div>
+
+    {include file='common/mobilefooter' /}
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>

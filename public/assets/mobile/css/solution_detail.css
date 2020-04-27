@@ -1,0 +1,30 @@
+.category_box{
+    width: 100%;
+    background-color: rgb(247,247,247);
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+
+    color: rgb(122,122,122);
+
+}
+
+.category_box .category_item{
+    width: 49%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.category_box .category_item.category_item_highlight{
+    background-color: rgb(25,171,244);
+    color: white;
+}

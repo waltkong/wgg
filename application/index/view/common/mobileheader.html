@@ -29,7 +29,10 @@
        <div class="drawer_menu_item">
            <div class="menu_first_level">
                <div class="menu_first_level_name">
-                   首页
+                   <a href="/mobile_index" >
+                       首页
+                   </a>
+
                </div>
            </div>
 
@@ -51,7 +54,7 @@
 
                 {foreach name="menu_solution_list" item="vo" key="k"}
                 <div class="menu_sub_level_item">
-                    <a href="/solution/{$vo.id}" >
+                    <a href="/mobile_solution/{$vo.id}" >
                         {$vo.name}
                     </a>
                 </div>

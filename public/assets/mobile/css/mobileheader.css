@@ -86,6 +86,7 @@
 .drawer_menu{
 
     padding-bottom: 20px;
+    opacity: 0.9;
 
     font-size: 15px;
     display: none;
