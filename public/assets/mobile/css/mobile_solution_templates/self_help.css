@@ -1,0 +1,265 @@
+
+.common_title_text_box{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+.little_vertical_bar{
+    width: 1px;
+    height: 18px;
+    background-color: rgb(92,176,253);
+}
+
+.common_title_title_text{
+
+    color: rgb(79,79,79);
+    margin-left: 30px;
+    margin-right: 30px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: flex-end;
+}
+
+.title_text_big{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.title_text_small{
+    font-size: 13px;
+}
+
+
+.plan_box{
+    margin-top: 15px;
+    padding: 5px 5px;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.plan_header{
+    width: 100%;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.plan_header .plan_header_img{
+    width: 50px;
+}
+
+.plan_header .plan_header_img img{
+    width: 98%;
+
+}
+
+.plan_header_text_box{
+    padding: 5px 10px;
+
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.plan_header_text_english{
+    color: rgb(173,173,173);
+    font-size: 14px;
+}
+
+.plan_header_text_chinese{
+    color: rgb(89,89,89);
+    font-size: 15px;
+}
+
+
+.plan_body{
+    margin-top: 10px;
+    width: 80%;
+    color: rgb(157,157,157);
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.plan_img_box{
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    align-items: flex-end;
+}
+
+.plan_img_box .plan_img{
+    width: 80%;
+}
+
+
+.plan_img_box .plan_img_end{
+    width: 50px;
+}
+
+
+
+
+.process_box{
+    margin: 15px 8px 0 8px;
+    padding: 5px 30px;
+    box-shadow: 3px 3px 3px rgba(219,209,200,1);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.process_header{
+
+}
+
+.process_img_box{
+    width: 100%;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.process_img_item{
+    width: 100%;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.process_img_left{
+    width: 45%;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.process_img_left img{
+    width: 70%;
+}
+
+.process_img_mid{
+    width: 10%;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.process_img_mid img{
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.process_img_right{
+    width: 45%;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.process_img_right img{
+    width: 70%;
+}
+
+.process_img_title{
+
+    height: 30px;
+
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+
+
+.util_box{
+    margin: 15px 8px 15px 8px;
+    padding-bottom: 15px;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+
+    box-shadow: 3px 3px 3px rgba(219,209,200,1);
+    border-radius: 8px;
+
+}
+
+.util_list_container{
+    margin-top: 10px;
+    width: 100%;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.util_list_container .util_item{
+    width: 50%;
+    padding: 10px 10px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.util_item .util_item_img{
+    width: 20px;
+}
+
+.util_item .util_item_img img{
+    width: 100%;
+}
+
+.util_item .util_item_name{
+    margin-left: 5px;
+    color: rgb(182,182,182);
+    font-size: 12px;
+}
