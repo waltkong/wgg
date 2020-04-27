@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> {$seo_title} </title>
+    <meta name="description" content="{$seo_description}">
+    <meta name="keywords" content="{$seo_keyword}">
+
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/common.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/mobile_product_detail.css?v={$asset_version}">
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
+
+</head>
+<body>
+
+    <div class="container" name="top">
+
+        {include file='common/mobileheader' /}
+
+        <div class="nav_container">
+            <img src="{$banner.image_url}" alt="{$banner.name}" />
+        </div>
+
+        <div class="breadcrumb_box">
+            当前位置：<a href="/">首页</a>><a href="/mobile_product_cate">产品中心</a>
+            ><a href="/mobile_product_cate/{$row.category_id}">{$row.category_name}</a>
+            ><a href="#"><span class="breadcrumb_title_text">{$row.name}</span></a>
+        </div>
+
+
+        <div class="main_box">
+
+            <div class="product_introduce_box">
+
+                <div class="product_image">
+                    <img src="{$row.single_image}" alt="{$row.name}" />
+                </div>
+
+                <div class="product_description_box">
+
+                    <div class="product_title">
+                        {$row.name}
+                    </div>
+
+                    <div class="product_attributes">
+                        {foreach name="row.util_array" item="vo" key="k"}
+                        <div class="product_attributes_each">
+                            {$vo}
+                        </div>
+                        {/foreach}
+                    </div>
+
+                    <!--<div class="consule_price" onclick="gotoContact()">-->
+                        <!--咨询价格-->
+                    <!--</div>-->
+
+                </div>
+
+            </div>
+
+
+            <div class="part_title_box">
+                <div class="part_title_bar">
+                </div>
+                <div class="part_title_text">
+                    详细信息
+                </div>
+            </div>
+
+
+            <div class="product_content">
+                {$row.content}
+            </div>
+
+        </div>
+
+        {include file='common/mobilefooter' /}
+    </div>
+
+</body>
+</html>

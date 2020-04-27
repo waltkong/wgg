@@ -29,8 +29,8 @@ Route::rule('contact_us_domessage','index/Contactus/do_message');   //
 //移动端
 Route::rule('mobile_index','index/Index/mobile_index');  //首页
 Route::rule('mobile_solution/[:id]','index/Solution/mobile_detail');  //解决方案详情
-//Route::rule('product_cate/[:id]','index/Product/product_category_index');    //产品分类主页
-//Route::rule('product/[:id]','index/Product/detail');   //产品详情
+Route::rule('mobile_product_cate/[:id]','index/Product/mobile_product_category_index');    //产品分类主页
+Route::rule('mobile_product/[:id]','index/Product/mobile_detail');   //产品详情
 //Route::rule('customcase/[:category_id]','index/Customcase/index');   //客户案例列表
 //Route::rule('customcase_detail/[:id]','index/Customcase/detail');   //客户案例详情
 //Route::rule('news/[:category_id]','index/News/index');   //新闻列表
