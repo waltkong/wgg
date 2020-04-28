@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> {$seo_title} </title>
+    <meta name="description" content="{$seo_description}">
+    <meta name="keywords" content="{$seo_keyword}">
+
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/common.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/mobile_customcase_detail.css?v={$asset_version}">
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/component/paginate.css?v={$asset_version}">
+
+</head>
+<body>
+
+<div class="container" name="top">
+
+    {include file='common/mobileheader' /}
+
+    <div class="nav_container">
+        <img src="{$banner.image_url}" alt="{$banner.name}" />
+    </div>
+
+    <div class="content_box">
+        <div class="content_title">
+            {$row.name}
+        </div>
+        <div class="content_time">
+            {$row.create_date}
+        </div>
+        <div class="content_body">
+            {$row.content}
+        </div>
+    </div>
+
+    <div class="simple_paginate_box">
+        <div class="simple_paginate_item">
+            <a href="/mobile_customcase_detail/{$jump_url.prev.id}">上一篇</a>
+        </div>
+        <div class="simple_paginate_item">
+            <a href="/mobile_customcase_detail/{$jump_url.next.id}">下一篇</a>
+        </div>
+    </div>
+
+
+    <div class="recommend_box">
+
+        <div class="recommend_text">
+            <span>推荐阅读</span>
+        </div>
+
+        {foreach name="recommend_cases_list" item="vo" key="k"}
+        <div class="recommend_item">
+            <a href="/mobile_customcase_detail/{$vo.id}">{$vo.name}</a>
+        </div>
+        {/foreach}
+
+    </div>
+
+    {include file='common/mobilefooter' /}
+
+</div>
+
+</body>
+</html>

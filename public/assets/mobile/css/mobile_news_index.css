@@ -1,0 +1,88 @@
+.nav_container{
+    width: 100%;
+}
+.nav_container img{
+    width: 100%;
+}
+
+.case_box{
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: flex-end;
+
+    margin-top: 20px;
+    padding: 0 8% 20px 8%;
+    width: 100%;
+}
+
+.case_item{
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-end;
+    align-items: center;
+
+    width: 50%;
+    padding: 0 10px ;
+    margin-top: 20px;
+
+}
+
+.case_img{
+    width: 90%;
+}
+
+.case_img img{
+    width: 100%;
+}
+
+.case_title{
+    margin-top: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(74,74,74);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+}
+
+.case_description{
+    margin-top: 15px;
+    line-height: 30px;
+    font-size: 13px;
+    color: rgb(124,124,124);
+
+    height: 100px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.case_see_detail{
+    margin-top: 14px;
+    text-align: center;
+    padding: 5px 15px;
+    background-color: rgb(60,163,251);
+    font-size: 15px;
+}
+
+.case_see_detail a{
+    text-decoration: none;
+}
+
+.case_see_detail a span{
+    color: white;
+}
+

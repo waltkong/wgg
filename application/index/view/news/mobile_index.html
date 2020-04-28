@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -11,17 +12,14 @@
 
     <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="__CDN__/assets/mobile/css/common.css?v={$asset_version}">
-    <link rel="stylesheet" href="__CDN__/assets/mobile/css/mobile_product_category_index.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/mobile_news_index.css?v={$asset_version}">
 
     <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
     <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
 
     <link rel="stylesheet" href="__CDN__/assets/mobile/css/component/paginate.css?v={$asset_version}">
 
-
-
 </head>
-
 <body>
 
 <div class="container" name="top">
@@ -32,37 +30,29 @@
         <img src="{$banner.image_url}" alt="{$banner.name}" />
     </div>
 
-    <div class="category_box">
-        {foreach name="menu_product_category_list" item="vo" key="k"}
-        <div class="category_item  {if condition='$vo.id eq $row.id '} category_item_highlight {/if} "
-             onclick="change_category_id('{$vo.id}')">
-            <div class="category_item_name">{$vo.name}</div>
-        </div>
-        {/foreach}
-    </div>
+    <div class="case_box">
 
-    <div class="product_list_box">
-        {foreach name="product_list" item="vo" key="k"}
+        {foreach name="news_list" item="vo" key="k"}
 
-        <div class="product_list_item">
+        <div class="case_item">
 
-            <div class="product_image_box">
-
-                <img src="{$vo.single_image}" alt="{$vo.name}" />
-
-                <div class="product_name_text">
-                    {$vo.name}
-                </div>
-
+            <div class="case_img">
+                <img src="{$vo.image_url}" alt="{$vo.name}">
+            </div>
+            <div class="case_title">
+                <span>{$vo.name}</span>
             </div>
 
-            <div class="product_see_detail_text">
-                <a href="/mobile_product/{$vo.id}">查看详情</a>
+            <div class="case_see_detail">
+                <a href="/mobile_news_detail/{$vo.id}">
+                    <span>查看详情</span>
+                </a>
             </div>
 
         </div>
 
         {/foreach}
+
     </div>
 
     <div class="page_box" >
@@ -89,24 +79,23 @@
         </div>
     </div>
 
-
     {include file='common/mobilefooter' /}
 
 </div>
 
-
+</body>
 
 <script>
 
     var params = {
         'pageIndex':"{$params.pageIndex}",
         'eachPage':"{$params.eachPage}",
-        'id':"{$row.id}"
+        'category_id':"{$params.category_id}"
     };
 
     function windows_jump() {
-//        var url = "/index/product/product_category_index?";
-        var url = "/mobile_product_cate/"+params.id+"?";
+//        var url = "/index/customcase/index?";
+        var url = "/mobile_news/"+params.category_id+"?";
         for(var i in params){
             if(params[i] != ''){
                 url += '&'+ i + '=' + params[i];
@@ -116,7 +105,8 @@
     }
 
     function change_category_id(category_id) {
-        params.id = category_id;
+        params.pageIndex = 1;
+        params.category_id = category_id;
         windows_jump();
     }
 
@@ -155,7 +145,7 @@
     }
 
 
+
 </script>
 
-</body>
 </html>

@@ -1,0 +1,35 @@
+.page_box{
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.paginate_container{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+
+    padding-bottom: 20px;
+}
+
+.paginate_item{
+    margin-left: 10px;
+
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid rgb(124,124,124);
+    background-color: white;
+    color:rgb(79,79,79);
+}
+
+.paginate_item.page_active{
+    background-color: rgb(61,178,248);
+    color: white;
+}
+

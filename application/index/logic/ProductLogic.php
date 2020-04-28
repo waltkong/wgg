@@ -74,12 +74,14 @@ class ProductLogic extends BaseLogic{
     }
 
 
-    public function product_list($category_id)
+    public function product_list($category_id,$pageIndex=1,$eachPage=1000,$option=[])
     {
+        $pageOffset = ($pageIndex-1)*$eachPage;
+
         $obj = new Product_model();
         $list = $obj->where('category_id',$category_id)
             ->order('id', 'asc')
-            ->limit(0,100)
+            ->limit($pageOffset,$eachPage)
             ->field('id,name,logo_image,single_image,util')
             ->select();
         $list = collection($list)->toArray();
@@ -96,6 +98,50 @@ class ProductLogic extends BaseLogic{
             $list[$k]['util_array'] =$temp;
         }
         return $list;
+    }
+
+
+
+    public function product_list_paginate($input,$pageIndex=1,$eachPage=1000,$option=[]){
+        $default = [
+            'data' => [],
+            'count' => 0,
+            'total' => 0,
+        ];
+
+        $pageOffset = ($pageIndex-1)*$eachPage;
+
+        $objFunc = function () use($input){
+            $obj = new Product_model();
+            if(isset($input['category_id']) && !empty($input['category_id'])){
+                $obj = $obj->where('category_id',$input['category_id']);
+            }
+            return $obj;
+        };
+        $default['total'] = $objFunc()->count();
+
+        $list = $objFunc()
+            ->order('createtime', 'desc')
+            ->limit($pageOffset,$eachPage)
+            ->field('id,name,logo_image,single_image,util')
+            ->select();
+        $list = collection($list)->toArray();
+        foreach ($list as $k => $v){
+            $list[$k]['logo_image'] = UrlUtil::getFullUrl($v['logo_image']);
+            $list[$k]['single_image'] = UrlUtil::getFullUrl($v['single_image']);
+
+            $utils = explode('|',$v['util']);
+            $temp = [];
+            foreach ($utils as $k2 => $util){
+                $temp[] = trim($util);
+            }
+
+            $list[$k]['util_array'] =$temp;
+        }
+        $default['data'] = $list;
+        $default['count'] = count($list);
+        return $default;
+
     }
 
 

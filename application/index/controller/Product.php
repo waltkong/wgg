@@ -76,7 +76,21 @@ class Product extends BaseController
 
         $this->assign('banner',['image_url' => $row['banner_image'] ?? '', 'name' => $row['name'] ?? '',]);
 
-        $this->assign('product_list',$this->logic->product_list($row['id']));
+        $input['category_id'] = $input['id'] ?? '';
+        $pageIndex = $input['pageIndex'] ?? 1;
+        $eachPage = $input['eachPage'] ?? 10;
+
+        $product_list_res = $this->logic->product_list_paginate($input,$pageIndex,$eachPage);
+
+        $this->assign('product_list',$product_list_res['data']);
+        $this->assign('pageIndexList',$this->logic->getPageIndexList($pageIndex,$eachPage,$product_list_res['total']));
+
+        $params = [
+            'pageIndex' => $pageIndex,
+            'eachPage' => $eachPage,
+            'category_id' => $input['category_id'],
+        ];
+        $this->assign("params",$params);
 
         $this->assign('seo_title',$row['name'] ?? '');
         $this->assign('seo_description',$row['description']?? '');

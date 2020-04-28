@@ -1,0 +1,93 @@
+.nav_container{
+    width: 100%;
+}
+.nav_container img{
+    width: 100%;
+}
+
+.content_box{
+    width: 100%;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+
+
+}
+
+.content_title{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(79,79,79);
+}
+
+.content_time{
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.content_body{
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+.simple_paginate_box{
+    width: 100%;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.simple_paginate_item{
+    margin: 0 20px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(178,178,178);
+    background-color: white;
+}
+
+.simple_paginate_item a{
+    text-decoration: none;
+    color: rgb(79,79,79);
+}
+
+.recommend_box{
+    margin-top: 20px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.recommend_text{
+    color: rgb(150,211,247);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.recommend_item{
+    margin-top: 15px;
+    font-size: 15px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.recommend_item a{
+    text-decoration: none;
+    color: rgb(150,211,247);
+}

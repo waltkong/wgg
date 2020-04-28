@@ -98,7 +98,7 @@
 
                 {foreach name="menu_customcase_category_list" item="vo" key="k"}
                 <div class="menu_sub_level_item">
-                    <a href="/customcase/{$vo.id}" >
+                    <a href="/mobile_customcase/{$vo.id}" >
                         {$vo.name}
                     </a>
                 </div>
@@ -120,7 +120,7 @@
 
                 {foreach name="menu_news_category_list" item="vo" key="k"}
                 <div class="menu_sub_level_item">
-                    <a href="/news/{$vo.id}" >
+                    <a href="/mobile_news/{$vo.id}" >
                         {$vo.name}
                     </a>
                 </div>
@@ -192,17 +192,23 @@
 
     function toggle_sub_menu(obj) {
 
+
         var obj1 = $(obj).parent().find('.menu_sub_level')[0];
 
         var imgobj = $(obj).find('.menu_first_level_arrow_img')[0];
 
-        if(obj1.style.display == 'none'){
+
+
+        if(!obj1 || obj1.style.display == ''  ||  obj1.style.display == undefined || obj1.style.display == 'none'){
+
 
             $('.menu_sub_level').css('display','none');
             $(imgobj).attr('src',$('#arrow002').attr('src'));
             obj1.style.display = 'block';
 
         }else{
+
+
             $('.menu_sub_level').css('display','none');
             $(imgobj).attr('src',$('#arrow001').attr('src'));
             obj1.style.display = 'none';
