@@ -15,6 +15,33 @@
     <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
     <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
 
+    <!--<script src="__CDN__/assets/mobile/js/marquee.js"></script>-->
+
+    <style>
+        @keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+        .marquee{
+            width: 100%;
+            /*height: 44px;*/
+            /*line-height: 44px;*/
+            /*background: #fff;*/
+            border: none;
+            display: block;
+            margin: 0 auto;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: clip;
+            position: relative;
+            font-size: 13px;
+        }
+        .marquee .marquee_content{
+            display: inline-block;
+            position: relative;
+            padding-right: 0px;
+            animation: kf-marque-animation 11.3s linear infinite;
+            white-space: nowrap;
+        }
+    </style>
+
 
 </head>
 <body>
@@ -66,7 +93,16 @@
         </div>
 
         <div class="video_box">
-            <video src="{$one_vedio}" controls="controls" autoplay="autoplay">
+            <!--autoplay="autoplay"-->
+            <video src="{$one_vedio}"
+                   controls="controls"
+                   x5-playsinline="true"
+                   playsInline="true"
+                   x-webkit-airplay="allow"
+                   webkit-playsinline="true"
+                   playsinline="true"
+                   x5-video-player-type="h5-page"
+            >
                 您的浏览器不支持 video 标签。
             </video>
         </div>
@@ -109,7 +145,7 @@
 
             {foreach name="menu_product_category_list" item="vo" key="k"}
 
-            <div class="wise_products_category_item">
+            <div class="wise_products_category_item" onclick=goToProductCatePage("{$vo.id}")>
                 <div class="wise_products_category_item_img">
                     <img src="{$vo.single_image}" alt="{$vo.name}" />
                 </div>
@@ -141,7 +177,7 @@
             <div class="company_img">
                 <img src="__CDN__/assets/mobile/image/index/company.png"  alt="五宫格信息科技"/>
             </div>
-            <div class="company_desc_box">
+            <div class="company_desc_box" onclick=gotoContact()>
                 <div class="company_desc_text">
                     {$page_company_info.company_description}
                 </div>
@@ -184,7 +220,7 @@
                 {/foreach}
             </div>
 
-            <div class="common_see_more">
+            <div class="common_see_more" onclick=gotoCasePage()>
                 <div>查看更多>></div>
             </div>
         </div>
@@ -238,7 +274,7 @@
 
             </div>
 
-            <div class="common_see_more">
+            <div class="common_see_more"  onclick=gotoNewsPage()>
                 <div>查看更多>></div>
             </div>
 
@@ -255,16 +291,35 @@
             </div>
         </div>
 
-        <div class=" companies_box">
+        <div class="marquee">
+            <div class=" companies_box marquee_content" id="companies_box">
 
+                <img src="{$page_company_info.custom_company_logo_images}" />
+
+            </div>
         </div>
+
+
+
+        <!--<div class="marquee">-->
+
+            <!--<div class="content">-->
+                <!--<span>1这里为了连续无限滚动。你说的不好用，则是zindex没有生效，没生效就是没有定义position属性，如果不想让元素的位置有所变化，就给赋予z-index属性的元素加上答相对定位的position:relative;</span> <span style="display: inline-block; width: 5em;"></span>-->
+                <!--<span>2这里为了连续无限滚动。</span> <span style="display: inline-block; width: 5em;"></span>-->
+                <!--<span>3这里为了连续无限滚动。</span> <span style="display: inline-block; width: 5em;"></span>-->
+            <!--</div>-->
+
+        <!--</div>-->
+
 
 
         {include file='common/mobilefooter' /}
     </div>
+
+    {include file='common/baidubridge' /}
 </body>
 
-
+{include file='common/checkMobileVisit' /}
 <script>
 
     window.onload = function() {
@@ -330,6 +385,23 @@
             },
         });
 
+
+
+//        new Marquee({
+//            ID: "companies_box",
+//            Direction: "left",
+//            Step: 1,
+//            Width: 1000,
+//            Height: 80,
+//            Timer: 50,
+//            DelayTime: 1000,
+//            WaitTime: 1000,
+//            ScrollStep: 80
+//        });
+
+
+
+
     };
 
 
@@ -358,12 +430,20 @@
 //            window.location.href = url;
     }
 
-    function gotosolutionPage() {
-        window.location.href='/solution';
+    function goToProductCatePage(cateId) {
+        window.location.href='/mobile_product_cate/'+cateId;
+    }
+
+    function gotoCasePage() {
+        window.location.href='/mobile_customcase';
     }
 
     function gotoContact() {
-        window.location.href='/contact_us';
+        window.location.href='/mobile_contact_company';
+    }
+
+    function gotoNewsPage() {
+        window.location.href='/mobile_news';
     }
 
 

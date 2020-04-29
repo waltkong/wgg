@@ -1,0 +1,17 @@
+<script src="__CDN__/assets/pc/layer/layer.js?v={$asset_version}"></script>
+<script>
+    var this_visitDevice = "{$visitDevice}";
+    $(document).ready(function () {
+        if(this_visitDevice == 'pc'){
+            //询问框
+            layer.confirm('检测到您使用电脑访问，是否跳转到电脑端访问？', {
+                btn: ['确定','取消'] //按钮
+            }, function(){
+                window.location.href = "/";
+            }, function(){
+
+            });
+
+        }
+    });
+</script>

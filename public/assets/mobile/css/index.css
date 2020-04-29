@@ -46,6 +46,7 @@
     margin-top: 15px;
 }
 .video_box video{
+
     width: 100%;
     height: auto;
 }
@@ -419,4 +420,47 @@
     margin: 0 5px;
     font-size: 14px;
     color: white;
+}
+
+.companies_box{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    /*width: 100%;*/
+    overflow-x: scroll;
+    white-space:nowrap;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.companies_box img{
+    width: 800px;
+}
+
+.companies_logo_item{
+    width: 60px;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-end;
+    align-items: center;
+
+}
+
+.companies_log_img{
+    width: 90%;
+}
+
+.companies_log_img img{
+    width: 100%;
+}
+
+.companies_name{
+    margin-top: 10px;
+    font-size: 10px;
+    color: rgb(79,79,79);
 }

@@ -117,6 +117,7 @@
 
     function change_category_id(category_id) {
         params.id = category_id;
+        params.pageIndex = 1;
         windows_jump();
     }
 
@@ -156,6 +157,8 @@
 
 
 </script>
-
+{include file='common/baidubridge' /}
 </body>
+
+{include file='common/checkMobileVisit' /}
 </html>
