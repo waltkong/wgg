@@ -222,6 +222,7 @@
     text-align: center;
     text-align-last: center;
     vertical-align: middle;
+    align-items: center;
 }
 
 .msg_select select option{
@@ -229,4 +230,33 @@
     text-align: center;
     font-size: 14px;
     vertical-align: middle;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.msg_btn{
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.msg_btn button{
+    background-color: rgb(52,175,244);
+    border: none;
+    color: white;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }

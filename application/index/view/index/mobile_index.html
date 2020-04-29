@@ -66,7 +66,7 @@
         </div>
 
         <div class="video_box">
-            <video src="{$one_vedio}" controls="controls">
+            <video src="{$one_vedio}" controls="controls" autoplay="autoplay">
                 您的浏览器不支持 video 标签。
             </video>
         </div>
@@ -272,7 +272,12 @@
         var mySwiper = new Swiper ('.swiper1-container', {
 //            direction: 'vertical', // 垂直切换选项
             loop: true, // 循环模式选项
-            autoplay:5000,
+            autoplay:{
+                delay:3000,
+                stopOnLastSlide:false,
+                disableOnInteraction: false,
+            },
+//            autoplay:5,
             // 如果需要分页器
 //            pagination: {
 //                el: '.swiper1-pagination',
