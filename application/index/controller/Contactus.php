@@ -81,6 +81,27 @@ class Contactus extends BaseController
     }
 
 
+    public function mobile_index()
+    {
+        $input = $this->req;
+        $this->assign('this_category_id',1);
+
+        $company_info = $this->logic->company_info();
+        $this->assign('row',$company_info);
+
+        return $this->view->fetch();
+    }
+
+    public function mobile_contact_us(){
+        $input = $this->req;
+        $this->assign('this_category_id',2);
+
+        $company_info = $this->logic->company_info();
+        $this->assign('row',$company_info);
+
+        return $this->view->fetch();
+    }
+
 
 
 

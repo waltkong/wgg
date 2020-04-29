@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> {$seo_title} </title>
+    <meta name="description" content="{$seo_description}">
+    <meta name="keywords" content="{$seo_keyword}">
+
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/common.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/mobile_contactus_contact_us.css?v={$asset_version}">
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/component/paginate.css?v={$asset_version}">
+
+    <script src="__CDN__/assets/pc/layer/layer.js?v={$asset_version}"></script>
+
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=X9OzLWGg4hA3zA6am6YdeMoqzcd3ADlw"></script>
+
+</head>
+<body>
+  <div class="container" name="top">
+
+      {include file='common/mobileheader' /}
+
+      <div class="nav_container">
+          <img src="{$banner.image_url}" alt="{$banner.name}" />
+      </div>
+
+      <div class="category_box">
+
+          <div class="category_item  {if condition='1 eq $this_category_id'} category_active {/if} ">
+              <div class="category_title">
+                  <a href="/mobile_contact_company">公司简介</a>
+              </div>
+              <div class="category_highlight_bar">
+
+              </div>
+          </div>
+
+          <div class="category_item {if condition='2 eq $this_category_id'} category_active {/if} ">
+              <div class="category_title">
+                  <a href="/mobile_contact_us">联系我们</a>
+              </div>
+              <div class="category_highlight_bar ">
+
+              </div>
+          </div>
+
+      </div>
+
+      <div class="map" id="map_container">
+      </div>
+
+      <div class="info_box">
+
+          <div class="info_item">
+              <div class="info_icon">
+                  <img src="__CDN__/assets/mobile/image/素材切图输出/6-联系我们/图像/未标题-1_15.gif"/>
+              </div>
+              <div class="info_text">
+                    联系电话:
+              </div>
+              <div class="info_value">
+                  {$row.contact_phone}
+              </div>
+          </div>
+
+          <div class="info_item">
+              <div class="info_icon">
+                  <img src="__CDN__/assets/mobile/image/素材切图输出/6-联系我们/图像/未标题-1_20.gif"/>
+              </div>
+              <div class="info_text">
+                  商务联系:
+              </div>
+              <div class="info_value">
+                  {$row.contact_mobile}（{$row.contact_people}）
+              </div>
+          </div>
+
+          <div class="info_item">
+              <div class="info_icon">
+                  <img src="__CDN__/assets/mobile/image/素材切图输出/6-联系我们/图像/未标题-1_24.gif"/>
+              </div>
+              <div class="info_text">
+                  官方邮箱:
+              </div>
+              <div class="info_value">
+                  {$row.company_email}
+              </div>
+          </div>
+
+          <div class="info_item">
+              <div class="info_icon">
+                  <img src="__CDN__/assets/mobile/image/素材切图输出/6-联系我们/图像/未标题-1_27.gif"/>
+              </div>
+              <div class="info_text">
+                  商务联系:
+              </div>
+              <div class="info_value">
+                  {$row.company_address}
+              </div>
+          </div>
+      </div>
+
+
+
+      <div class="leave_message_title_container">
+          <div class="common_title_text_box">
+              <div class="little_vertical_bar">
+              </div>
+              <div class="common_title_title_text">
+                  <div class="title_text_big">
+                      在线留言/
+                  </div>
+                  <div class="title_text_small">
+                      LEAVE MESSAGE
+                  </div>
+              </div>
+              <div class="little_vertical_bar">
+              </div>
+          </div>
+      </div>
+
+      <div class="msg_box">
+
+          <div class="msg_row msg_input_box">
+
+              <div class="msg_title_text">
+                姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:
+              </div>
+              <div class="msg_input">
+                  <input type="text"  name="username" id="username" value="" autocomplete="off"/>
+              </div>
+
+          </div>
+
+          <div class="msg_row msg_input_box">
+
+              <div class="msg_title_text">
+                  手机号码:
+              </div>
+              <div class="msg_input">
+                  <input type="text"  name="phone" id="phone" value="" autocomplete="off"/>
+
+              </div>
+
+          </div>
+
+          <div class="msg_row msg_select_box">
+
+              <div class="msg_title_text">
+                  回电时间:
+              </div>
+              <div class="msg_select">
+
+                  <select id="reply_time" name="reply_time" autocomplete="off">
+                      <option value="无">选择时间</option>
+                      <option value="9:00-12:00">9:00-12:00</option>
+                      <option value="12:00-18:00">12:00-18:00</option>
+                      <option value="18:00-21:00">18:00-21:00</option>
+                  </select>
+
+              </div>
+
+          </div>
+
+          <div class="msg_row msg_area_box">
+
+              <div class="msg_title_text">
+                  您的需求:
+              </div>
+              <div class="msg_area">
+                  <textarea name="need" id="need" autocomplete="off"></textarea>
+
+              </div>
+
+          </div>
+
+
+      </div>
+
+
+
+      {include file='common/mobilefooter' /}
+
+  </div>
+</body>
+
+
+<script>
+
+
+    $(document).ready(function () {
+        // 百度地图API功能
+        var map = new BMap.Map("map_container");
+        map.enableScrollWheelZoom();
+        var point;
+
+        var marker; // 创建点
+        var addr;
+
+        //添加覆盖物
+        function add_overlay(){
+            map.addOverlay(marker);            //增加点
+        }
+        //清除覆盖物
+        function remove_overlay(){
+            map.clearOverlays();
+        }
+
+        var lng ="{$row.company_address_long}";
+        var lat = "{$row.company_address_lat}";
+
+        point = new BMap.Point(lng, lat);
+        marker = new BMap.Marker(new BMap.Point(lng, lat));
+        map.centerAndZoom(point, 15);
+        add_overlay();
+    });
+
+
+
+    function submitForm() {
+        var ajaxdata = {
+            username: $('#username').val(),
+            phone: $('#phone').val(),
+            reply_time: $('#reply_time').val(),
+            need: $('#need').val(),
+        };
+        $.ajax({
+            type: "POST",
+            url: "/contact_us_domessage",
+            data: ajaxdata,
+            dataType: "json",
+            success: function(response){
+                if(response.code ==1){
+
+                    $('#username').val('');
+                    $('#phone').val('');
+                    $('#reply_time').val('');
+                    $('#need').val('');
+
+                    layer.msg("提交成功");
+                }else{
+                    layer.msg(response.msg);
+                }
+            }
+        });
+    }
+
+    function windows_jump(url) {
+        window.location.href= url;
+    }
+
+
+
+
+</script>
+
+</html>

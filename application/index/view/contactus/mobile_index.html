@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> {$seo_title} </title>
+    <meta name="description" content="{$seo_description}">
+    <meta name="keywords" content="{$seo_keyword}">
+
+    <script src="__CDN__/assets/pc/lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/common.css?v={$asset_version}">
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/mobile_contactus_index.css?v={$asset_version}">
+
+    <link rel="stylesheet" href="__CDN__/assets/pc/swiper/swiper.min.css?v={$asset_version}">
+    <script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+
+    <link rel="stylesheet" href="__CDN__/assets/mobile/css/component/paginate.css?v={$asset_version}">
+
+</head>
+<body>
+
+<div class="container" name="top">
+
+    {include file='common/mobileheader' /}
+
+    <div class="nav_container">
+        <img src="{$banner.image_url}" alt="{$banner.name}" />
+    </div>
+
+    <div class="category_box">
+
+        <div class="category_item {if condition='1 eq $this_category_id'} category_active {/if} ">
+            <div class="category_title">
+                <a href="/mobile_contact_company">公司简介</a>
+            </div>
+            <div class="category_highlight_bar">
+
+            </div>
+        </div>
+
+        <div class="category_item {if condition='2 eq $this_category_id'} category_active {/if} ">
+            <div class="category_title">
+                <a href="/mobile_contact_us">联系我们</a>
+            </div>
+            <div class="category_highlight_bar ">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="common_title_text_box">
+        <div class="little_vertical_bar">
+        </div>
+        <div class="common_title_title_text">
+            <div class="title_text_big">
+                公司简介/
+            </div>
+            <div class="title_text_small">
+                ABOUT US
+            </div>
+        </div>
+        <div class="little_vertical_bar">
+        </div>
+    </div>
+
+    <div class="company_info_box">
+        <div class="company_info_start_img">
+            <img src="__CDN__/assets/mobile/image/素材切图输出/5-关于我们/图像/未标题-1_21.gif"/>
+        </div>
+        <div class="company_info_content">
+            <span>{$row.company_description}</span>
+        </div>
+        <div class="company_info_end_img">
+            <img src="__CDN__/assets/mobile/image/素材切图输出/5-关于我们/图像/未标题-1_26.gif"/>
+        </div>
+    </div>
+
+
+    <div class="culture_text_container">
+        <div class="common_title_text_box">
+            <div class="little_vertical_bar">
+            </div>
+            <div class="common_title_title_text">
+                <div class="title_text_big">
+                    公司文化/
+                </div>
+                <div class="title_text_small">
+                    CULTURE
+                </div>
+            </div>
+            <div class="little_vertical_bar">
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="culture_box">
+
+        <div class="culture_item">
+            <div class="culture_item_title">
+                <span>公司精神</span>
+            </div>
+            <div class="culture_item_value">
+                {$row.company_spirit}
+            </div>
+        </div>
+
+        <div class="culture_item">
+            <div class="culture_item_title">
+                <span>核心价值观</span>
+            </div>
+            <div class="culture_item_value">
+                {$row.company_value_view}
+            </div>
+        </div>
+
+        <div class="culture_item">
+            <div class="culture_item_title">
+                <span>经营理念</span>
+            </div>
+            <div class="culture_item_value">
+                {$row.company_manage_theory}
+            </div>
+        </div>
+
+        <div class="culture_item">
+            <div class="culture_item_title">
+                <span>公司愿景</span>
+            </div>
+            <div class="culture_item_value">
+                {$row.company_dream}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="certificates_box">
+
+        <div class="common_title_text_box">
+            <div class="little_vertical_bar">
+            </div>
+            <div class="common_title_title_text">
+                <div class="title_text_big">
+                    荣誉资质/
+                </div>
+                <div class="title_text_small">
+                    CERTIFICATES
+                </div>
+            </div>
+            <div class="little_vertical_bar">
+            </div>
+        </div>
+
+        <div class="certificates_title_box">
+            <div class="certificates_title_name">
+                <span>荣誉证书</span>
+            </div>
+            <div class="certificates_title_number">
+                10
+            </div>
+        </div>
+
+        <div class="certificates_img">
+            <img src="__CDN__/assets/mobile/image/素材切图输出/5-关于我们/图像/未标题-1_53.gif"/>
+        </div>
+
+        <div class="certificates_title_box">
+            <div class="certificates_title_name">
+                <span>专利证书</span>
+            </div>
+            <div class="certificates_title_number">
+                20
+            </div>
+        </div>
+
+        <div class="certificates_img">
+            <img src="__CDN__/assets/mobile/image/素材切图输出/5-关于我们/图像/未标题-1_50.gif"/>
+        </div>
+
+    </div>
+
+
+    {include file='common/mobilefooter' /}
+
+
+</div>
+
+</body>
+</html>

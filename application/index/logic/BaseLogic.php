@@ -127,4 +127,10 @@ class BaseLogic{
         ];
     }
 
+
+    //pc 和 手机端 互跳
+    public function jumpBetweenPCAndMobile(){
+
+    }
+
 }

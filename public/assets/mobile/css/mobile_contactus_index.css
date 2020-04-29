@@ -1,0 +1,255 @@
+
+.common_title_text_box{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+.little_vertical_bar{
+    width: 1px;
+    height: 18px;
+    background-color: rgb(92,176,253);
+}
+
+.common_title_title_text{
+
+    color: rgb(79,79,79);
+    margin-left: 15px;
+    margin-right: 15px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: flex-end;
+}
+
+.title_text_big{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.title_text_small{
+    font-size: 13px;
+}
+
+.nav_container{
+    width: 100%;
+}
+.nav_container img{
+    width: 100%;
+}
+
+.category_box{
+    margin-top: 0;
+
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.category_item{
+    padding: 8px 8px;
+
+    width: 50%;
+    background-color: rgb(247,247,247);
+
+    font-size: 16px;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.category_item.category_active{
+    background-color: rgb(61,178,248);
+}
+
+.category_title a{
+    text-decoration: none;
+    color: black;
+}
+
+.category_active .category_title a{
+    color: white;
+}
+
+.category_highlight_bar{
+    margin-top: 10px;
+    width: 60px;
+    height: 2px;
+}
+
+.category_active .category_highlight_bar{
+    background-color: white;
+}
+
+.company_info_box{
+
+    margin-top: 20px;
+    padding: 0 8%;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+
+.company_info_start_img{
+    width: 100%;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+.company_info_start_img img{
+    width: 50px;
+}
+.company_info_content{
+    margin-top: 15px;
+    padding: 0 10px;
+
+    font-size: 14px;
+    color: rgb(89,89,89);
+    line-height: 25px;
+}
+.company_info_end_img{
+    width: 100%;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-end;
+    align-items: center;
+}
+.company_info_end_img img{
+    width: 50px;
+}
+
+.culture_text_container{
+    margin-top: 25px;
+}
+
+.culture_box{
+    padding: 5px 5px 20px 5px;
+    margin: 15px 10px 0 10px;
+    box-shadow: 3px 3px 3px rgba(219,209,200,1);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+
+
+}
+
+.culture_item{
+    width: 100%;
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.culture_item_title{
+
+    width: 30%;
+
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 8px;
+    background-color: rgb(60,163,252);
+    box-shadow: 3px 3px 3px rgba(219,209,200,1);
+    color: white;
+    font-size: 14px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.culture_item_value{
+    width: 65%;
+    font-size: 13px;
+    color: rgb(99,99,99);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+
+}
+
+.certificates_box{
+
+    padding: 5px 5px 20px 5px;
+    margin: 25px 10px 20px 10px;
+    box-shadow: 3px 3px 3px rgba(219,209,200,1);
+    border-radius: 8px;
+
+}
+
+.certificates_title_box{
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.certificates_title_name{
+    font-size: 16px;
+}
+
+.certificates_title_number{
+
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 13px;
+    border-radius: 50%;
+    border: 1px rgb(249,203,155) solid;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.certificates_img{
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.certificates_img img{
+    width: 100%;
+}

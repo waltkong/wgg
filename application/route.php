@@ -35,8 +35,8 @@ Route::rule('mobile_customcase/[:category_id]','index/Customcase/mobile_index');
 Route::rule('mobile_customcase_detail/[:id]','index/Customcase/mobile_detail');   //客户案例详情
 Route::rule('mobile_news/[:category_id]','index/News/mobile_index');   //新闻列表
 Route::rule('mobile_news_detail/[:id]','index/News/mobile_detail');   //新闻详情
-//Route::rule('contact_company','index/Contactus/index');   //联系我们-公司介绍
-//Route::rule('contact_us','index/Contactus/contact_us');   //联系我们的-联系我们
+Route::rule('mobile_contact_company','index/Contactus/mobile_index');   //联系我们-公司介绍
+Route::rule('mobile_contact_us','index/Contactus/mobile_contact_us');   //联系我们的-联系我们
 //Route::rule('contact_us_domessage','index/Contactus/do_message');   //
 
 
