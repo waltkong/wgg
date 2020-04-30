@@ -117,7 +117,7 @@
                         {foreach name="menu_product_category_list" item="vo" key="k"}
                         <div class="swiper-slide">
 
-                            <div class="provide_item" onmouseover="listenOnMOuseOver('{$k}')">
+                            <div class="provide_item" onmouseover="listenOnMOuseOver('{$k}')" onclick=goToProductCatePage("{$vo.id}")>
                                 <img src="{$vo.logo_image}" alt="{$vo.name}"/>
                                 <div class="provide_product_name">
                                     {$vo.name}
@@ -229,7 +229,7 @@
                     <div class="solution_v2_see_more" onclick="gotosolutionPage()">
                         了解详情
                     </div>
-                    <div class="solution_v2_free_get" onclick="gotoContact()">
+                    <div class="solution_v2_free_get" onclick="gotoBaiduBridge()">
                         点击咨询
                     </div>
                 </div>
@@ -258,11 +258,12 @@
                         <img src="{$vo.image_url}" alt="{$vo.name}"/>
                     </div>
                     <div class="case_company">
-                        {$vo.name}
+                        <a href="/customcase_detail/{$vo.id}"> {$vo.name} </a>
+
                     </div>
-                    <div class="case_description">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.description}
-                    </div>
+                    <!--<div class="case_description">-->
+                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vo.description-->
+                    <!--</div>-->
                 </div>
                 {/foreach}
 
@@ -445,8 +446,15 @@
         window.location.href='/contact_us';
     }
 
+    function goToProductCatePage(cate_id) {
+        window.location.href='/product_cate/'+cate_id;
+    }
 
 
+    function gotoBaiduBridge() {
+        var link = "http://p.qiao.baidu.com/cps/chat?siteId=13739459&userId=25115521&siteToken=&cp=wggai.com&cr=&cw=";
+        window.open(link);
+    }
 
 </script>
 

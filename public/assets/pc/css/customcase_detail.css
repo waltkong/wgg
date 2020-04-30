@@ -100,6 +100,7 @@
 
 .recommend_cases_item a{
     text-decoration: none;
+    color: rgb(0,0,238);
 }
 
 
@@ -128,4 +129,5 @@
 
 .simple_paginate_item a{
     text-decoration: none;
+    color: rgb(0,0,238);
 }

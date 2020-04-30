@@ -31,7 +31,7 @@
             视觉结算系统是一套基于人工智能技术实现实时快速识别菜品价格，顾客自助快速付款，达到“一秒结算，0出错率”效果的结算系统。
         </div>
 
-        <div class="plan_content_button">
+        <div class="plan_content_button" onclick="gotoBaiduBridge()" style="cursor: pointer">
             点击咨询
         </div>
 
@@ -153,5 +153,10 @@
 <script>
     function toToTop(){
         window.location.href = "#top";
+    }
+
+    function gotoBaiduBridge() {
+        var link = "http://p.qiao.baidu.com/cps/chat?siteId=13739459&userId=25115521&siteToken=&cp=wggai.com&cr=&cw=";
+        window.open(link);
     }
 </script>

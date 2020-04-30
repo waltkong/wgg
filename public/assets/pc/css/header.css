@@ -26,6 +26,7 @@
     flex-wrap: nowrap;
     justify-content:center;
     align-items: center;
+    cursor: pointer;
 }
 
 .header_logo_box .logo_image{

@@ -439,14 +439,21 @@
 }
 
 .case_company{
+    cursor: pointer;
+
     margin-top: 30px;
-    color: rgb(53,53,53);
+
     font-size: 20px;
     font-weight: bold;
 
     overflow: hidden;
     text-overflow:ellipsis;
     white-space: nowrap;
+}
+
+.case_company a{
+    text-decoration: none;
+    color: rgb(53,53,53);
 }
 
 .case_description{
