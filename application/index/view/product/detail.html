@@ -78,7 +78,7 @@
                     {/foreach}
                 </div>
 
-                <div class="consule_price" onclick="gotoContact()">
+                <div class="consule_price" onclick="gotoBaiduBridge()">
                     咨询价格
                 </div>
 
@@ -136,6 +136,11 @@
 
     function gotoContact() {
         window.location.href='/contact_us';
+    }
+
+    function gotoBaiduBridge() {
+        var link = "http://p.qiao.baidu.com/cps/chat?siteId=13739459&userId=25115521&siteToken=&cp=wggai.com&cr=&cw=";
+        window.open(link);
     }
 
 

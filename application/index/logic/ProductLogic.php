@@ -82,7 +82,7 @@ class ProductLogic extends BaseLogic{
         $list = $obj->where('category_id',$category_id)
             ->order('id', 'asc')
             ->limit($pageOffset,$eachPage)
-            ->field('id,name,logo_image,single_image,util')
+            ->field('id,name,logo_image,single_image,util,description')
             ->select();
         $list = collection($list)->toArray();
         foreach ($list as $k => $v){

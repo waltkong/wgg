@@ -37,7 +37,7 @@ class Customcase extends BaseController
         $this->assign('this_category_id',$input['category_id']);
 
         $pageIndex = $input['pageIndex'] ?? 1;
-        $eachPage = $input['eachPage'] ?? 10;
+        $eachPage = $input['eachPage'] ?? 6;
         $case_list_res = $this->logic->case_list($input,$pageIndex,$eachPage);
         $this->assign('case_list',$case_list_res['data']);
 

@@ -61,17 +61,25 @@
 
                 <div class="product_image_box">
 
-                    <img src="{$vo.single_image}" alt="{$vo.name}" />
+                    <div class="product_image">
+                        <img src="{$vo.single_image}" alt="{$vo.name}" />
+                    </div>
+
 
                     <div class="product_name_text">
                         {$vo.name}
                     </div>
 
+                    <div class="product_description_text">
+                        {$vo.description}
+                    </div>
+
+                    <div class="product_see_detail_text">
+                        <a href="/product/{$vo.id}">了解详情</a>
+                    </div>
+
                 </div>
 
-                <div class="product_see_detail_text">
-                    <a href="/product/{$vo.id}">查看详情</a>
-                </div>
 
             </div>
             {/foreach}
