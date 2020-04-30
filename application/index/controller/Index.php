@@ -42,7 +42,7 @@ class Index extends BaseController
         $news_list = $this->logic->news_list(3);
         $this->assign('news_list',$news_list);
 
-        $case_list = $this->logic->case_list(3);
+        $case_list = $this->logic->case_list(3,'weigh');
         $this->assign('case_list',$case_list);
 
 
@@ -74,8 +74,10 @@ class Index extends BaseController
         $news_list = $this->logic->news_list(3);
         $this->assign('news_list',$news_list);
 
-        $case_list = $this->logic->case_list(3);
+
+        $case_list = $this->logic->case_list(3,'weigh');
         $this->assign('case_list',$case_list);
+
 
         $one_vedio = $this->logic->one_vedio();
         $this->assign('one_vedio',$one_vedio);

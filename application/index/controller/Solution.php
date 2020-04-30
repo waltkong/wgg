@@ -37,9 +37,9 @@ class Solution extends BaseController
 
         $this->assign('solution_list',$this->logic->get_solution_list());
 
-        $this->assign('seo_title',$row['name'] ?? '');
-        $this->assign('seo_description',$row['description']?? '');
-        $this->assign('seo_keyword',$row['keyword']?? '');
+        $this->assign('seo_title',$row['seo_title'] ?? '');
+        $this->assign('seo_description',$row['seo_description'] ?? '');
+        $this->assign('seo_keyword',$row['seo_keyword'] ?? '');
 
         return $this->view->fetch();
     }
@@ -55,9 +55,9 @@ class Solution extends BaseController
 
         $this->assign('solution_list',$this->logic->get_solution_list());
 
-        $this->assign('seo_title',$row['name'] ?? '');
-        $this->assign('seo_description',$row['description']?? '');
-        $this->assign('seo_keyword',$row['keyword']?? '');
+        $this->assign('seo_title',$row['seo_title'] ?? '');
+        $this->assign('seo_description',$row['seo_description'] ?? '');
+        $this->assign('seo_keyword',$row['seo_keyword'] ?? '');
 
         return $this->view->fetch();
     }

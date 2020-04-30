@@ -72,9 +72,9 @@ class IndexLogic extends BaseLogic{
         return $list;
     }
 
-    public function case_list($count=10){
+    public function case_list($count=10,$order='id',$orderway='desc'){
         $obj = new Cases_model();
-        $list = $obj->order('id', 'desc')
+        $list = $obj->order($order, $orderway)
             ->limit(0,$count)
             ->select();
         $list = collection($list)->toArray();

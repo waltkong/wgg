@@ -40,9 +40,9 @@ class Product extends BaseController
 
         $this->assign('product_list',$this->logic->product_list($row['id']));
 
-        $this->assign('seo_title',$row['name'] ?? '');
-        $this->assign('seo_description',$row['description']?? '');
-        $this->assign('seo_keyword',$row['keyword']?? '');
+        $this->assign('seo_title',$row['seo_title'] ?? '');
+        $this->assign('seo_description',$row['seo_description'] ?? '');
+        $this->assign('seo_keyword',$row['seo_keyword'] ?? '');
 
         return $this->view->fetch();
     }
@@ -58,9 +58,9 @@ class Product extends BaseController
 
         $this->assign('product_list',$this->logic->product_list(1));
 
-        $this->assign('seo_title',$row['name'] ?? '');
-        $this->assign('seo_description',$row['description']?? '');
-        $this->assign('seo_keyword',$row['keyword']?? '');
+        $this->assign('seo_title',$row['seo_title'] ?? '');
+        $this->assign('seo_description',$row['seo_description'] ?? '');
+        $this->assign('seo_keyword',$row['seo_keyword'] ?? '');
 
         return $this->view->fetch();
     }
@@ -92,9 +92,9 @@ class Product extends BaseController
         ];
         $this->assign("params",$params);
 
-        $this->assign('seo_title',$row['name'] ?? '');
-        $this->assign('seo_description',$row['description']?? '');
-        $this->assign('seo_keyword',$row['keyword']?? '');
+        $this->assign('seo_title',$row['seo_title'] ?? '');
+        $this->assign('seo_description',$row['seo_description'] ?? '');
+        $this->assign('seo_keyword',$row['seo_keyword'] ?? '');
 
         return $this->view->fetch();
     }
@@ -112,9 +112,9 @@ class Product extends BaseController
 
         $this->assign('product_list',$this->logic->product_list(1));
 
-        $this->assign('seo_title',$row['name'] ?? '');
-        $this->assign('seo_description',$row['description']?? '');
-        $this->assign('seo_keyword',$row['keyword']?? '');
+        $this->assign('seo_title',$row['seo_title'] ?? '');
+        $this->assign('seo_description',$row['seo_description'] ?? '');
+        $this->assign('seo_keyword',$row['seo_keyword'] ?? '');
 
         return $this->view->fetch();
     }

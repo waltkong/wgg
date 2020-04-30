@@ -83,10 +83,9 @@ class News extends BaseController
         $relation_recommend_list = (new CustomcaseLogic())->case_list([],1,3,['order'=>'id']);
         $this->assign('relation_recommend_list',$relation_recommend_list['data']);
 
-
-        $this->assign('seo_title',$row['name'] ?? '');
-        $this->assign('seo_description',$row['description'] ?? '');
-        $this->assign('seo_keyword',$row['keyword'] ?? '');
+        $this->assign('seo_title',$row['seo_title'] ?? '');
+        $this->assign('seo_description',$row['seo_description'] ?? '');
+        $this->assign('seo_keyword',$row['seo_keyword'] ?? '');
 
         return $this->view->fetch();
     }
@@ -145,9 +144,9 @@ class News extends BaseController
         $this->assign('relation_recommend_list',$relation_recommend_list['data']);
 
 
-        $this->assign('seo_title',$row['name'] ?? '');
-        $this->assign('seo_description',$row['description'] ?? '');
-        $this->assign('seo_keyword',$row['keyword'] ?? '');
+        $this->assign('seo_title',$row['seo_title'] ?? '');
+        $this->assign('seo_description',$row['seo_description'] ?? '');
+        $this->assign('seo_keyword',$row['seo_keyword'] ?? '');
 
         return $this->view->fetch();
     }
