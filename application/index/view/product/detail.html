@@ -43,6 +43,8 @@
         <img src="{$banner.image_url}" alt="{$banner.name}" />
     </div>
 
+    {include file='component/search_box' /}
+
     <div class="breadcrumb_box">
         当前位置：<a href="/">首页</a>><a href="/product_cate">产品中心</a>
         ><a href="/product_cate/{$row.category_id}">{$row.category_name}</a>

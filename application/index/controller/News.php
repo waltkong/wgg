@@ -160,6 +160,8 @@ class News extends BaseController
             die('no keyword');
         }
 
+        $res = $this->logic->write_search_keyword($keyword);
+
         $this->assign('this_input_keyword',$keyword);
 
         $pageIndex = $input['pageIndex'] ?? 1;
@@ -172,6 +174,7 @@ class News extends BaseController
             'pageIndex' => $pageIndex,
             'eachPage' => $eachPage,
         ];
+        $this->assign("params",$params);
         $contactlogic = new ContactusLogic();
         $seo_info = $contactlogic->seo_info();
 
