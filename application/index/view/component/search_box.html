@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="__CDN__/assets/pc/css/component/search_box.css?v={$asset_version}">
+<script src="__CDN__/assets/pc/swiper/swiper.min.js"></script>
+<div class="search_box">
+
+    <div class="search_keywords_box">
+        <div class="search_keywords_title">
+            <span>热门关键词 : </span>
+        </div>
+        <div class="search_keywords_box">
+            {foreach name="searchKeyWordsList" item="vo" key="k"}
+            <div class="search_keywords_each" onclick=doSearchThisKeyWord("{$vo.name}")>
+                <span>{$vo.name}</span>
+            </div>
+            {/foreach}
+        </div>
+    </div>
+
+    <div class="search_input_box">
+        <input type="text"
+               placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入关键词"
+               id="search_keyword_value"
+               value="{$this_input_keyword}"
+        />
+        <img src="__CDN__/assets/pc/image/index/放大镜.png"  alt="五宫格搜索" onclick="doSearch()"/>
+    </div>
+</div>
+
+<script>
+
+    function doSearch() {
+        var keyword = $('#search_keyword_value').val().trim();
+        if(keyword == ''){
+            return;
+        }
+        doSearchThisKeyWord(keyword);
+    }
+
+    function doSearchThisKeyWord(keyword) {
+        var ajaxdata = {
+            keyword: keyword,
+        };
+        var url = '/search_keyword/'+keyword;
+        window.open(url);
+    }
+
+</script>
+

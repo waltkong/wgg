@@ -152,4 +152,35 @@ class News extends BaseController
     }
 
 
+
+    public function search_keyword(){
+        $input = $this->req;
+        $keyword = $input['keyword'] ?? '';
+        if(empty($keyword)){
+            die('no keyword');
+        }
+
+        $this->assign('this_input_keyword',$keyword);
+
+        $pageIndex = $input['pageIndex'] ?? 1;
+        $eachPage = $input['eachPage'] ?? 10;
+        $res = $this->logic->search_keyword_list($input,$pageIndex,$eachPage);
+
+        $this->assign('data_list',$res['data']);
+        $this->assign('pageIndexList',$this->logic->getPageIndexList($pageIndex,$eachPage,$res['total']));
+        $params = [
+            'pageIndex' => $pageIndex,
+            'eachPage' => $eachPage,
+        ];
+        $contactlogic = new ContactusLogic();
+        $seo_info = $contactlogic->seo_info();
+
+        $this->assign('seo_title',$seo_info['seo_news_title']);
+        $this->assign('seo_description',$seo_info['seo_news_description']);
+        $this->assign('seo_keyword',$seo_info['seo_news_keyword']);
+
+        return $this->view->fetch();
+    }
+
+
 }

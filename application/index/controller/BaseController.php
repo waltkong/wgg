@@ -35,7 +35,8 @@ class  BaseController extends Frontend{
 
         $this->assign('visitDevice',DeviceUtil::isMobile()?'mobile':'pc');
 
-
+        $this->assign('searchKeyWordsList',$this->logic->searchKeyWordsList(5));
+        $this->assign('this_input_keyword','');
     }
 
     protected function menuData(){

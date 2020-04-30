@@ -23,7 +23,8 @@ Route::rule('news/[:category_id]','index/News/index');   //新闻列表
 Route::rule('news_detail/[:id]','index/News/detail');   //新闻详情
 Route::rule('contact_company','index/Contactus/index');   //联系我们-公司介绍
 Route::rule('contact_us','index/Contactus/contact_us');   //联系我们的-联系我们
-Route::rule('contact_us_domessage','index/Contactus/do_message');   //
+Route::rule('contact_us_domessage','index/Contactus/do_message');   //留言
+Route::rule('search_keyword/[:keyword]','index/News/search_keyword');   //搜索
 
 
 //移动端

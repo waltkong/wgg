@@ -30,6 +30,9 @@ php think menu -c web/message
 php think crud -t web_visitlog -c web/visitlog -m web/visitlog_model
 php think menu -c web/visitlog
 
+php think crud -t web_searchlog -c web/searchlog -m web/searchlog_model
+php think menu -c web/searchlog
+
 
 php think crud -t web_productcategory -c web/productcategory -m web/productcategory_model
 php think menu -c web/productcategory

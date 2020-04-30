@@ -2,6 +2,7 @@
 namespace app\index\logic;
 
 use app\admin\model\web\Product_model;
+use app\admin\model\web\Searchlog_model;
 use app\admin\model\web\Solution_model;
 use app\admin\model\web\Visitlog_model;
 use app\admin\model\web\Productcategory_model;
@@ -125,6 +126,16 @@ class BaseLogic{
             'prev' => $prev[0],
             'next' => $next[0],
         ];
+    }
+
+
+    public function searchKeyWordsList($count=5){
+        $obj = new Searchlog_model();
+        $list = $obj->where('is_show',1)
+            ->order('id', 'asc')
+            ->limit(0,$count)
+            ->select();
+        return $list;
     }
 
 
