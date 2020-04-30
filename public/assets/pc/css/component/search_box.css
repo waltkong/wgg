@@ -47,9 +47,13 @@
     border-radius: 15px;
 }
 .search_input_box input{
+    padding: 0 5px;
     width: 200px;
     height: 35px;
     border-radius: 15px;
+    outline:none;
+    color: rgb(79,79,79);
+
 
 }
 .search_input_box img{
@@ -58,4 +62,12 @@
     position: absolute;
     right: 10px;
     top: 10px;
+}
+
+.search_input_box  input::-ms-input-placeholder {
+    text-align: center;
+}
+
+.search_input_box  input::-webkit-input-placeholder {
+    text-align: center;
 }

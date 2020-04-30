@@ -5,6 +5,7 @@ namespace app\index\logic;
 use app\admin\model\web\Cases_model;
 use app\admin\model\web\News_model;
 use app\admin\model\web\Product_model;
+use app\admin\model\web\Searchlog_model;
 use app\admin\model\web\Solution_model;
 use app\common\util\UrlUtil;
 use app\index\repository\AppRepository;
@@ -196,6 +197,17 @@ class NewsLogic extends BaseLogic{
         $timeKey =  array_column($arr_dimen,'createtime');//取出数组中serverTime的一列，返回一维数组
         array_multisort($timeKey,SORT_DESC,$arr_dimen);
         return $arr_dimen;
+    }
+
+
+    public function write_search_keyword($keyword){
+        $data = [
+            'ip' => request()->ip(),
+            'name' => $keyword,
+            'is_show' => 0,
+            'createtime' => time(),
+        ];
+        (new Searchlog_model())->insert($data);
     }
 
 

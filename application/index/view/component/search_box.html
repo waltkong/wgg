@@ -17,9 +17,10 @@
 
     <div class="search_input_box">
         <input type="text"
-               placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入关键词"
+               placeholder="请输入关键词"
                id="search_keyword_value"
                value="{$this_input_keyword}"
+               onclick="listenKeywordBoxClick(this)"
         />
         <img src="__CDN__/assets/pc/image/index/放大镜.png"  alt="五宫格搜索" onclick="doSearch()"/>
     </div>
@@ -42,6 +43,17 @@
         var url = '/search_keyword/'+keyword;
         window.open(url);
     }
+
+    function listenKeywordBoxClick(obj) {
+        $(obj).focus();
+    }
+
+    $('#search_keyword_value').bind('keyup', function(event) {
+        if (event.keyCode == "13") {
+            //回车执行查询
+            doSearch();
+        }
+    });
 
 </script>
 
