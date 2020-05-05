@@ -99,7 +99,7 @@ class News extends BaseController
         $this->assign('this_category_id',$input['category_id']);
 
         $pageIndex = $input['pageIndex'] ?? 1;
-        $eachPage = $input['eachPage'] ?? 10;
+        $eachPage = $input['eachPage'] ?? 6;
         $news_list_res = $this->logic->news_list($input,$pageIndex,$eachPage);
         $this->assign('news_list',$news_list_res['data']);
 

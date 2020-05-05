@@ -30,30 +30,40 @@
         <img src="{$banner.image_url}" alt="{$banner.name}" />
     </div>
 
-    <div class="case_box">
+    <div class="news_box">
 
         {foreach name="news_list" item="vo" key="k"}
+        <div class="news_item" onclick=goToNewsDetailPage("{$vo.id}")>
 
-        <div class="case_item">
-
-            <div class="case_img">
-                <img src="{$vo.image_url}" alt="{$vo.name}">
-            </div>
-            <div class="case_title">
-                <span>{$vo.name}</span>
+            <div class="news_item_img">
+                <img src="{$vo.image_url}" alt="{$vo.name}" />
             </div>
 
-            <div class="case_see_detail">
-                <a href="/mobile_news_detail/{$vo.id}">
-                    <span>查看详情</span>
-                </a>
+            <div class="news_item_content_box">
+                <div class="news_item_title">
+                    <a href="/mobile_news_detail/{$vo.id}">
+                    {$vo.name}
+                    </a>
+                </div>
+                <div class="news_item_description">
+                    &nbsp;{$vo.description}
+                </div>
             </div>
 
         </div>
 
+        <!--if condition="($k < count($news_list)-1 ) "-->
+
+        <div class="news_divider">
+        </div>
+        <!--/if-->
+
+
         {/foreach}
 
     </div>
+
+
 
     <div class="page_box" >
         <div class="paginate_container">
@@ -144,6 +154,10 @@
         windows_jump();
     }
 
+
+    function goToNewsDetailPage(id) {
+        window.location.href='/mobile_news_detail/'+id;
+    }
 
 
 </script>

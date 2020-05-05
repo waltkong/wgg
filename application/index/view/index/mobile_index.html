@@ -58,7 +58,7 @@
                     {foreach name="banner" item="vo" key="k"}
                     <div class="swiper-slide">
 
-                        <img src="{$vo.image_url}" alt="{$vo.name}"  onclick="bannerJump('{$vo.jump_url}')"/>
+                        <img src="{$vo.image_url}" class="swiper_my_each" alt="{$vo.name}"  onclick="bannerJump('{$vo.jump_url}')"/>
 
                     </div>
                     {/foreach}
@@ -68,8 +68,8 @@
                 <!--分页-->
                 <div class="pagination swiper1-pagination"></div>
                 <!--&lt;!&ndash; 如果需要导航按钮 &ndash;&gt;-->
-                <div class="swiper-button-prev swiper_btn"></div>
-                <div class="swiper-button-next swiper_btn"></div>
+                <!--<div class="swiper-button-prev swiper_btn"></div>-->
+                <!--<div class="swiper-button-next swiper_btn"></div>-->
 
                 <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;-->
                 <!--<div class="swiper-scrollbar"></div>-->
@@ -96,7 +96,7 @@
             <!--autoplay="autoplay"-->
             <video src="{$one_vedio}"
                    controls="controls"
-                   autoplay="autoplay"
+                   <!--autoplay="autoplay"-->
                    <!--x5-playsinline="true"-->
                    <!--playsInline="true"-->
                    <!--x-webkit-airplay="allow"-->
@@ -209,7 +209,7 @@
             <div class="cases_box">
                 {foreach name="case_list" item="vo" key="k"}
 
-                <div class="cases_item">
+                <div class="cases_item" onclick=gotoCaseDetailPage("{$vo.id}")>
                     <div class="cases_item_img">
                         <img src="{$vo.image_url}" alt="{$vo.name}" />
                     </div>
@@ -247,7 +247,7 @@
             <div class="news_box">
 
                 {foreach name="news_list" item="vo" key="k"}
-                <div class="news_item">
+                <div class="news_item" onclick=goToNewsDetailPage("{$vo.id}")>
 
                     <div class="news_item_img">
                         <img src="{$vo.image_url}" alt="{$vo.name}" />
@@ -337,6 +337,8 @@
             // 如果需要分页器
 //            pagination: {
 //                el: '.swiper1-pagination',
+//                clickable:true,
+//
 //            },
 
             // 如果需要前进后退按钮
@@ -439,12 +441,20 @@
         window.location.href='/mobile_customcase';
     }
 
+    function gotoCaseDetailPage(id) {
+        window.location.href='/mobile_customcase_detail/'+id;
+    }
+
     function gotoContact() {
         window.location.href='/mobile_contact_company';
     }
 
     function gotoNewsPage() {
         window.location.href='/mobile_news';
+    }
+
+    function goToNewsDetailPage(id) {
+        window.location.href='/mobile_news_detail/'+id;
     }
 
 

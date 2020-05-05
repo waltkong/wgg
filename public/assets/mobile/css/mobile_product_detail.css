@@ -2,6 +2,12 @@
     width: 100%;
 }
 
+.nav_container img{
+    height: 200px;
+    width: 100%;
+    object-fit:cover
+}
+
 .breadcrumb_box{
     margin-left: 8px;
     margin-top: 20px;
@@ -21,6 +27,7 @@
 }
 
 .product_introduce_box{
+    padding: 0 2%;
     width: 100%;
 
     display: flex;

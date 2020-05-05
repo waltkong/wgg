@@ -3,6 +3,7 @@
 namespace app\index\controller;
 
 
+use app\common\util\DeviceUtil;
 use app\index\logic\ContactusLogic;
 use app\index\logic\IndexLogic;
 use think\Request;
@@ -30,6 +31,11 @@ class Index extends BaseController
 
     public function index()
     {
+        if(DeviceUtil::isMobile()){
+            return $this->redirect('/mobile_index');
+        }
+
+
         $banner_list = $this->logic->banner_list(1,10);
         $this->assign('banner',$banner_list);
 
@@ -62,6 +68,12 @@ class Index extends BaseController
 
 
     public function mobile_index(){
+
+        if(! DeviceUtil::isMobile()){
+            return $this->redirect('/index');
+        }
+
+
         $banner_list = $this->logic->banner_list(1,10);
         $this->assign('banner',$banner_list);
 

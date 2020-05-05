@@ -113,7 +113,28 @@
 
     </div>
 
+
+    {if condition="$highlight_menu == 1"}
+    <div class="friend_link_box_v2">
+        <div class="friend_link_list_each_v2 friend_link_list_each_first_v2">
+            友情链接：
+        </div>
+        {foreach name="company_list" item="vo" key="k"}
+        <div class="friend_link_list_each_v2" onclick=goToFriendPage_v2("{$vo.jump_url}")>
+            {$vo.name}
+        </div>
+        {/foreach}
+
+    </div>
+    {/if}
+
     <div class="bottom_copyright">
         {$page_company_info.company_copyright}
     </div>
 </div>
+
+<script>
+    function goToFriendPage_v2(url) {
+        window.open(url)
+    }
+</script>
