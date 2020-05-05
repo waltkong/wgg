@@ -101,6 +101,9 @@ class Index extends BaseController
         $this->assign('seo_description',$seo_info['seo_index_description']);
         $this->assign('seo_keyword',$seo_info['seo_index_keyword']);
 
+
+        $this->assign('my_company_mimic_count',range(0,5));
+
         return $this->view->fetch();
     }
 

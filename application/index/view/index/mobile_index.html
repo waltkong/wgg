@@ -18,7 +18,25 @@
     <!--<script src="__CDN__/assets/mobile/js/marquee.js"></script>-->
 
     <style>
-        @keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+        @keyframes kf-marque-animation{
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-33.3%);
+            }
+        }
+        @keyframes mymove
+        {
+            from {left:0px;}
+            to {left:-800px;}
+        }
+        @-webkit-keyframes mymove /*Safari and Chrome*/
+        {
+            from {left:0px;}
+            to {left:-800px;}
+        }
+
         .marquee{
             width: 100%;
             /*height: 44px;*/
@@ -34,10 +52,11 @@
             font-size: 13px;
         }
         .marquee .marquee_content{
-            display: inline-block;
+            /*display: inline-block;*/
+            width: 4000px;
             position: relative;
             padding-right: 0px;
-            animation: kf-marque-animation 11.3s linear infinite;
+            animation: mymove 11.3s linear infinite;
             white-space: nowrap;
         }
     </style>
@@ -294,12 +313,13 @@
 
         <div class="marquee">
             <div class=" companies_box marquee_content" id="companies_box">
-
-                <img src="{$page_company_info.custom_company_logo_images}" />
-
+                {foreach name="my_company_mimic_count" item="vo" key="k"}
+                <div class="companies_box_inner_box">
+                    <img src="{$page_company_info.custom_company_logo_images}" />
+                </div>
+                {/foreach}
             </div>
         </div>
-
 
 
         <!--<div class="marquee">-->
