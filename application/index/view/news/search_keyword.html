@@ -100,9 +100,9 @@
                 </div>
                 {/foreach}
 
-                <div class="paginate_item each_page page_three_point">
-                    ...
-                </div>
+                <!--<div class="paginate_item each_page page_three_point">-->
+                    <!--...-->
+                <!--</div>-->
 
                 <div class="paginate_item next_page" onclick="next_page()">
                     下一页
@@ -181,8 +181,13 @@
 
     function changePageInput(obj) {
         var value = $('#input_page_page_number').val();
-        params.pageIndex = Number(value);
-        windows_jump();
+        if(Number(value)>0){
+            params.pageIndex = Number(value);
+            windows_jump();
+        }else{
+            alert('请输入数字');
+        }
+
     }
 
 

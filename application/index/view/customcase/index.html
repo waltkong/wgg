@@ -197,8 +197,12 @@
 
     function changePageInput(obj) {
         var value = $('#input_page_page_number').val();
-        params.pageIndex = Number(value);
-        windows_jump();
+        if(Number(value)>0){
+            params.pageIndex = Number(value);
+            windows_jump();
+        }else{
+            alert('请输入数字');
+        }
     }
 
 

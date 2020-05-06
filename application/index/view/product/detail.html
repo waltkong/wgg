@@ -150,13 +150,20 @@
 <script>
 
     $(document).ready(function () {
-        $('.MsoNormal').find('img').each(function (index,el) {
+        $('.product_content p').find('img').each(function (index,el) {
 
             var this_w = $(el).attr('width');
+            var this_h = $(el).attr('height');
+            var this_src = $(el).attr('src');
 
-            el.style.setProperty("width",this_w+'px',"important");
-            el.style.setProperty("height","auto","important");
+//            el.style.setProperty("width",this_w+'px',"important");
+//            el.style.setProperty("height",this_h+'px',"important");
+
+
             el.style.setProperty("display","inline-block","important");
+            el.setAttribute('width', this_w+'px','important');
+            el.setAttribute('height', this_h+'px','important');
+            $(el).attr('src',this_src+'?'+Math.random());
 
         })
     });
