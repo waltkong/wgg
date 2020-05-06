@@ -51,7 +51,7 @@ class Solution extends BaseController
         $row = $this->logic->solution_one($input);
         $this->assign('row',$row);
 
-        $this->assign('banner',['image_url' => $row['banner_image'] ?? '', 'name' => $row['name'] ?? '',]);
+        $this->assign('banner',['image_url' => $row['mobile_banner_image'] ?? '', 'name' => $row['name'] ?? '',]);
 
         $this->assign('solution_list',$this->logic->get_solution_list());
 

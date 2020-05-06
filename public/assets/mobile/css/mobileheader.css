@@ -4,7 +4,7 @@
     /*position: fixed;*/
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 214748364700;
 }
 
 
@@ -26,18 +26,18 @@
 }
 
 .header_box .header_logo_box{
-    margin-left: 10%;
-    width: 70%;
+    margin-left: 2%;
+    width: 78%;
 
     display: flex;
     flex-direction:row;
     flex-wrap: nowrap;
-    justify-content:space-around;
+    justify-content:flex-end;
     align-items: center;
 }
 
 .header_box .logo_image{
-    width: 46%;
+    width: 42%;
 }
 
 .header_box .logo_image img{
@@ -45,8 +45,8 @@
 }
 
 .header_box .website_title{
-
-    width: 50%;
+    margin-left: 10px;
+    width: 54%;
     font-size: 16px;
     color: white;
 }

@@ -24,8 +24,7 @@ class Contactus extends BaseController
         $this->req = request()->param(false);
         $this->logic = new ContactusLogic();
 
-        $banner = $this->logic->banner_one(6);
-        $this->assign('banner',$banner);
+
         $this->assign('highlight_menu',6);
 
         $contactlogic = new ContactusLogic();
@@ -38,6 +37,9 @@ class Contactus extends BaseController
 
     public function index()
     {
+        $banner = $this->logic->banner_one(6,2);
+        $this->assign('banner',$banner);
+
         $input = $this->req;
         $this->assign('this_category_id',1);
 
@@ -48,6 +50,9 @@ class Contactus extends BaseController
     }
 
     public function contact_us(){
+        $banner = $this->logic->banner_one(6,2);
+        $this->assign('banner',$banner);
+
         $input = $this->req;
         $this->assign('this_category_id',2);
 
@@ -83,6 +88,9 @@ class Contactus extends BaseController
 
     public function mobile_index()
     {
+        $banner = $this->logic->banner_one(6,3);
+        $this->assign('banner',$banner);
+
         $input = $this->req;
         $this->assign('this_category_id',1);
 
@@ -93,6 +101,9 @@ class Contactus extends BaseController
     }
 
     public function mobile_contact_us(){
+        $banner = $this->logic->banner_one(6,3);
+        $this->assign('banner',$banner);
+
         $input = $this->req;
         $this->assign('this_category_id',2);
 

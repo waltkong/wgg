@@ -25,8 +25,7 @@ class News extends BaseController
         $this->req = request()->param(false);
         $this->logic = new NewsLogic();
 
-        $banner = $this->logic->banner_one(5);
-        $this->assign('banner',$banner);
+
 
         $this->assign('highlight_menu',5);
 
@@ -37,6 +36,9 @@ class News extends BaseController
         $input = $this->req;
         $input['category_id'] = $input['category_id'] ?? '';
         $this->assign('this_category_id',$input['category_id']);
+
+        $banner = $this->logic->banner_one(5,2);
+        $this->assign('banner',$banner);
 
         $pageIndex = $input['pageIndex'] ?? 1;
         $eachPage = $input['eachPage'] ?? 10;
@@ -70,6 +72,8 @@ class News extends BaseController
 
         $this->logic->shouldUpdateClick();
 
+        $banner = $this->logic->banner_one(5,2);
+        $this->assign('banner',$banner);
 
         $row = $this->logic->news_one($input);
         $this->assign('row',$row);
@@ -97,6 +101,9 @@ class News extends BaseController
         $input = $this->req;
         $input['category_id'] = $input['category_id'] ?? '';
         $this->assign('this_category_id',$input['category_id']);
+
+        $banner = $this->logic->banner_one(5,3);
+        $this->assign('banner',$banner);
 
         $pageIndex = $input['pageIndex'] ?? 1;
         $eachPage = $input['eachPage'] ?? 6;
@@ -130,6 +137,9 @@ class News extends BaseController
 
         $this->logic->shouldUpdateClick();
 
+        $banner = $this->logic->banner_one(5,3);
+        $this->assign('banner',$banner);
+
 
         $row = $this->logic->news_one($input);
         $this->assign('row',$row);
@@ -159,6 +169,9 @@ class News extends BaseController
         if(empty($keyword)){
             die('no keyword');
         }
+
+        $banner = $this->logic->banner_one(5,2);
+        $this->assign('banner',$banner);
 
         $res = $this->logic->write_search_keyword($keyword);
 

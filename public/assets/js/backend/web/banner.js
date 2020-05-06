@@ -48,6 +48,16 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                 6:'关于我们',
                             }
                         },
+                        {
+                            field: 'show_device',
+                            title: __('Show_device'),
+                            formatter: Table.api.formatter.flag,
+                            searchList:{
+                                1:'都可',
+                                2:'pc',
+                                3:'mobile',
+                            }
+                        },
                         {field: 'jump_url', title: __('Jump_url'), formatter: Table.api.formatter.url},
                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}

@@ -74,7 +74,7 @@ class Product extends BaseController
         $row = $this->logic->product_category_one($input);
         $this->assign('row',$row);
 
-        $this->assign('banner',['image_url' => $row['banner_image'] ?? '', 'name' => $row['name'] ?? '',]);
+        $this->assign('banner',['image_url' => $row['mobile_banner_image'] ?? '', 'name' => $row['name'] ?? '',]);
 
         $input['category_id'] = $input['id'] ?? '';
         $pageIndex = $input['pageIndex'] ?? 1;
@@ -108,7 +108,7 @@ class Product extends BaseController
         $row = $this->logic->product_one($input);
         $this->assign('row',$row);
 
-        $this->assign('banner',['image_url' => $row['banner_image'] ?? '', 'name' => $row['name'] ?? '',]);
+        $this->assign('banner',['image_url' => $row['mobile_banner_image'] ?? '', 'name' => $row['name'] ?? '',]);
 
         $this->assign('product_list',$this->logic->product_list(1));
 

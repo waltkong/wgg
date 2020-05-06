@@ -36,7 +36,7 @@ class Index extends BaseController
         }
 
 
-        $banner_list = $this->logic->banner_list(1,10);
+        $banner_list = $this->logic->banner_list(1,10,2);
         $this->assign('banner',$banner_list);
 
         $company_list = $this->logic->company_list([],100);
@@ -74,7 +74,7 @@ class Index extends BaseController
         }
 
 
-        $banner_list = $this->logic->banner_list(1,10);
+        $banner_list = $this->logic->banner_list(1,10,3);
         $this->assign('banner',$banner_list);
 
         $company_list = $this->logic->company_list([],100);

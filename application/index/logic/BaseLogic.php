@@ -98,9 +98,13 @@ class BaseLogic{
     }
 
 
-    public function banner_one($group=1){
+    public function banner_one($group=1,$show_device=1){
+        //$show_device 1都可 2pc 3mobile
+        $show_device = $show_device==1 ? [1] : [1,$show_device];
+
         $obj = new Banner_model();
-        $row = $obj->where('group',$group)->find();
+        $row = $obj->where('group',$group)
+            ->whereIn('show_device',$show_device)->find();
         if(!empty($row)){
             $row['image_url'] = UrlUtil::getFullUrl($row['image_url']);
         }else{

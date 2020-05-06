@@ -124,7 +124,7 @@
 }
 
 .friend_link_list_each_v2.friend_link_list_each_first_v2{
-    color: rgb(38,184,251);
+    color: white;
 }
 
 .friend_link_list_each_v2{
@@ -132,7 +132,7 @@
     margin-top: 1rem;
     font-size: 1.1rem;
     cursor: pointer;
-    color: rgb(38,184,251);
+    color: white;
 }
 
 

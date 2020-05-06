@@ -15,10 +15,13 @@ class IndexLogic extends BaseLogic{
      * @param int $group
      * @param int $count
      */
-    public function banner_list($group=1, $count=10){
+    public function banner_list($group=1, $count=10,$show_device=1){
+        //$show_device 1都可 2pc 3mobile
+        $show_device = $show_device==1 ? [1] : [1,$show_device];
         $obj = new Banner_model();
         $list = $obj
             ->where('group',$group)
+            ->whereIn('show_device',$show_device)
             ->order('createtime', 'desc')
             ->limit(0,$count)
             ->select();
@@ -97,7 +100,10 @@ class IndexLogic extends BaseLogic{
             ->where('jump_url','like','%.mp4%')
             ->order('createtime', 'desc')
             ->find();
-        return empty($row)? '' : $row->jump_url;
+        return empty($row)? [
+            'image_url' => '',
+            'jump_url' => '',
+        ] : \GuzzleHttp\json_decode(\GuzzleHttp\json_encode($row),true);
     }
 
 

@@ -24,8 +24,7 @@ class Customcase extends BaseController
         $this->req = request()->param(false);
         $this->logic = new CustomcaseLogic();
 
-        $banner = $this->logic->banner_one(4);
-        $this->assign('banner',$banner);
+
         $this->assign('highlight_menu',4);
 
     }
@@ -33,6 +32,10 @@ class Customcase extends BaseController
     public function index()
     {
         $input = $this->req;
+
+        $banner = $this->logic->banner_one(4,2);
+        $this->assign('banner',$banner);
+
         $input['category_id'] = $input['category_id'] ?? 1;
         $this->assign('this_category_id',$input['category_id']);
 
@@ -68,6 +71,9 @@ class Customcase extends BaseController
         $input = $this->req;
         $input['id'] = $input['id'] ?? '';
 
+        $banner = $this->logic->banner_one(4,2);
+        $this->assign('banner',$banner);
+
         $this->logic->shouldUpdateClick();
 
         $row = $this->logic->case_one($input);
@@ -98,6 +104,10 @@ class Customcase extends BaseController
 
     public function mobile_index(){
         $input = $this->req;
+
+        $banner = $this->logic->banner_one(4,3);
+        $this->assign('banner',$banner);
+
         $input['category_id'] = $input['category_id'] ?? 1;
         $this->assign('this_category_id',$input['category_id']);
 
@@ -132,6 +142,9 @@ class Customcase extends BaseController
     public function mobile_detail(){
         $input = $this->req;
         $input['id'] = $input['id'] ?? '';
+
+        $banner = $this->logic->banner_one(4,3);
+        $this->assign('banner',$banner);
 
         $this->logic->shouldUpdateClick();
 
