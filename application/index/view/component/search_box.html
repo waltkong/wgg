@@ -8,7 +8,7 @@
         </div>
         <div class="search_keywords_box">
             {foreach name="searchKeyWordsList" item="vo" key="k"}
-            <div class="search_keywords_each" onclick=doSearchThisKeyWord("{$vo.name}")>
+            <div class="search_keywords_each" onclick=goToSearchThisKeyWordPage("{$vo.jump_url}")>
                 <span>{$vo.name}</span>
             </div>
             {/foreach}
@@ -28,6 +28,9 @@
 
 <script>
 
+    function goToSearchThisKeyWordPage(url) {
+        window.open(url);
+    }
     function doSearch() {
         var keyword = $('#search_keyword_value').val().trim();
         if(keyword == ''){
@@ -41,7 +44,7 @@
             keyword: keyword,
         };
         var url = '/search_keyword/'+keyword;
-        window.open(url);
+        window.location.href = url;
     }
 
     function listenKeywordBoxClick(obj) {

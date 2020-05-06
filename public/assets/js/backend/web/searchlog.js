@@ -35,6 +35,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'id', title: __('Id')},
                         {field: 'name', title: __('Name')},
                         {field: 'ip', title: __('Ip')},
+                        {field: 'jump_url', title: '跳转地址', formatter: Table.api.formatter.url},
                         {
                             field: 'is_show',
                             title: __('Is_show'),

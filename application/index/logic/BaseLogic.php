@@ -139,6 +139,10 @@ class BaseLogic{
             ->order('id', 'asc')
             ->limit(0,$count)
             ->select();
+        $list = collection($list)->toArray();
+        foreach ($list as $k => $v){
+            $list[$k]['jump_url'] = UrlUtil::getFullUrl($v['jump_url']);
+        }
         return $list;
     }
 
