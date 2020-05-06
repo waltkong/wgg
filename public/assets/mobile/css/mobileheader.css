@@ -61,8 +61,8 @@
     align-items: center;
 }
 .header_box .menu_btn{
-    height: 40px;
-    width: 50px;
+    height: 30px;
+    width: 40px;
 
     display: flex;
     flex-direction: column;
