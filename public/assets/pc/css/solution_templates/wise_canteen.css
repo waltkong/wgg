@@ -183,12 +183,12 @@
     width: 120px;
     height: 120px;
 
-    border-radius: 50%;
-    background-color: rgb(52,175,244);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
+    /*border-radius: 50%;*/
+    /*background-color: rgb(247,247,247);*/
+    /*color: white;*/
+    /*font-size: 18px;*/
+    /*font-weight: bold;*/
+    /*text-align: center;*/
 
 
     display: flex;
@@ -197,6 +197,11 @@
     justify-content:center;
     align-items: center;
 }
+
+.function_box_title img{
+    width: 100%;
+}
+
 
 .function_box_item .function_box_content{
 
@@ -239,6 +244,7 @@
 
 .software_config_icon{
     width: 55px;
+    height: 55px;
 }
 
 .software_config_icon img{
@@ -251,6 +257,7 @@
     font-size: 13px;
     font-weight: bold;
     margin: 20px 0px;
+    text-align: center;
 }
 
 
