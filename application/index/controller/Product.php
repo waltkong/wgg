@@ -38,7 +38,13 @@ class Product extends BaseController
 
         $this->assign('banner',['image_url' => $row['banner_image'] ?? '', 'name' => $row['name'] ?? '',]);
 
-        $this->assign('product_list',$this->logic->product_list($row['id']));
+
+        $product_list = $this->logic->product_list($row['id']);
+        foreach ($product_list as $k => $item){
+            $product_list[$k]['description'] = mb_substr($item['description'],0,50);
+        }
+
+        $this->assign('product_list',$product_list);
 
         $this->assign('seo_title',$row['seo_title'] ?? '');
         $this->assign('seo_description',$row['seo_description'] ?? '');

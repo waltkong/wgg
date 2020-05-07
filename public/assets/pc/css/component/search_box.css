@@ -56,6 +56,11 @@
 
 
 }
+
+.search_input_box input::-ms-clear, input::-ms-reveal{
+    display: none;
+}
+
 .search_input_box img{
     cursor: pointer;
     width: 20px;

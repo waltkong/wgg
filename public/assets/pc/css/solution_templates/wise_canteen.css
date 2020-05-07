@@ -144,6 +144,8 @@
     line-height: 30px;
     font-size: 16px;
     color: rgb(99,99,99);
+
+    text-align-last:start;
 }
 
 .case_description_image{
@@ -180,13 +182,20 @@
 
     width: 120px;
     height: 120px;
-    padding: 45px 10px ;
+
     border-radius: 50%;
     background-color: rgb(52,175,244);
     color: white;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
 }
 
 .function_box_item .function_box_content{
@@ -205,6 +214,10 @@
     width: 145px;
 }
 
+.function_box_content_each .function_box_content_each_img img{
+    width: 100%;
+}
+
 .function_box_content_each_list{
     color: rgb(77,77,77);
     font-size: 16px;
@@ -214,7 +227,7 @@
     margin-top: 3px;
 }
 
-.software_config_each{
+.function_box_content_each.software_config_each{
     width: 79px;
 
     display: flex;
@@ -226,6 +239,11 @@
 
 .software_config_icon{
     width: 55px;
+}
+
+.software_config_icon img{
+    width: 55px;
+    max-height: 55px;
 }
 
 .software_config_name{

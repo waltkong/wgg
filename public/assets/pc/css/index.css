@@ -41,6 +41,7 @@
 .company_introduce_description{
 
     height: 75px;
+    width: 100%;
 
     padding: 10px 100px;
     text-align: left;
@@ -504,13 +505,23 @@
 
 
 .more_button_text{
+    width: 100%;
     text-align: end;
     font-size: 20px;
-    color: #34AFF4;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: center;
+
+
 }
 
 .more_button_text a{
     text-decoration: none;
+    color: #34AFF4;
 }
 
 
