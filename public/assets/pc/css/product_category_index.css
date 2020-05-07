@@ -69,6 +69,7 @@
 
 }
 .product_list_item .product_image_box{
+    width: 100%;
     /*border:2px dashed rgb(159,159,159);*/
     border: 1px solid rgb(159,159,159);
     border-radius: 5px;
@@ -96,6 +97,7 @@
 
 .product_list_item .product_image_box .product_image img{
     width: 100%;
+    height: auto;
     /*max-height: 300px;*/
 }
 
