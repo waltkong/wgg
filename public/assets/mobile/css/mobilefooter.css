@@ -89,10 +89,11 @@
 .mobile_footer_copy_right_one{
     font-size: 11px;
     margin-top: 15px;
+    text-align: center;
 }
 
 .mobile_footer_copy_right_two{
     font-size: 10px;
     margin-top: 15px;
-
+    text-align: center;
 }

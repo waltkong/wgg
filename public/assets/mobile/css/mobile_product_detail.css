@@ -116,7 +116,8 @@
 }
 
 .product_content{
+    width: 100%;
     margin-top: 15px;
-    padding: 5px 5px;
+    padding: 5px 6%;
     margin-bottom: 15px;
 }
