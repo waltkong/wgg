@@ -168,8 +168,14 @@
 
 .single_product_img img{
     /*width: 400px;*/
-    width: 508px;
     /*max-height: 300px;*/
+
+    /*width: 508px;*/
+
+    width: auto;
+    height: 23rem;
+    object-fit:cover;
+
 }
 
 .single_product_content{

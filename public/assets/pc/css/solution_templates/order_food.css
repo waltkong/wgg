@@ -38,6 +38,8 @@
 }
 
 .wechat_order_content{
+    min-height: 300px;
+
     margin-top: 20px;
     padding: 10px 20px;
     width: 400px;
@@ -68,8 +70,22 @@
     width:55%;
 }
 
-.wechat_order_right img{
+.wechat_order_right .wechat_order_right_1{
     width:90%;
+    min-height: 350px;
+}
+
+.wechat_order_right_1 img{
+    width: 100%;
+}
+
+.wechat_order_right .wechat_order_right_2{
+    width:90%;
+    min-height: 400px;
+}
+
+.wechat_order_right_2 img{
+    width: 100%;
 }
 
 .temperature_keep_closet_box{
