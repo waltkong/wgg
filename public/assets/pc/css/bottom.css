@@ -3,7 +3,7 @@
     /*height: 402px;*/
     margin-top: 1.2rem;
     /*height: 25rem;*/
-    background-color: rgb(58,58,58);
+    background-color: rgb(0,0,0);
     color: white;
 }
 
@@ -131,7 +131,7 @@
 .friend_link_list_each_v2{
     margin-left: 1.2rem;
     margin-top: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     cursor: pointer;
     color: white;
 }
