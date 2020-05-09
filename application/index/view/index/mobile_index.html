@@ -111,45 +111,36 @@
             </div>
         </div>
 
+        <!--<div class="video_box">-->
+            <!--&lt;!&ndash;autoplay="autoplay"&ndash;&gt;-->
+            <!--<video src=""-->
+                   <!--controls="controls"-->
+                   <!--autoplay="autoplay"-->
+                   <!--loop="loop"-->
+                   <!--&lt;!&ndash;x5-playsinline&ndash;&gt;-->
+                   <!--&lt;!&ndash;webkit-playsinline&ndash;&gt;-->
+                   <!--&lt;!&ndash;playsinline&ndash;&gt;-->
+                   <!--&lt;!&ndash;x-webkit-airplay="allow"&ndash;&gt;-->
+                   <!--&lt;!&ndash;x5-video-player-type="h5"&ndash;&gt;-->
+            <!---->
+            <!--&lt;!&ndash;autoplay="autoplay"&ndash;&gt;-->
+                   <!--&lt;!&ndash;x5-playsinline="true"&ndash;&gt;-->
+                   <!--&lt;!&ndash;playsInline="true"&ndash;&gt;-->
+                   <!--&lt;!&ndash;x-webkit-airplay="allow"&ndash;&gt;-->
+                   <!--&lt;!&ndash;webkit-playsinline="true"&ndash;&gt;-->
+                   <!--&lt;!&ndash;playsinline="true"&ndash;&gt;-->
+                   <!--&lt;!&ndash;x5-video-player-type="h5-page"&ndash;&gt;-->
+            <!--&gt;-->
+                <!--您的浏览器不支持 video 标签。-->
+            <!--</video>-->
+        <!--</div>-->
+
+
         <div class="video_box">
-            <!--autoplay="autoplay"-->
-            <video src="{$one_vedio.jump_url}"
-                   controls="controls"
-                   autoplay="autoplay"
-                   loop="loop"
-                   <!--x5-playsinline-->
-                   <!--webkit-playsinline-->
-                   <!--playsinline-->
-                   <!--x-webkit-airplay="allow"-->
-                   <!--x5-video-player-type="h5"-->
-            <!--controls="controls"-->
-
-            <!--x5-playsinline=""-->
-
-            <!--playsinline="true"-->
-
-            <!--webkit-playsinline="true"-->
-
-            <!--x-webkit-airplay="true"-->
-
-            <!--x5-video-player-type="h5"-->
-
-            <!--x5-video-player-fullscreen=""-->
-
-            <!--x5-video-orientation="portraint"-->
-
-
-            <!--autoplay="autoplay"-->
-                   <!--x5-playsinline="true"-->
-                   <!--playsInline="true"-->
-                   <!--x-webkit-airplay="allow"-->
-                   <!--webkit-playsinline="true"-->
-                   <!--playsinline="true"-->
-                   <!--x5-video-player-type="h5-page"-->
-            >
-                您的浏览器不支持 video 标签。
-            </video>
+            <img src="__CDN__/assets/mobile/image/index/video_preview.png"
+                 onclick=goToVideoPage("/assets/pc/video/index1.mp4"); />
         </div>
+
 
         <div class="apply_field_box">
             <div class="apply_field_title_box">
@@ -499,6 +490,10 @@
 
     function goToNewsDetailPage(id) {
         window.location.href='/mobile_news_detail/'+id;
+    }
+
+    function goToVideoPage(url) {
+        window.location.href=url;
     }
 
 

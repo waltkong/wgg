@@ -3,9 +3,9 @@
 }
 
 .swiper_my_each{
-    height: 200px;
+    /*height: 250px;*/
     width: 100%;
-    object-fit:cover
+    /*object-fit:cover*/
 }
 
 
@@ -53,6 +53,12 @@
     /*position: relative;*/
     /*z-index: -1;*/
 }
+
+.video_box img{
+    width: 100%;
+    height: auto;
+}
+
 .video_box video{
 
     width: 100%;
