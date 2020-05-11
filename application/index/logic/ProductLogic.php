@@ -65,7 +65,12 @@ class ProductLogic extends BaseLogic{
             foreach ($utils as $k2 => $util){
                 $util = trim($util);
                 $util = str_replace("：",":",$util);
-                $temp[] = $util;
+
+                //不能太长 150/3 = 50个字
+                if(strlen($util) < '150'){
+                    $temp[] = $util;
+                }
+
             }
             $row['util_array'] =$temp;
 
