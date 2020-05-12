@@ -276,4 +276,7 @@ return [
         //API接口地址
         'api_url'             => 'https://api.fastadmin.net',
     ],
+    'http_exception_template'    =>  [
+        404 =>  APP_PATH . 'index/view/404.html',
+    ],
 ];
