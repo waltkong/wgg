@@ -54,7 +54,7 @@ class AppRepository{
         ],
         [
             'id' => 2,
-            'name' => '政府机关'
+            'name' => '政企机构'
         ],
         [
             'id' => 3,
