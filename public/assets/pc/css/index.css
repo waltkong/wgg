@@ -19,7 +19,7 @@
     height: 400px;
     color: white;
 
-    background:url(/assets/pc/image/首页切图/素材切图/02.png);
+    background:url(/assets/pc/image/首页切图/素材切图/02.jpg);
     background-size:100% 100%;
     background-repeat:no-repeat;
 
@@ -40,7 +40,7 @@
 
 .company_introduce_description{
 
-    height: 75px;
+    height: 52px;
     width: 100%;
 
     padding: 10px 100px;
@@ -50,7 +50,7 @@
     overflow:hidden;
     display:-webkit-box;
     text-overflow:ellipsis;
-    -webkit-line-clamp:3;
+    -webkit-line-clamp:2;
     -webkit-box-orient:vertical;
     white-space:normal;
 }
