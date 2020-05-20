@@ -24,7 +24,7 @@ class  BaseController extends Frontend{
     }
 
     private function myInit(){
-        $this->assign("asset_version",date('Ymd',time()));   //time()
+        $this->assign("asset_version",date('Ymdhis',time()));   //time()
 
         $this->menuData();
 

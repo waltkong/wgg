@@ -105,8 +105,14 @@
 
 }
 
+.operate_target_item_icon{
+    height: 60px;
+    width: 60px;
+}
+
 .operate_target_item_icon img{
     width: 60px;
+
 }
 
 .operate_target_item_text{

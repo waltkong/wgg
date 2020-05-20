@@ -40,8 +40,9 @@
 
 .company_introduce_description{
 
-    height: 52px;
+    height: 72px;
     width: 100%;
+    line-height: 30px;
 
     padding: 10px 100px;
     text-align: left;
